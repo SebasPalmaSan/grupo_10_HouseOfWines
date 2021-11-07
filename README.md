@@ -1,20 +1,24 @@
-# grupo_10_HouseOfWines
-Nuestro sitio es un Marketplace que ofrecera la venta de vinos, whiskys, destilados y espumantes, que será dirigido a personas físicas de una franja etaria de 18 a 65 años.
-Haremos que el cliente tenga una navegacionº   agil, intuitiva y segura, y que cuente con servicio de envio a domicilio dentro de las 24hs dependiendo su situacion geografica.
+# Pryotecto House of Wines
 
-Inspiracion en referentes del mercado:
+Nuestro sitio es un Marketplace que ofrecera la venta de vinos, whiskys, destilados y espumantes, que será dirigido a personas físicas de una franja etaria de 18 a 65 años, residentes de la Republica Argentina. Haremos que el cliente tenga una navegación ágil, intuitiva y segura, y que cuente con servicio de envio a domicilio dentro de las 24hs dependiendo su situacion geográfica.
 
-https://www.lesommelier.com.ar/
-tomamos como inspiración y referencia su estetica y su gama de colores utilizados.
+## Referentes del mercado:
 
-https://casacatar.com/
-tomamos como referencia su dinamica, funcionalidades y división de categorias de productos ofrecidos.
+**Le Sommelier:**  tomamos como inspiración y referencia su estética y su gama de colores utilizados. [Aquí](https://www.lesommelier.com.ar/ "Aquí")
 
-https://clubargentinodelvino.com/
-tomamos en referencia su presentación y sus imágenes.
+**Casa Catar:** tomamos como referencia su dinámica, funcionalidades y división de categorias de productos ofrecidos. [Aquí](https://casacatar.com/ "Aquí")
 
-https://cepadevinos.com/
-tomamos en referencia su simpleza y su forma de exponer sus productos.
+**Club Argentino del vino:** tomamos en referencia su presentación y sus imágenes. [Aquí ](https://clubargentinodelvino.com/ "Aquí ")
 
-https://www.estaciondebebidas.com/
-tomamos como inspiración y referencia el header, que acompaña y se desplaza junto con el cuerpo de la página.
+**Cepa de vinos:** tomamos en referencia su simpleza y su forma de exponer sus productos. [Aquí](https://cepadevinos.com/ "Aquí")
+
+**Estación de bebidas:**  tomamos como inspiración y referencia el header, que acompaña y se desplaza junto con el cuerpo de la página. [Aquí](https://www.estaciondebebidas.com/ "Aquí")
+
+## Desarrolladores:
+**Melisa Mendez:**
+
+**Sofia Valentini:**
+
+**Sebastian Palma Sanchez:**
+
+**Santiago Gonzalez Calcagno:**
