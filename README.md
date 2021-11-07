@@ -1,4 +1,4 @@
-# Pryotecto House of Wines
+# Proyecto House of Wines
 
 Nuestro sitio es un Marketplace que ofrecera la venta de vinos, whiskys, destilados y espumantes, que será dirigido a personas físicas de una franja etaria de 18 a 65 años, residentes de la Republica Argentina. Haremos que el cliente tenga una navegación ágil, intuitiva y segura, y que cuente con servicio de envio a domicilio dentro de las 24hs dependiendo su situacion geográfica.
 
