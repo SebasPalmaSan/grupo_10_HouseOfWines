@@ -19,6 +19,6 @@ Nuestro sitio es un Marketplace que ofrecera la venta de vinos, whiskys, destila
 
 **Sofia Valentini Curcio:**
 
-Sebastian Palma Sanchez: Hola! soy Sebas, me gusta mucho la muúica, grabar, editar y masterizar. Soy fanático de River Plate! y encontré hace un buen tiempo, el gusto y la pasión por la programación.
+Sebastian Palma Sanchez: Hola! soy Sebas, me gusta mucho la música, grabar, editar y masterizar. Soy fanático de River Plate! y encontré hace un buen tiempo, el gusto y la pasión por la programación.
 
 **Santiago Gonzalez Calcagno:**
