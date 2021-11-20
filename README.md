@@ -19,6 +19,6 @@ Nuestro sitio es un Marketplace que ofrecera la venta de vinos, whiskys, destila
 
 **Sofia Valentini:**
 
-**Sebastian Palma Sanchez:**
+**Sebastian Palma Sanchez: Hola! soy Sebas, me gusta mucho la musica, me gusta mucho grabar, editar y masterizar. Me encanta viajar! y encontré hace un buen tiempo, el gusto y la pasión por la programación.
 
 **Santiago Gonzalez Calcagno:**
