@@ -15,7 +15,7 @@ Nuestro sitio es un Marketplace que ofrecera la venta de vinos, whiskys, destila
 **Estación de bebidas:**  tomamos como inspiración y referencia el header, que acompaña y se desplaza junto con el cuerpo de la página. [Aquí](https://www.estaciondebebidas.com/ "Aquí")
 
 ## Desarrolladores:
-**Melisa Mendez:**
+Melisa Mendez: Hola, soy Mel! Soy nueva en el mundo de la programación. Me gusta mucho viajar, ir a recitales, tomar mate, y estar con mi familia. 
 
 **Sofia Valentini Curcio:**
 
