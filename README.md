@@ -21,4 +21,4 @@ Nuestro sitio es un Marketplace que ofrecera la venta de vinos, whiskys, destila
 
 Sebastian Palma Sanchez: Hola! soy Sebas, me gusta mucho la música, grabar, editar y masterizar. Soy fanático de River Plate! y encontré hace un buen tiempo, el gusto y la pasión por la programación.
 
-**Santiago Gonzalez Calcagno:**
+Santiago Gonzalez Calcagno: Soy Santiago. Me gustan los deportes, los videojuegos y los viajes. Hace varios años que me llamaba la atención la programación, pero recientemente me animé a probar y abrir un nuevo abanico de oportunidades. Veo este proyecto como la colocación de la primera piedra, con muchos objetivos y enormes posibilidades.
