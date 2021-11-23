@@ -17,7 +17,7 @@ Nuestro sitio es un Marketplace que ofrecera la venta de vinos, whiskys, destila
 ## Desarrolladores:
 Melisa Mendez: Hola, soy Mel! Soy nueva en el mundo de la programación. Me gusta mucho viajar, ir a recitales, tomar mate, y estar con mi familia. 
 
-**Sofia Valentini Curcio:**
+Sofia Valentini Curcio: Hola a todos! Soy Sofi, como muchos de ustedes, gran consumidora de todo tipo de plataformas, amante de los animales, la familia y los lugares nuevos. Encuentro éste proyecto como punto de partida en el campo de la programación, espero que les guste tanto como nos gustó a nosotros llevarlo a cabo. 
 
 Sebastian Palma Sanchez: Hola! soy Sebas, me gusta mucho la música, grabar, editar y masterizar. Soy fanático de River Plate! y encontré hace un buen tiempo, el gusto y la pasión por la programación.
 
