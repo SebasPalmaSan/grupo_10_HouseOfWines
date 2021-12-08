@@ -1,0 +1,23 @@
+{
+  "name": "grupo_10_houseofwines",
+  "version": "1.0.0",
+  "description": "Proyecto House of Wines",
+  "main": "index.js",
+  "scripts": {
+    "test": "\"clear && nodemon app.js -e js,mjs,json,html,css\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SebasPalmaSan/grupo_10_HouseOfWines.git"
+  },
+  "author": "Sebastian, Sofia, Melisa, Santiago",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SebasPalmaSan/grupo_10_HouseOfWines/issues"
+  },
+  "homepage": "https://github.com/SebasPalmaSan/grupo_10_HouseOfWines#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "nodemon": "^2.0.15"
+  }
+}
