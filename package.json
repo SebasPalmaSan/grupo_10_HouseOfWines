@@ -2,9 +2,9 @@
   "name": "grupo_10_houseofwines",
   "version": "1.0.0",
   "description": "Proyecto House of Wines",
-  "main": "index.js",
+  "main": "src/app.js",
   "scripts": {
-    "test": "\"clear && nodemon app.js -e js,mjs,json,html,css\""
+    "test": "nodemon app.js -e js,mjs,json,html,css"
   },
   "repository": {
     "type": "git",
