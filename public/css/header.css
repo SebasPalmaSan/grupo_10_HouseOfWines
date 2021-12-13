@@ -13,7 +13,8 @@
 }
 
 .logoHOW{
-    width:20vw;
+    width:70%;
+    border: solid 2px #550c18;
 }
 
 .main-nav{
@@ -25,11 +26,12 @@
 }
 
 .link{
-    border-right: dotted 2px #c4c4c4;
+    border-right: dotted 3px #c4c4c4;
+    padding: 10px;
     text-decoration: none;
     outline: none;
     color: #c4c4c4;
-    margin-right: 2px;
     display: inline;
 }
+
 
