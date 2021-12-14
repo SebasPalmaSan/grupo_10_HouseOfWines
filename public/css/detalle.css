@@ -11,6 +11,7 @@
 main{
     background-color: #f5f5f5 ;
     width: 100%;
+    border: solid 1px #550c18;
 }
 
 .titulo{
@@ -24,6 +25,7 @@ main{
 .descripcion{
     color: #6a6363;
     font-size: 14px;
+    font-weight: 500;
     display: flex;
     justify-content: center;
 }
