@@ -36,6 +36,8 @@
 
 
 @media(min-with:361){
-    
+    .logoHOW{
+        display: none;
+    }
 }
 
