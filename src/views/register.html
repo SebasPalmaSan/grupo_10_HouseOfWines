@@ -22,25 +22,107 @@ rel="stylesheet" />
     <!-- Stylesheets -->
     <link href="/css/header.css" rel="stylesheet">
     <link href="/css/footer.css" rel="stylesheet">
-    <link href="/css/styles.css" rel="stylesheet">
+    <link href="/css/register.css" rel="stylesheet">
+
 </head>
 
 <!-------------------------------------------------------------------------------->
 <body>
 
-    <!-- HRADER -->
+    <!-- HEADER -->
     <header>
-
+        <header class="main-header">
+            <section>
+                <figure class="logoHOW">
+                    <img src="/images/HOWlogo.png">
+                </figure>
+                <article class="buscador">
+                    <form id="buscador"> <input type="search" value = "Buscar productos, marcas" id="barra"><button type="submit" onclick=""> <i class="fas fa-search"></i></button> </form>
+                    </article>
+            </section>
+    
+            <section class="main-nav">
+                <a href="/" class="link">Vinos</a>
+                <a href="/" class="link">Espumantes</a>
+                <a href="/" class="link">Destilados</a>
+                <a href="/" class="link">Whiskys</a>
+                <a href="/" class="link">Accesorios</a>
+                <a href="/register" class="link">Crear cuenta</a>
+                <a href="/login" class="link">Iniciar sesión</a>
+                <a href="carrito" class="link">Mi carrito</a>
+            </section>
+        
     </header>
 
     <!-- MAIN -->
     <main>
+        <form action="/" method="GET" class="formulario">
+            <div class="control-formulario">
+                <input type="text" name="nombre" placeholder="Nombre y Apellido" minlength="3" class="control" required="">
+            </div>
+            <div class="control-formulario">
+                <input type="email" name="email" placeholder="E-mail" class="control" required="">
+            </div>
+            <div class="control-formulario">
+                <input type="password" name="contrasena" placeholder="Contraseña" class="control" required="">
+            </div>
+            <div class="control-formulario">
+                <input type="password" name="Ccontrasena" placeholder="Repetir contraseña" class="control" required="">
+            </div>
+            <button type="submit" class="boton-formulario">CREAR CUENTA</button>
+            <p class="mt-3 text-center">¿Ya tenés una cuenta? <a href="/account/login/" title="" class="btn-link-primary">Iniciá sesión</a></p>
+        </form>
 
     </main>
 
     <!-- FOOTER-->
     <footer>
-
-    </footer>
+        <div class="contenedor-footer">
+            <div class="secciones-footer">
+                <h2>Categorías</h2>
+                <p class="cuerpo-de-texto">
+                    <h4>Vinos 10% off</h4>
+                    <h4>Espumantes</h4>
+                    <h4>Destilados</h4>
+                    <h4>Whiskys</h4>
+                    <h4>Cristaleria & Regaleria</h4>
+                </p>
+            </div>
+            </section>
+    
+            <div class="secciones-footer">
+                <h2>Contáctanos</h2>
+                <p class="cuerpo-de-texto"></p>
+                <h4>+541158050145</h4>
+                <h4>contacto@houseofwines.com.ar</h4>
+                <h4>Capital Federal, Bs As</h4>
+            </div>
+    
+            <div class="secciones-footer">
+                <h2>Sigamos Conectados</h2>
+            </div>
+        </div>
+    
+            <div class="pago-footer">
+                <h4>Medios de Pagos</h4>
+                <div class="col-md-8">
+                    <img src="//d26lpennugtm8s.cloudfront.net/assets/common/img/logos/payment/new_logos_payment/visa@2x.png" data-src="//d26lpennugtm8s.cloudfront.net/assets/common/img/logos/payment/new_logos_payment/visa@2x.png" class="icon-logo ls-is-cached lazyloaded" alt="visa" width="40" height="25">
+                    <img src="//d26lpennugtm8s.cloudfront.net/assets/common/img/logos/payment/new_logos_payment/mastercard@2x.png" data-src="//d26lpennugtm8s.cloudfront.net/assets/common/img/logos/payment/new_logos_payment/mastercard@2x.png" class="icon-logo ls-is-cached lazyloaded" alt="mastercard" width="40" height="25">
+                    <img src="//d26lpennugtm8s.cloudfront.net/assets/common/img/logos/payment/new_logos_payment/amex@2x.png" data-src="//d26lpennugtm8s.cloudfront.net/assets/common/img/logos/payment/new_logos_payment/amex@2x.png" class="icon-logo ls-is-cached lazyloaded" alt="amex" width="40" height="25">
+                    <img src="//d26lpennugtm8s.cloudfront.net/assets/common/img/logos/payment/new_logos_payment/diners@2x.png" data-src="//d26lpennugtm8s.cloudfront.net/assets/common/img/logos/payment/new_logos_payment/diners@2x.png" class="icon-logo ls-is-cached lazyloaded" alt="diners" width="40" height="25">
+                    <img src="//d26lpennugtm8s.cloudfront.net/assets/common/img/logos/payment/new_logos_payment/ar/banelco@2x.png" data-src="//d26lpennugtm8s.cloudfront.net/assets/common/img/logos/payment/new_logos_payment/ar/banelco@2x.png" class="icon-logo ls-is-cached lazyloaded" alt="ar_banelco" width="40" height="25">
+                    <img src="//d26lpennugtm8s.cloudfront.net/assets/common/img/logos/payment/new_logos_payment/ar/cabal@2x.png" data-src="//d26lpennugtm8s.cloudfront.net/assets/common/img/logos/payment/new_logos_payment/ar/cabal@2x.png" class="icon-logo ls-is-cached lazyloaded" alt="ar_cabal" width="40" height="25">
+                    <img src="//d26lpennugtm8s.cloudfront.net/assets/common/img/logos/payment/new_logos_payment/ar/tarjeta-naranja@2x.png" data-src="//d26lpennugtm8s.cloudfront.net/assets/common/img/logos/payment/new_logos_payment/ar/tarjeta-naranja@2x.png" class="icon-logo ls-is-cached lazyloaded" alt="ar_tarjeta-naranja" width="40" height="25">
+                    <img src="//d26lpennugtm8s.cloudfront.net/assets/common/img/logos/payment/new_logos_payment/ar/tarjeta-shopping@2x.png" data-src="//d26lpennugtm8s.cloudfront.net/assets/common/img/logos/payment/new_logos_payment/ar/tarjeta-shopping@2x.png" class="icon-logo ls-is-cached lazyloaded" alt="ar_tarjeta-shopping" width="40" height="25">
+                    <img src="//d26lpennugtm8s.cloudfront.net/assets/common/img/logos/payment/new_logos_payment/mercadopago@2x.png" data-src="//d26lpennugtm8s.cloudfront.net/assets/common/img/logos/payment/new_logos_payment/mercadopago@2x.png" class="icon-logo ls-is-cached lazyloaded" alt="mercadopago" width="40" height="25">
+                    <img src="//d26lpennugtm8s.cloudfront.net/assets/common/img/logos/payment/new_logos_payment/ar/argencard@2x.png" data-src="//d26lpennugtm8s.cloudfront.net/assets/common/img/logos/payment/new_logos_payment/ar/argencard@2x.png" class="icon-logo ls-is-cached lazyloaded" alt="ar_argencard" width="40" height="25">
+                    <img src="//d26lpennugtm8s.cloudfront.net/assets/common/img/logos/payment/new_logos_payment/nativa@2x.png" data-src="//d26lpennugtm8s.cloudfront.net/assets/common/img/logos/payment/new_logos_payment/nativa@2x.png" class="icon-logo ls-is-cached lazyloaded" alt="nativa" width="40" height="25">
+                    <img src="//d26lpennugtm8s.cloudfront.net/assets/common/img/logos/payment/new_logos_payment/ar/cencosud@2x.png" data-src="//d26lpennugtm8s.cloudfront.net/assets/common/img/logos/payment/new_logos_payment/ar/cencosud@2x.png" class="icon-logo ls-is-cached lazyloaded" alt="ar_cencosud" width="40" height="25">
+                    <img src="//d26lpennugtm8s.cloudfront.net/assets/common/img/logos/payment/new_logos_payment/pagofacil@2x.png" data-src="//d26lpennugtm8s.cloudfront.net/assets/common/img/logos/payment/new_logos_payment/pagofacil@2x.png" class="icon-logo ls-is-cached lazyloaded" alt="pagofacil" width="40" height="25">
+                    <img src="//d26lpennugtm8s.cloudfront.net/assets/common/img/logos/payment/new_logos_payment/rapipago@2x.png" data-src="//d26lpennugtm8s.cloudfront.net/assets/common/img/logos/payment/new_logos_payment/rapipago@2x.png" class="icon-logo ls-is-cached lazyloaded" alt="rapipago" width="40" height="25">
+                </div>
+            </div>
+    
+        </footer>
 </body>
 </html>
