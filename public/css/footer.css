@@ -4,6 +4,36 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+footer {
+    color: #BAB7B7;
+    background-color: #550c18;
+    width: 100%;
+    margin: auto;
+}
+.contenedor-footer {
+    font-size: light;
+    display: flex;
+    justify-content: space-between;
+
+}
+.secciones-footer{
+    text-align: center;
+    padding: 0 10px;
+}
+.secciones-footer h4{
+    font-size: 15px;
+    margin-top: 0px ;
+    margin-bottom: 0px;
+
+}
+.pago-footer{
+    margin: 15px;
+    padding: 15px;
+    display: flex;
+    justify-content:center;
+
     font-weight: 300;
     
 }
@@ -41,4 +71,5 @@ footer{
 .footRedes{
     font-size: 14px;
     color: #c4c4c4;
+
 }
