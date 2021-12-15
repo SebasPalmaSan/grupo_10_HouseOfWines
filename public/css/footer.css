@@ -11,65 +11,41 @@ footer {
     background-color: #550c18;
     width: 100%;
     margin: auto;
+    position: relative;
+    align-self: center;
+    padding: 10px 0;
 }
-.contenedor-footer {
+#footer-top {
     font-size: light;
     display: flex;
-    justify-content: space-between;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 100vw;
 
 }
-.secciones-footer{
+.art-footer-top{
     text-align: center;
     padding: 0 10px;
 }
-.secciones-footer h4{
+
+footer h2 {
+    margin: 5px;
+}
+.cuerpo-de-texto{
     font-size: 15px;
     margin-top: 0px ;
     margin-bottom: 0px;
-
 }
-.pago-footer{
-    margin: 15px;
-    padding: 15px;
-    display: flex;
-    justify-content:center;
 
+.iconos-redes {
+    font-size: 20px;
+    padding: 0 10px;
+}
+#footer-bottom{
+    display: flex;
+    flex-direction: column;
+    align-items:center;
     font-weight: 300;
-    
 }
 
-footer{
-    position: relative;
-    align-self: center;
-  }
-
-.foot{
-    background-color: #550c18;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    padding: 20px;
-}
-
-.tituloFoot{
-    font-size: 16px;
-    font-weight: bold;
-
-}
-
-.footCateg{
-    font-size: 12px;
-    color: #c4c4c4;
-    
-}
-
-.footContact{
-    font-size: 12px;
-    color: #c4c4c4;
-}
-
-.footRedes{
-    font-size: 14px;
-    color: #c4c4c4;
-
-}
