@@ -49,3 +49,15 @@ footer h2 {
     font-weight: 300;
 }
 
+#chat {
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
+    order: 1;
+}
+
+#chat img {
+    width: 50px;
+    background-color: none;
+}
+
