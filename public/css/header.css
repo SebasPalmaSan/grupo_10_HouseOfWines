@@ -26,24 +26,33 @@
 
 .buscador{
     flex: 1 0 auto;
-    border: none;
     outline: none;
-    border-radius: 2rem 0 0 2rem;
-    padding: 0 0 0 15px;
+    border: none;
+    border-radius: 3rem 0 0 3rem;
+    padding: 0 0 0 30px;
     font-size: 1rem;
     height: 30px;
+    
+    
+}
+
+.fa-search{
+    color: #550c18;
+    border-radius: 1rem;
+    display: flex;
+    justify-content: flex-end;
 }
 
 .main-nav{
     margin:5px;
-    padding: 10px;
     border: solid 1px #550c18;
     background-color: #550c18;
     color: #c4c4c4;
+    text-align: center;
 }
 
 .link{
-    border-right: dotted 3px #c4c4c4;
+    border-right: dotted 1px #c4c4c4;
     padding: 10px;
     font-size: 8px;
     text-decoration: none;
@@ -79,7 +88,12 @@
     }
     .link{
         font-size: 14px;
-    }
+    }/*
+    .buscador{
+        position: relative;
+        left: 30rem;
+        bottom: 4rem;
+    }*/
 }
 
 @media(min-width:1200px){
@@ -88,7 +102,13 @@
     }
     .logoHOW{
         width: 60%;
-    }
+    }/*
+    .buscador{
+        position: relative;
+        left: 60rem;
+        bottom: 7rem;
+    }*/
+
     .link{
         font-size: 16px;
     }
