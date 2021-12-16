@@ -63,6 +63,9 @@ footer h2 {
     .iconos-redes{
         font-size: 40px;
     }
+    .art-footer-top{
+        width: 30%;
+    }
 }
 
 
@@ -71,7 +74,7 @@ footer h2 {
     #chat {
     position: fixed;
     bottom: 50px;
-    right: 50px;
+    right: 10px;
     order: 1;
     color: #25D366;
     font-size: 70px;
