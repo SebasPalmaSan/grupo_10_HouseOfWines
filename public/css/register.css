@@ -71,3 +71,45 @@ footer {
     width: 100%;
     margin: 0;
 }
+
+@media(min-width:361px){
+    .subtitulos,
+    .divider{
+        font-size: 12px;
+
+    }
+    .titulo {
+        font-size: 13px;
+    }
+    .boton-formulario {
+        font-size: 12px;
+    }
+
+@media(min-width:768px){
+    .subtitulos,
+    .divider{
+        font-size: 15px;
+
+    }
+    .titulo {
+        font-size: 20px;
+    }
+   .boton-formulario {
+       font-size: 15px;
+   }
+}
+
+@media(min-width:1200px){
+    .subtitulos,
+    .divider{
+        font-size: 25px;
+
+    }
+    .titulo {
+        font-size: 25px;
+    }
+    .boton-formulario {
+        font-size: 20px;
+    }
+}
+}

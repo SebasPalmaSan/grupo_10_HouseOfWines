@@ -86,6 +86,7 @@ main{
    border: solid 2px #550c18;
    float: left;
    margin-right: 10px;
+   border-radius: 5px;
 }
 
 .imagen img:hover{
@@ -108,8 +109,9 @@ main{
     justify-content: center;
     text-decoration: none;
     outline: none;
-    border: solid 1px #550c18;
+    border: solid 1px #000000;
     background-color: #550c18;
+    border-radius: 5px;
     margin-bottom: 4px;
 }
 
@@ -150,7 +152,7 @@ main{
 
 @media(min-width:1200px){
     .imagen img{
-        width: 40%;
+        width: 30%;
         height: auto;
     }
     .resenia-producto{
