@@ -1,16 +1,48 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>detalle</title>
-    <link rel="stylesheet" href="/css/detalle.css"/>
-    <link rel="stylesheet" href="/css/header.css">
-    <link rel="stylesheet" href="/css/footer.css"/>
+    <title>House of Wines</title>
+
+    <!-- Links-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+   
+
+    <!-- Tipografia -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet"/>
+
+    <!-- Iconos -->
+
+
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/card/2.5.4/card.min.js" integrity="sha512-bap2DVGWmQ620Jpimq4jr/z96eYAryS1h7FrrBY2ndRkLAD465BDAGr5k5OIxkd92J5Nt1hRJlhXSra6ECbZdg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="apple-touch-icon" sizes="57x57" href="/favicons/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/favicons/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/favicons/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/favicons/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/favicons/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/favicons/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/favicons/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/favicons/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="/favicons/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/favicons/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicons/favicon-16x16.png">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="/css/footer.css"/>
+    <link rel="stylesheet" href="/css/header.css"/>
+    <link rel="stylesheet" href="/css/detalle.css"/>
+    
 </head>
 
 <body>
@@ -35,15 +67,27 @@
             <a href="/" class="link">Destilados</a>
             <a href="/" class="link">Whiskys</a>
             <a href="/" class="link">Accesorios</a>
-            <a href="/register">Crear cuenta</a>
-            <a href="/login">Iniciar sesión</a>
-            <a href="#">Mi carrito</a>
+            <a href="/register" class="link">Crear cuenta</a>
+            <a href="/login" class="link">Iniciar sesión</a>
+            <a href="#" class="link">Mi carrito</a>
         </section>
     </header>
 
     <!--main-->
 
     <main>
+
+        <section class="ref">
+            <a href="/" class="subtitulos">Inicio</a>
+            <span class="divider"> > </span>
+            <a href="/" class="subtitulos">Sección</a>
+            <span class="divider"> > </span>
+            <a href="/" class="subtitulos">Marca</a>
+            <span class="divider"> > </span>
+            <a href="/" class="subtitulos">Producto</a>
+        </section>
+
+
         <h1 class="titulo">BOX JHONNIE WALKER</h1>
         <h2 class="descripcion">18 Years - Gold Label Reserve - Black Label - Red Label</h2>
         
@@ -91,7 +135,6 @@
 
     <!-- FOOTER-->
     <footer>
-
         <section id="footer-top">
             <article class="art-footer-top">
                 <h2>Categorías</h2>
@@ -113,14 +156,14 @@
                 </section>
             </article>
     
-            <article class="art-footer-top">
+            <article class="art-footer-top" id="iconos-redes">
                 <h2>Sigamos Conectados</h2>
                 <picture id="redes">
-                    <i class="fab fa-facebook-square iconos-redes" style="font-size: 45px"></i>
-                    <i class="fab fa-instagram iconos-redes" style="font-size:45px"></i>
-                    <i class="fab fa-twitter iconos-redes" style="font-size:45px"></i>
+                    <i class="fab fa-whatsapp iconos-redes" style="" id="chat"></i>
+                    <i class="fab fa-facebook-square iconos-redes"></i>
+                    <i class="fab fa-instagram iconos-redes"></i>
+                    <i class="fab fa-twitter iconos-redes"></i>
                 </picture>
-
             </article>
         </section>
     
@@ -143,6 +186,7 @@
                 <img src="//d26lpennugtm8s.cloudfront.net/assets/common/img/logos/payment/new_logos_payment/rapipago@2x.png" data-src="//d26lpennugtm8s.cloudfront.net/assets/common/img/logos/payment/new_logos_payment/rapipago@2x.png" class="icon-logo ls-is-cached lazyloaded" alt="rapipago" width="40" height="25">
             </picture>
         </section>
+
 
     </footer>
 </body>
