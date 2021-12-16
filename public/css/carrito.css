@@ -86,3 +86,120 @@ hr {
     margin-left: 60%;
     display: flex;
 }
+
+@media(min-width:361px){
+    h6{
+        font-size: 12px;
+    }
+    li {
+        font-size: 9px;
+        display: inline;
+        margin-left:1px;
+        margin-right:1px;
+        padding: 0;
+        align-items: center;
+    }
+    .detalle-compra {
+        display: inline;
+    }
+    
+    p{
+        font-size: 9px;
+    }
+    .imagen{
+        padding: 0;
+    }
+
+    .boton-fc{
+        width: 50%;
+        height: 30%;
+        border:0;
+    }
+    .cuenta{
+        font-size: 9px;
+    }
+    .mi-carrito{
+        margin: 2px;
+    }
+    .box-producto{
+        margin: 2px;
+    }
+
+@media(min-width:768px){
+    h6{
+        font-size: 20px;
+    }
+    li {
+        font-size: 14px;
+        display: inline;
+        margin-left:1px;
+        margin-right:1px;
+        padding: 0;
+        align-items: center;
+    }
+    .detalle-compra {
+        display: inline;
+    }
+    
+    p{
+        font-size: 12px;
+    }
+    .imagen{
+        padding: 0;
+    }
+
+    .boton-fc{
+        width: 50%;
+        height: 30%;
+        border:0;
+    }
+    .boton-comprar{
+        align-items: center;
+    }
+    .cuenta{
+        font-size: 9px;
+    }
+    .mi-carrito{
+        justify-content: space-between;
+        margin: 2px;
+    }
+    .box-producto{
+        margin: 2px;
+    }
+}
+
+@media(min-width:1200px){
+    h6{
+        font-size: 24px;
+    }
+    .imagen{
+        margin-left: 10%;
+    }
+    p{
+        font-size: 16px;
+        margin-right: 30px;
+    }
+    li {
+        font-size: 16px;
+        display: inline;
+        margin-left:10%;
+        margin-right:1%;
+        padding: 0;
+    }
+
+    .boton-fc{
+        width:100%;
+    }
+    .boton-comprar{
+        margin-top:10px;
+        margin-left: 70%;
+        margin-right: 10%;
+    }
+    .precio{
+        margin: 10%;
+    }
+    .description{
+        margin-right: 10px;
+    }
+}
+}
