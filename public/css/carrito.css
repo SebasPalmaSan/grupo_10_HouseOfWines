@@ -71,7 +71,6 @@ li{
     margin-bottom: 10px;
   }
 
-
 .boton-fc:hover {
     transform: translatey(3px);
     box-shadow: none;
@@ -100,10 +99,6 @@ hr {
         padding: 0;
         align-items: center;
     }
-    .detalle-compra {
-        display: inline;
-    }
-    
     p{
         font-size: 9px;
     }
@@ -121,6 +116,7 @@ hr {
     }
     .mi-carrito{
         margin: 2px;
+        padding-right: 5px;
     }
     .box-producto{
         margin: 2px;
@@ -151,13 +147,20 @@ hr {
     }
 
     .boton-fc{
-        width: 50%;
-        height: 30%;
-        border:0;
+        width:100%;
     }
     .boton-comprar{
-        align-items: center;
+        margin-top:10px;
+        margin-left: 70%;
+        margin-right: 10%;
     }
+    .precio{
+        margin: 10%;
+    }
+    .description{
+        margin-right: 10px;
+    }
+    
     .cuenta{
         font-size: 9px;
     }
