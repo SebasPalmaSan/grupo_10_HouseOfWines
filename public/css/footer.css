@@ -23,13 +23,14 @@ footer {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: space-between;
     width: 100vw;
 
 }
 .art-footer-top{
     text-align: center;
     padding: 0 10px;
+    width: 30%;
 }
 
 footer h2 {
@@ -74,7 +75,7 @@ footer h2 {
     #chat {
     position: fixed;
     bottom: 50px;
-    right: 50px;
+    right: 10px;
     order: 1;
     color: #25D366;
     font-size: 70px;
