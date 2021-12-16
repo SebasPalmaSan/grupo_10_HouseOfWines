@@ -13,6 +13,20 @@ main{
     width: 100%;
     border: solid 1px #550c18;
 }
+.ref{
+    text-align: center;
+    margin-bottom: 10px;
+}
+.subtitulos,
+.divider{
+    color: #736E6E;
+    font-size: 25px;
+    display: inline;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    padding: 2px 1px 0;
+}
 
 .titulo{
     color: #6a6363;
@@ -59,6 +73,7 @@ main{
     text-decoration: none;
     outline: none;
     color: #c4c4c4;
+    
 }
 
 .m-pagos:hover{
@@ -88,11 +103,14 @@ main{
     color: #c4c4c4;
     font-size: 12px;
     font-weight: 400;
-    width: 100%;
+    width: 25%;
     display: flex;
     justify-content: center;
     text-decoration: none;
     outline: none;
+    border: solid 1px #550c18;
+    background-color: #550c18;
+    margin-bottom: 4px;
 }
 
 .agregar:hover{
@@ -129,6 +147,7 @@ main{
     }
     .resenia-producto{
         font-size: 16px;
+        font-weight: 300;
     }
     
 }
