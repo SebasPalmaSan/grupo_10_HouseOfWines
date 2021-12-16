@@ -26,10 +26,8 @@ rel="stylesheet" />
 
 </head>
 
-<!-------------------------------------------------------------------------------->
 <body>
 
-<!-- HEADER -->
 <header>
     <header class="main-header">
         <section>
@@ -54,28 +52,33 @@ rel="stylesheet" />
     
 </header>
 
-<!-- MAIN -->
-<main>
-    <form action="/" method="GET" class="formulario">
-        <div class="control-formulario">
-            <input type="text" name="nombre" placeholder="Nombre y Apellido" minlength="3" class="control" required="">
-        </div>
-        <div class="control-formulario">
-            <input type="email" name="email" placeholder="E-mail" class="control" required="">
-        </div>
-        <div class="control-formulario">
-            <input type="password" name="contrasena" placeholder="Contraseña" class="control" required="">
-        </div>
-        <div class="control-formulario">
-            <input type="password" name="Ccontrasena" placeholder="Repetir contraseña" class="control" required="">
-        </div>
-        <button type="submit" class="boton-formulario">CREAR CUENTA</button>
-        <p class="mt-3 text-center">¿Ya tenés una cuenta? <a href="/account/login/" title="" class="btn-link-primary">Iniciá sesión</a></p>
-    </form>
-
+    <main>
+        <form action="/" method="GET" class="formulario">
+            <div>
+                <a href="#" class="subtitulos">Inicio</a>
+                <span class="divider"> > </span>
+                <a href="/login" class="subtitulos">Mi cuenta</a>
+                <span class="divider"> > </span>
+                <a href="/register" class="subtitulos">Crear cuenta</a>
+                </div>
+            <div class="titulo"><h1>Crear cuenta</h1></div>
+            <div class="control-formulario">
+                <input type="text" name="nombre" placeholder="Nombre y Apellido" minlength="3" class="control" required="">
+            </div>
+            <div class="control-formulario">
+                <input type="email" name="email" placeholder="E-mail" class="control" required="">
+            </div>
+            <div class="control-formulario">
+                <input type="password" name="contrasena" placeholder="Contraseña" class="control" required="">
+            </div>
+            <div class="control-formulario">
+                <input type="password" name="Ccontrasena" placeholder="Repetir contraseña" class="control" required="">
+            </div>
+            <button type="submit" class="boton-formulario">CREAR CUENTA</button>
+            <div class="subtitulos"><p class="mt-3 text-center">¿Ya tenés una cuenta? <a href="/login" class="subtitulos"><b>Iniciá sesión</b></a></p></div>
+        </form>
 </main>
 
-    <!-- FOOTER-->
     <footer>
 
         <section id="footer-top">

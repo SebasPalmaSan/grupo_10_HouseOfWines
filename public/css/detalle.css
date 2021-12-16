@@ -33,11 +33,10 @@ main{
 
 .precio{
     color: #6a6363;
-    font-size: 16px;
-    font-weight: 600;
+    font-size: 20px;
+    font-weight: bold;
     display: flex;
     justify-content: center;
-
 }
 
 .cuotas{
@@ -53,20 +52,36 @@ main{
     text-align: center;
     color: #c4c4c4;
     font-weight: 400;
+    
+}
+
+.m-pagos{
+    text-decoration: none;
+    outline: none;
+    color: #c4c4c4;
+}
+
+.m-pagos:hover{
+    color: #6a6363;
 }
 
 .imagen img{
-   width: 350px;
+   width: 90%;
    margin: 10px 20px;
    border: solid 2px #550c18;
    float: left;
    margin-right: 10px;
 }
 
+.imagen img:hover{
+    box-shadow: 0px 0px 10px #6a6363;
+}
+
 .resenia-producto{
     color: #6a6363;
     font-size: 11px;
-    margin: 10px 8px;; ;
+    margin: 10px 8px;
+    
 }
 
 .agregar{
@@ -76,9 +91,45 @@ main{
     width: 100%;
     display: flex;
     justify-content: center;
+    text-decoration: none;
+    outline: none;
 }
 
-.wsp.img{
-    width: 500px;
-    border-radius: 50px;
+.agregar:hover{
+    color: #6a6363;
+}
+
+
+@media(max-width:360px){
+    .resenia-producto{
+        display: none;
+    }
+}
+
+@media(min-width:361px){
+    .resenia-producto{
+      font-size: 8px;
+
+    }
+
+@media(min-width:768px){
+    .imagen img{
+        width: 45%;
+    }
+    .resenia-producto{
+        font-size: 14px;
+    }
+   
+}
+
+@media(min-width:1200px){
+    .imagen img{
+        width: 40%;
+        height: auto;
+    }
+    .resenia-producto{
+        font-size: 16px;
+    }
+    
+}
 }
