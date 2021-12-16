@@ -122,12 +122,20 @@ main{
     .resenia-producto{
         display: none;
     }
+    .agregar{
+        width: 50%;
+        margin: 4px;
+    }
 }
 
 @media(min-width:361px){
     .resenia-producto{
       font-size: 8px;
 
+    }
+    .agregar{
+        width: 50%;
+        margin: 4px;
     }
 
 @media(min-width:768px){
