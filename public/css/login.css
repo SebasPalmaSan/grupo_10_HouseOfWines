@@ -76,14 +76,58 @@ main{
     padding-right:150px;
 }
 
-.wsp.img{
-    width: 500px;
-    border-radius: 50px;
-}
-
 footer {
     color: #BAB7B7;
     background-color: #550c18;
     width: 100%;
     height: 100%;
+}
+
+@media(min-width:361px){
+    .subtitulos,
+    .divider{
+        font-size: 12px;
+
+    }
+    .titulo {
+        font-size: 13px;
+    }
+    .reset-password {
+        font-size: 10px;
+    }
+    .boton-formulario {
+        font-size: 12px;
+    }
+
+@media(min-width:768px){
+    .subtitulos,
+    .divider{
+        font-size: 15px;
+
+    }
+    .titulo {
+        font-size: 20px;
+    }
+    .reset-password {
+        font-size: 12px;
+    }
+   .boton-formulario {
+       font-size: 15px;
+       
+   }
+   @media(min-width:1200px){
+    .subtitulos,
+    .divider{
+        font-size: 25px;
+
+    }
+    .titulo {
+        font-size: 25px;
+    }
+    .boton-formulario {
+        font-size: 20px;
+    }
+}
+
+}
 }
