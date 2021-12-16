@@ -12,9 +12,26 @@
     border: solid 2px #550c18
 }
 
+.logoMobile{
+    width: 80%;
+    margin: 2px;
+    padding: 10px;
+    
+}
+
 .logoHOW{
-    width:50%;
-    border: solid 2px #550c18;
+    width: 40px;
+    
+}
+
+.buscador{
+    flex: 1 0 auto;
+    border: none;
+    outline: none;
+    border-radius: 2rem 0 0 2rem;
+    padding: 0 0 0 15px;
+    font-size: 1rem;
+    height: 30px;
 }
 
 .main-nav{
@@ -28,16 +45,51 @@
 .link{
     border-right: dotted 3px #c4c4c4;
     padding: 10px;
+    font-size: 8px;
     text-decoration: none;
     outline: none;
     color: #c4c4c4;
     display: inline;
 }
 
-
-@media(min-with:361){
+@media(max-width:360px){
     .logoHOW{
         display: none;
     }
 }
 
+@media(min-width:361px){
+    .logoMobile{
+        display: none;
+    }
+    .logoHOW{
+        width: 50%;
+    }
+    .link{
+        font-size: 10px;
+    }
+}
+
+@media(min-width:768px){
+    .logoMobile{
+        display: none;
+    }
+    .logoHOW{
+        width: 50%;
+    }
+    .link{
+        font-size: 14px;
+    }
+}
+
+@media(min-width:1200px){
+    .logoMobile{
+        display: none;
+    }
+    .logoHOW{
+        width: 60%;
+    }
+    .link{
+        font-size: 16px;
+    }
+}

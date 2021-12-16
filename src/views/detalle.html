@@ -16,15 +16,17 @@
 <body>
     <header class="main-header">
         <section>
-            <figure class="logoHOW">
-                <img src="/images/HOWlogo.png"/>
+            <figure>
+                <img src="/images/howlogo.png" class="logoHOW"/>
             </figure>
-            <figure class="logoMobile">
-                <img src="HOWlogomobile.png"/>
+            <figure>
+                <img src="/images/how-logo-mobile.png" class="logoMobile"/>
             </figure>
-            <article class="buscador">
-                <form id="buscador"> <input type="search" value = "Buscar productos, marcas" id="barra"><button type="submit" onclick=""> <i class="fas fa-search"></i></button> </form>
-                </article>
+            <form class="search" action="" method="post">
+            <fieldset class="buscador">
+                <input type="text" placeholder= "Busca tu producto"<i class="fas fa-search">
+            </fieldset>
+            </form>
         </section>
 
         <section class="main-nav">
@@ -50,7 +52,7 @@
             <dt class="cuotas">12 x 1.570,00</dt>
         </dl>
         <article class="medios">
-        <h2>Ver medios de pagos<i class="fa-brands fa-cc-visa"><i class="fa-brands fa-cc-mastercard"></i></i></h2>
+        <a href="/" class="m-pagos"><h2>VER MEDIOS DE PAGOS</h2>/</a>
         </article> 
 
         <picture class="imagen">
@@ -76,46 +78,72 @@
                 lleno de carácter que se mantiene incluso al ser mezclado.</h2>
         </section>
 
-        <section class="agregar">
-            <h2>Agregar al carrito<i class="fa-regular fa-cart-circle-check"></i></h2>
+        <section>
+            <a href="/" class="agregar"><h2>AGREGAR AL CARRITO</h2></a>
         </section>
 
-        <section class="agregar">
-            <h2>Ver productos relacionados</h2>
+        <section>
+            <a href="/" class="agregar"><h2>VER PRODUCTOS RELACIONADOS</h2></a>
         </section>
 
-        <figure class="wsp-img">
-            <img src=""/>
-        </figure>
-    
+       
     </main>
 
-    <footer class="foot">
-        <section class="footCateg">
-            <h2>Categorías</h2>
-            <h2>Vinos 10% off</h2>
-            <h2>Espumantes</h2>
-            <h2>Destilados</h2>
-            <h2>Whiskys</h2>
-            <h2>Cristaleria & Regaleria</h2>
-        </section>
+    <!-- FOOTER-->
+    <footer>
 
-        <section class="footContact">
-            <h2>Contáctanos</h2>
-            <h2>+541158050145</h2>
-            <h2>contacto@houseofwines.com.ar</h2>
-            <h2>Capital Federal, Bs As</h2>
-        </section>
+        <section id="footer-top">
+            <article class="art-footer-top">
+                <h2>Categorías</h2>
+                <section class="cuerpo-de-texto">
+                    <p>Vinos hasta 35% off</p>
+                    <p>Espumantes</p>
+                    <p>Destilados</p>
+                    <p>Whiskys</p>
+                    <p>Cristaleria & Regaleria</p>
+                </section>
+            </article>
+    
+            <article class="art-footer-top">
+                <h2>Contáctanos</h2>
+                <section class="cuerpo-de-texto">
+                    <p>+541158050145</p>
+                    <p>contacto@houseofwines.com.ar</p>
+                    <p>Capital Federal, Bs As</p>
+                </section>
+            </article>
+    
+            <article class="art-footer-top">
+                <h2>Sigamos Conectados</h2>
+                <picture id="redes">
+                    <i class="fab fa-facebook-square iconos-redes" style="font-size: 45px"></i>
+                    <i class="fab fa-instagram iconos-redes" style="font-size:45px"></i>
+                    <i class="fab fa-twitter iconos-redes" style="font-size:45px"></i>
+                </picture>
 
-        <section class="footRedes">
-            <h2>Sigamos Conectados</h2>
-        </section>
-
-        <section class="footMedios">
-            <h3>Medios de Pagos</h3>
+            </article>
         </section>
     
+        <section id="footer-bottom">
+            <h2>Medios de Pagos</h2>
+            <picture class="col-md-8">
+                <img src="//d26lpennugtm8s.cloudfront.net/assets/common/img/logos/payment/new_logos_payment/visa@2x.png" data-src="//d26lpennugtm8s.cloudfront.net/assets/common/img/logos/payment/new_logos_payment/visa@2x.png" class="icon-logo ls-is-cached lazyloaded" alt="visa" width="40" height="25">
+                <img src="//d26lpennugtm8s.cloudfront.net/assets/common/img/logos/payment/new_logos_payment/mastercard@2x.png" data-src="//d26lpennugtm8s.cloudfront.net/assets/common/img/logos/payment/new_logos_payment/mastercard@2x.png" class="icon-logo ls-is-cached lazyloaded" alt="mastercard" width="40" height="25">
+                <img src="//d26lpennugtm8s.cloudfront.net/assets/common/img/logos/payment/new_logos_payment/amex@2x.png" data-src="//d26lpennugtm8s.cloudfront.net/assets/common/img/logos/payment/new_logos_payment/amex@2x.png" class="icon-logo ls-is-cached lazyloaded" alt="amex" width="40" height="25">
+                <img src="//d26lpennugtm8s.cloudfront.net/assets/common/img/logos/payment/new_logos_payment/diners@2x.png" data-src="//d26lpennugtm8s.cloudfront.net/assets/common/img/logos/payment/new_logos_payment/diners@2x.png" class="icon-logo ls-is-cached lazyloaded" alt="diners" width="40" height="25">
+                <img src="//d26lpennugtm8s.cloudfront.net/assets/common/img/logos/payment/new_logos_payment/ar/banelco@2x.png" data-src="//d26lpennugtm8s.cloudfront.net/assets/common/img/logos/payment/new_logos_payment/ar/banelco@2x.png" class="icon-logo ls-is-cached lazyloaded" alt="ar_banelco" width="40" height="25">
+                <img src="//d26lpennugtm8s.cloudfront.net/assets/common/img/logos/payment/new_logos_payment/ar/cabal@2x.png" data-src="//d26lpennugtm8s.cloudfront.net/assets/common/img/logos/payment/new_logos_payment/ar/cabal@2x.png" class="icon-logo ls-is-cached lazyloaded" alt="ar_cabal" width="40" height="25">
+                <img src="//d26lpennugtm8s.cloudfront.net/assets/common/img/logos/payment/new_logos_payment/ar/tarjeta-naranja@2x.png" data-src="//d26lpennugtm8s.cloudfront.net/assets/common/img/logos/payment/new_logos_payment/ar/tarjeta-naranja@2x.png" class="icon-logo ls-is-cached lazyloaded" alt="ar_tarjeta-naranja" width="40" height="25">
+                <img src="//d26lpennugtm8s.cloudfront.net/assets/common/img/logos/payment/new_logos_payment/ar/tarjeta-shopping@2x.png" data-src="//d26lpennugtm8s.cloudfront.net/assets/common/img/logos/payment/new_logos_payment/ar/tarjeta-shopping@2x.png" class="icon-logo ls-is-cached lazyloaded" alt="ar_tarjeta-shopping" width="40" height="25">
+                <img src="//d26lpennugtm8s.cloudfront.net/assets/common/img/logos/payment/new_logos_payment/mercadopago@2x.png" data-src="//d26lpennugtm8s.cloudfront.net/assets/common/img/logos/payment/new_logos_payment/mercadopago@2x.png" class="icon-logo ls-is-cached lazyloaded" alt="mercadopago" width="40" height="25">
+                <img src="//d26lpennugtm8s.cloudfront.net/assets/common/img/logos/payment/new_logos_payment/ar/argencard@2x.png" data-src="//d26lpennugtm8s.cloudfront.net/assets/common/img/logos/payment/new_logos_payment/ar/argencard@2x.png" class="icon-logo ls-is-cached lazyloaded" alt="ar_argencard" width="40" height="25">
+                <img src="//d26lpennugtm8s.cloudfront.net/assets/common/img/logos/payment/new_logos_payment/nativa@2x.png" data-src="//d26lpennugtm8s.cloudfront.net/assets/common/img/logos/payment/new_logos_payment/nativa@2x.png" class="icon-logo ls-is-cached lazyloaded" alt="nativa" width="40" height="25">
+                <img src="//d26lpennugtm8s.cloudfront.net/assets/common/img/logos/payment/new_logos_payment/ar/cencosud@2x.png" data-src="//d26lpennugtm8s.cloudfront.net/assets/common/img/logos/payment/new_logos_payment/ar/cencosud@2x.png" class="icon-logo ls-is-cached lazyloaded" alt="ar_cencosud" width="40" height="25">
+                <img src="//d26lpennugtm8s.cloudfront.net/assets/common/img/logos/payment/new_logos_payment/pagofacil@2x.png" data-src="//d26lpennugtm8s.cloudfront.net/assets/common/img/logos/payment/new_logos_payment/pagofacil@2x.png" class="icon-logo ls-is-cached lazyloaded" alt="pagofacil" width="40" height="25">
+                <img src="//d26lpennugtm8s.cloudfront.net/assets/common/img/logos/payment/new_logos_payment/rapipago@2x.png" data-src="//d26lpennugtm8s.cloudfront.net/assets/common/img/logos/payment/new_logos_payment/rapipago@2x.png" class="icon-logo ls-is-cached lazyloaded" alt="rapipago" width="40" height="25">
+            </picture>
+        </section>
+
     </footer>
-    
 </body>
 </html>

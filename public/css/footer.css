@@ -12,27 +12,41 @@ footer {
     background-color: #550c18;
     width: 100%;
     height: 100%;
-    margin: 0;
-}
-.contenedor-footer {
-    font-size: light;
-    display: flex;
-    justify-content: space-between;
+    margin: auto;
+    position: relative;
+    align-self: center;
+    padding: 10px 0;
 
 }
-.secciones-footer{
+#footer-top {
+    font-size: light;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 100vw;
+
+}
+.art-footer-top{
     text-align: center;
     padding: 0 10px;
 }
-.secciones-footer h4{
+
+footer h2 {
+    margin: 5px;
+}
+.cuerpo-de-texto{
     font-size: 15px;
     margin-top: 0px ;
     margin-bottom: 0px;
-
 }
-.pago-footer{
-    margin: 15px;
-    padding: 15px;
+.iconos-redes {
+    font-size: 20px;
+    padding: 0 10px;
+}
+#footer-bottom{
     display: flex;
-    justify-content:center; 
+    flex-direction: column;
+    align-items:center;
+    font-weight: 300;
 }
