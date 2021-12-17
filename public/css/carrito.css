@@ -49,6 +49,10 @@ li{
     color: #6a6363;
 }
 
+.imagen:hover{
+    transform:scale(1.20);
+}
+
 .mi-carrito{
     display: inline-flex;
     justify-content: space-between;
@@ -181,7 +185,7 @@ hr {
         font-size: 24px;
     }
     .imagen{
-        margin-left: 10%;
+        margin-left: 5%;
     }
     p{
         font-size: 16px;
@@ -204,9 +208,10 @@ hr {
         margin-right: 10%;
     }
     .precio{
-        margin: 10%;
+        padding: 5px;
+        margin-right: 10%;
     }
     .description{
-        margin-right: 10px;
+        margin:0 10px 0 20px;
     }
 }
