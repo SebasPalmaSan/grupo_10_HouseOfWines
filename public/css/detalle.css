@@ -82,7 +82,7 @@ main{
 
 .imagen img{
    width: 90%;
-   margin: 10px 20px;
+   margin: 20px;
    border: solid 2px #550c18;
    float: left;
    margin-right: 10px;
@@ -96,8 +96,7 @@ main{
 .resenia-producto{
     color: #6a6363;
     font-size: 11px;
-    margin: 10px 8px;
-    
+    margin: 10px;
 }
 
 .agregar{
@@ -152,12 +151,13 @@ main{
 
 @media(min-width:1200px){
     .imagen img{
-        width: 30%;
-        height: auto;
+        width: 50%;
+        
     }
     .resenia-producto{
-        font-size: 16px;
+        font-size: 20px;
         font-weight: 300;
+        
     }
     
 }
