@@ -4,7 +4,8 @@
   "description": "Proyecto House of Wines",
   "main": "src/app.js",
   "scripts": {
-    "test": "nodemon app.js -e js,mjs,json,html,css"
+    "test": "nodemon src/app.js -e js,mjs,json,html,css",
+    "start": "node app.js"
   },
   "repository": {
     "type": "git",
