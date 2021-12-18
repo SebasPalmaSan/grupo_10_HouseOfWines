@@ -96,6 +96,20 @@
     display: inline;
 }
 
+.menu-inicio{
+    text-align: center;
+    display: flex;
+    position: relative;
+    left: 2px;
+    bottom: 25px;
+    font-size: 25px;
+    background-color: #c4c4c4;
+    color: #550c18;
+    margin: auto;
+    padding: 20px;
+    border-radius: 50px;
+}
+
 @media(max-width:360px){
     .logoHOW{
         display: none;
@@ -111,6 +125,9 @@
         margin-left:40px;
         bottom: 4px;
         width: 100%;
+    }
+    .main-nav{
+        display: none;
     }
 }
 
@@ -133,6 +150,16 @@
         width: 80%;
     }
     
+    .main-nav{
+        border: solid 1px #550c18;
+        background-color: #f5f5f5;
+    }
+    .link{
+        color: #550c18;
+    }
+    .menu-inicio{
+        display: none;
+    }
 }
 
 @media(min-width:768px){
@@ -152,6 +179,21 @@
         bottom: 70px;
         width: 40%;
     
+    }
+    .main-nav{
+        width: 100%;
+        margin:5px;
+        padding:8px;
+        border: solid 1px #550c18;
+        background-color: #550c18;
+        color: #c4c4c4;
+        text-align: center;
+    }
+    .link{
+        color: #c4c4c4;
+    }
+    .menu-inicio{
+        display: none;
     }
 
     @media(min-width: 900px){
@@ -215,6 +257,23 @@
         border: none;
         color: #550c18;
     }
+
+    .main-nav{
+        width: 100%;
+        margin:5px;
+        padding:8px;
+        border: solid 1px #550c18;
+        background-color: #550c18;
+        color: #c4c4c4;
+        text-align: center;
+    }
+    .link{
+        color: #c4c4c4;
+    }
+    .menu-inicio{
+        display: none;
+    }
+
 
     
 }

@@ -93,6 +93,44 @@ hr {
     display: flex;
 }
 
+@media(max-width:360px){
+    h6{
+        font-size: 12px;
+    }
+    li {
+        font-size: 9px;
+        display: inline;
+        margin-left:1px;
+        margin-right:1px;
+        padding: 0;
+        align-items: center;
+    }
+    p{
+        font-size: 9px;
+    }
+    .imagen{
+        padding: 0;
+    }
+
+    .boton-fc{
+        width: 50%;
+        height: 30%;
+        border:0;
+    }
+    .cuenta{
+        font-size: 9px;
+    }
+    .mi-carrito{
+        margin: 2px;
+        padding-right: 5px;
+        margin-right: 20px;
+    }
+    .box-producto{
+        margin: 2px;
+    }
+
+}
+
 @media(min-width:361px){
     h6{
         font-size: 12px;
