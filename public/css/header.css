@@ -71,7 +71,7 @@
     margin: auto;
 }
 
-#menu-copa label{
+#menu-copa a{
     text-align: center;
     background-color: #c4c4c4;
     color: #550c18;
@@ -86,13 +86,16 @@
     margin: 5px;
 }
 
-#copa-boton{
-    display: none;
-}
 
-#menu-copa label:hover {
+.close-menu {
     cursor: pointer;
-    background-color: rgb(85,12,24,0.3);
+    background-color: #c4c4c4;
+    color: #550c18;
+    border: solid #550c18 1px;
+    border-radius: 5px;
+    width: 40px;
+    padding: 5px 8px;
+    text-align: center;
 }
 
 #main-nav {
@@ -104,8 +107,9 @@
     flex-flow: row wrap;
     justify-content: space-evenly;
     align-items: center;
-    display: flex;
+    display: none;
     transition: 250ms;
+    padding-bottom: 15px;
 }
 
 #nav-left{
@@ -141,7 +145,7 @@
     
 }
 
-#menu-copa:checked ~ #main-nav{
+#main-nav:target {
     display: flex;
 }
 
@@ -155,14 +159,15 @@
     #menu-copa{
         display: none;
     }
+    .close-menu {
+        display: none;
+    }
     #main-nav{
-        display: flex;
         width: 100%;
         flex-direction: row;
         justify-content: space-around;
         align-items: center;
         background-color: rgb(85,12,24);
-        visibility: visible;
     }
     #nav-left{
         flex-direction: row;
