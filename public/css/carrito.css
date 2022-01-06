@@ -81,7 +81,6 @@ li{
     margin-bottom: 10px;
   }
 
-
 .boton-fc:hover {
     transform: translatey(3px);
     box-shadow: none;
@@ -116,7 +115,6 @@ hr {
     .imagen{
         padding: 0;
     }
-
     .boton-fc{
         width: 50%;
         height: 30%;
@@ -133,7 +131,6 @@ hr {
     .box-producto{
         margin: 2px;
     }
-
 }
 
 @media(min-width:361px){
@@ -172,7 +169,6 @@ hr {
         margin: 2px;
     }
 }
-
 @media(min-width:768px){
     h6{
         font-size: 20px;
