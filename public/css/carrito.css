@@ -4,10 +4,16 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Roboto";
+    font-family: "Roboto", sans-serif;
+}
+
+main{
+    background-color: #f5f5f5;
+    border: solid 2px #550c18;
 }
 
 h6{
+    margin-top: 5px;
     text-align: center;
     color: #6a6363;
     font-size:40px;
@@ -46,6 +52,10 @@ li{
     border: solid 1px #550c18;
     background-color: #f5f5f5;
     color: #6a6363;
+}
+
+.imagen:hover{
+    transform:scale(1.20);
 }
 
 .mi-carrito{
@@ -87,6 +97,42 @@ hr {
     display: flex;
 }
 
+@media(max-width:360px){
+    h6{
+        font-size: 12px;
+    }
+    li {
+        font-size: 9px;
+        display: inline;
+        margin-left:1px;
+        margin-right:1px;
+        padding: 0;
+        align-items: center;
+    }
+    p{
+        font-size: 9px;
+    }
+    .imagen{
+        padding: 0;
+    }
+    .boton-fc{
+        width: 50%;
+        height: 30%;
+        border:0;
+    }
+    .cuenta{
+        font-size: 9px;
+    }
+    .mi-carrito{
+        margin: 2px;
+        padding-right: 5px;
+        margin-right: 20px;
+    }
+    .box-producto{
+        margin: 2px;
+    }
+}
+
 @media(min-width:361px){
     h6{
         font-size: 12px;
@@ -117,12 +163,12 @@ hr {
     .mi-carrito{
         margin: 2px;
         padding-right: 5px;
+        margin-right: 20px;
     }
     .box-producto{
         margin: 2px;
     }
 }
-
 @media(min-width:768px){
     h6{
         font-size: 20px;
@@ -178,7 +224,7 @@ hr {
         font-size: 24px;
     }
     .imagen{
-        margin-left: 10%;
+        margin-left: 5%;
     }
     p{
         font-size: 16px;
@@ -201,9 +247,10 @@ hr {
         margin-right: 10%;
     }
     .precio{
-        margin: 10%;
+        padding: 5px;
+        margin-right: 10%;
     }
     .description{
-        margin-right: 10px;
+        margin:0 10px 0 20px;
     }
 }
