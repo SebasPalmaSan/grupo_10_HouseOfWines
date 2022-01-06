@@ -13,5 +13,5 @@
     - Detenernos en una idea por demasiado tiempo.
 
 **Dejar de hacer** 
-
+    - Tener en cuenta herramientas antes erradicadas por ineficientes para nuestro proyecto.
 
