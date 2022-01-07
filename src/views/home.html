@@ -33,35 +33,57 @@
     <link rel="icon" type="image/png" sizes="96x96" href="/favicons/favicon-96x96.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicons/favicon-16x16.png">
     <link rel="manifest" href="/manifest.json">
-    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileColor" content="#f5f5f5">
     <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
-    <meta name="theme-color" content="#ffffff">
+    <meta name="theme-color" content="#f5f5f5">
 
 
     <!-- Stylesheets -->
-    <link rel="stylesheet" href="/css/header.css"/>
     <link rel="stylesheet" href="/css/styles.css"/>
     <link rel="stylesheet" href="/css/footer.css"/>
+    <link rel="stylesheet" href="/css/header.css"/>
 </head>
 
 <!-------------------------------------------------------------------------------->
 <body>
 
     <!-- HEADER -->
-    <header class="main-header">
-        <section class="header-top">
-            <figure>
-                <img src="/images/howlogo.png" class="logoHOW"/>
-            </figure>
-            <figure>
-                <img src="/images/how-logo-mobile.png" class="logoMobile"/>
+    <header id="main-header">
+        <section id="header-top">
+            <figure id="logo">
+                <img src="/images/howlogo.png" id="logoHOW"/>
+                <img src="/images/how-logo-mobile.png" id="logoMobile"/>
             </figure>
 
-            <form action="/search" method="GET" class="buscador">
-                <input type="text" name="keywords" placeholder="Buscar tu producto, marcas y más" class="buscador-input">
-                <button type="submit" class="buscador-boton"><i class="fas fa-search" aria-hidden="true"></i></button>
+            <form action="/search" method="GET" id="buscador">
+                <input type="text" name="keywords" placeholder="Buscar tu producto, marcas y más" id="buscador-input">
+                <label for="buscador-input" id="buscador-boton"><i class="fas fa-search" aria-hidden="true"></i></label>
             </form>
         </section>
+
+        
+        <nav id="menu-copa">
+            <a href="#main-nav">Menu <i class="fa-solid fa-wine-glass"></i></a>
+        </nav>
+        <nav id="main-nav" >
+            <section id="nav-left">
+                <a href="/" class="link">Vinos</a>
+                <a href="/" class="link">Espumantes</a>
+                <a href="/" class="link">Destilados</a>
+                <a href="/" class="link">Whiskys</a>
+                <a href="/" class="link">Accesorios</a>
+            </section>
+            <section id="nav-right">
+                <a href="/register" class="link">Crear cuenta</a>
+                <a href="/login" class="link">Iniciar sesión</a>
+                <a href="/carrito" class="link">Mi carrito</a>
+            </section>
+            <section>
+                <a href="#" class="close-menu">Cerrar</i></a>
+            </section>
+        </nav>
+        
+
 
         <section class="main-nav">
             <a href="/" class="link">Categorías</a>
@@ -76,6 +98,7 @@
                 <i class="fa-solid fa-wine-glass"></i>
             </nav>
         </section>
+
     </header>
 
 
