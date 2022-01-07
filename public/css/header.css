@@ -17,6 +17,7 @@
     background-color: #f5f5f5;
     border: solid 3px #550c18;
 }
+
 .header-top{
     flex-direction: row;
 }
@@ -48,6 +49,7 @@
     justify-content:flex-end;
 
 }
+
 .buscador-input{
     border-radius: 1rem;
     justify-content: flex-end;
@@ -61,6 +63,7 @@
     font-size: 1em;
     outline: none;
 }
+
 .buscador-boton{
     position: absolute;
     font-size: 20px;
@@ -72,9 +75,6 @@
     color: #550c18;
 }
 
-
-
-
 .main-nav{
     width: 100%;
     margin:5px;
@@ -83,6 +83,7 @@
     background-color: #550c18;
     color: #c4c4c4;
     text-align: center;
+    border-radius: 6px;
 }
 
 .link{
@@ -115,10 +116,12 @@
         display: none;
 
     }
+
     .logoMobile {
         width: 200px;
 
     }
+
     .buscador{
         display: flex;
         position: relative;
@@ -126,6 +129,7 @@
         bottom: 4px;
         width: 100%;
     }
+
     .main-nav{
         display: none;
     }
@@ -135,13 +139,11 @@
     .logoMobile{
         display: none;
     }
+
     .logoHOW{
         width: 250px;
     }
-    .link{
-        font-size: 10px;
-    }
-    
+
     .buscador{
         display: flex;
         position: relative;
@@ -149,14 +151,12 @@
         bottom: 10px;
         width: 80%;
     }
-    
-    .main-nav{
-        border: solid 1px #550c18;
-        background-color: #f5f5f5;
-    }
+     
     .link{
-        color: #550c18;
+        color: #c4c4c4;
+        font-size: 10px;
     }
+
     .menu-inicio{
         display: none;
     }
@@ -166,12 +166,11 @@
     .logoMobile{
         display: none;
     }
+
     .logoHOW{
         width: 50%;
     }
-    .link{
-        font-size: 14px;
-    }
+
     .buscador{
         display: flex;
         position: relative;
@@ -180,6 +179,7 @@
         width: 40%;
     
     }
+
     .main-nav{
         width: 100%;
         margin:5px;
@@ -189,21 +189,26 @@
         color: #c4c4c4;
         text-align: center;
     }
+
+
     .link{
         color: #c4c4c4;
+        font-size: 18px;
     }
+
     .menu-inicio{
         display: none;
     }
 
+}
+
     @media(min-width: 900px){
         .buscador{
-        display: flex;
-        position: relative;
-        margin-left:560px;
-        bottom: 100px;
-        width: 40%;
-
+           display: flex;
+           position: relative;
+           margin-left:560px;
+           bottom: 100px;
+           width: 40%;
     }
     
 }
@@ -212,14 +217,11 @@
     .logoMobile{
         display: none;
     }
+
     .logoHOW{
         width: 60%;
     }
 
-    
-    .link{
-        font-size: 16px;
-    }
     .buscador{
         width: 40%;
         margin-left:720px;
@@ -234,6 +236,7 @@
         justify-content:flex-end;
     
     }
+
     .buscador-input{
         border-radius: 1rem;
         justify-content: flex-end;
@@ -247,6 +250,7 @@
         font-size: 1em;
         outline: none;
     }
+
     .buscador-boton{
         position: absolute;
         font-size: 20px;
@@ -260,21 +264,21 @@
 
     .main-nav{
         width: 100%;
-        margin:5px;
+        margin:20px;
         padding:8px;
         border: solid 1px #550c18;
         background-color: #550c18;
         color: #c4c4c4;
         text-align: center;
     }
+
     .link{
         color: #c4c4c4;
+        font-size: 20px;
     }
+
     .menu-inicio{
         display: none;
-    }
-
-
-    
+    }    
 }
-}
+
