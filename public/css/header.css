@@ -6,63 +6,71 @@
     box-sizing: border-box;
 }
 
-.main-header{
+#main-header{
+    width: 100vw;
     display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    align-items: center;
-    margin-bottom: 10px;
-    text-align: center;
-    margin:auto;
+    flex-direction: column;
+    justify-content: center;
+    padding: 10px;
     background-color: #f5f5f5;
     border: solid 3px #550c18;
 }
 
+#header-top {
+    display: flex;
 .header-top{
     flex-direction: row;
-}
-
-.logoMobile{
-    width: 200px;
-    display: flex;
-    
-    
-}
-
-.logoHOW{
-    width: 50%;
-    display: flex;
-    
-}
-
-.buscador{
-    width: 40%;
-    margin-left:720px;
-    margin-bottom: 5px;
-    display: flex;
-    position:relative;
-    bottom: 110px;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 100%;
     align-items: center;
-    outline: none;
-    border: solid 1px #c4c4c4;
-    border-radius: 5px;
-    justify-content:flex-end;
-
 }
+
+#logo{
+    width: 40%;
+}
+#logoMobile {
+    width: 100%;
+    display: flex;
+}
+
+#logoHOW {
+    display: none;
+}
+
+#buscador {
+    width: 40%;
+    display: flex;
+    align-items: center;
+    border: solid 2px #c4c4c4;
+    border-radius: 5px;
+    justify-content:space-around;
+    height: 3em;
+}
+
+
+#buscador-input{
+    width: 80%;
+    border-radius: 8px;
+    border: none;
 
 .buscador-input{
     border-radius: 1rem;
     justify-content: flex-end;
     border:solid 2px #c4c4c4;
+
     background-color: #f5f5f5;
     display: block;
-    width: 100%;
-    padding: 7px 35px 7px 7px;
-    border-radius: 5px;
-    height: 40px;
-    font-size: 1em;
+    height: 2em;
+    font-size: 1.25em;
     outline: none;
+    padding: 2px;
 }
+
+
+#buscador-boton{
+    width: 10%;
+    font-size: 1.25em;
 
 .buscador-boton{
     position: absolute;
@@ -71,10 +79,41 @@
     right: 2px;
     height: 60%;
     background-color: #f5f5f5;
+
     border: none;
+    background-color: #f5f5f5;
     color: #550c18;
 }
 
+
+#menu-copa {
+    margin: auto;
+}
+
+#menu-copa a{
+    text-align: center;
+    background-color: #c4c4c4;
+    color: #550c18;
+    border: solid #550c18 1px;
+    border-radius: 8px;
+    display: block;
+    width: 5em;
+    align-self: center;
+    justify-content: center;
+    transition: all 350ms;
+    font-size: 1.5em;
+    margin: 5px;
+}
+
+
+.close-menu {
+    cursor: pointer;
+    background-color: #c4c4c4;
+    color: #550c18;
+    border: solid #550c18 1px;
+    border-radius: 5px;
+    width: 40px;
+    padding: 5px 8px;
 .main-nav{
     width: 100%;
     margin:5px;
@@ -82,39 +121,65 @@
     border: solid 1px #550c18;
     background-color: #550c18;
     color: #c4c4c4;
+
     text-align: center;
     border-radius: 6px;
 }
 
-.link{
-    border-right: dotted 1px #c4c4c4;
-    font: 1em "roboto";
-    padding: 10px;
-    font-size: 8px;
-    text-decoration: none;
-    outline: none;
-    color: #c4c4c4;
-    display: inline;
-}
-
-.menu-inicio{
-    text-align: center;
-    display: flex;
-    position: relative;
-    left: 2px;
-    bottom: 25px;
-    font-size: 25px;
-    background-color: #c4c4c4;
-    color: #550c18;
+#main-nav {
     margin: auto;
-    padding: 20px;
-    border-radius: 50px;
+    padding: 0;
+    background-color: rgb(85,12,24,0.7);
+    border-radius: 15px;
+    width: 65%;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    display: none;
+    transition: 250ms;
+    padding-bottom: 15px;
 }
 
-@media(max-width:360px){
-    .logoHOW{
-        display: none;
+#nav-left{
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+}
 
+#nav-right{
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+
+.link{
+    font-size: 1em;
+    color: #c4c4c4;
+    margin: 5px 10px;
+    transition: all 300ms;
+}
+
+.link:hover {
+    color: #f5f5f5;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgb(0,0,0,0.5);
+    background-color: rgb(85,12,24,0.5);
+    
+}
+
+#main-nav:target {
+    display: flex;
+}
+
+@media(min-width:361px){
+    
     }
 
     .logoMobile {
@@ -162,10 +227,17 @@
     }
 }
 
+
 @media(min-width:768px){
-    .logoMobile{
+    #menu-copa{
         display: none;
     }
+
+    .close-menu {
+        display: none;
+    }
+    #main-nav{
+        display: flex;
 
     .logoHOW{
         width: 50%;
@@ -181,17 +253,38 @@
     }
 
     .main-nav{
+
         width: 100%;
-        margin:5px;
-        padding:8px;
-        border: solid 1px #550c18;
-        background-color: #550c18;
-        color: #c4c4c4;
-        text-align: center;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        background-color: rgb(85,12,24);
+    }
+    #nav-left{
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+    
+    #nav-right{
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
     }
 
 
     .link{
+
+        display: block;
+        margin: 5px 10px;
+    }
+    #logoMobile {
+        display: none;
+    }
+    
+    #logoHOW {
+        width: 100%;
+        display: flex;
         color: #c4c4c4;
         font-size: 18px;
     }
@@ -210,10 +303,22 @@
            bottom: 100px;
            width: 40%;
     }
-    
+
 }
 
 @media(min-width:1200px){
+
+    .link {
+        font-size: 1.7em;
+        margin: 8px 10px;
+
+    }
+    .link:hover {
+        box-shadow: 0 0 10px rgb(255,255,255,0.5);
+        background-color: rgb(85,12,24,0.5);
+        border-radius: 10px;
+    }
+}
     .logoMobile{
         display: none;
     }
@@ -281,4 +386,3 @@
         display: none;
     }    
 }
-
