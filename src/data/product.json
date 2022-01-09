@@ -1,0 +1,27 @@
+[
+    {
+      "id": 1,
+      "name": "Johnnie Walker",
+      "category": "whisky",
+      "description": "Whisky de 12 anios de tipo escoces",
+      "discount": 12,
+      "oldPrice": 4200,
+      "newPrice": 3680
+    },
+    {
+      "id": 2,
+      "name": "vino",
+      "category": "vinos",
+      "discount": 25,
+      "oldPrice": 3000,
+      "newPrice": 2250
+    },
+    {
+     "id": 3,
+     "name": "vino",
+     "category": "vinos",
+     "discount": 25,
+     "oldPrice": 4000,
+     "newPrice": 3500
+    }
+  ]
