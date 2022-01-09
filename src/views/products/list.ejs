@@ -1,0 +1,38 @@
+<%- include('../partials/head.ejs') %> 
+<body>
+<%- include('../partials/header.ejs') %>
+<main>
+<% if (locals.products) { %>
+        <% if (products.legth > 0) { %>
+            <ul>
+                <% products.forEach(product => { %>
+                <li> 
+                <a href="/products/">
+                    <article class="producto">
+                        <picture class="img-product">
+                          <img src="/uploads/" alt="Imagen del producto">
+                        </picture>
+                        <Section class="texto">
+                         <h3 class="nombre-producto"> <%= product.name %> </h3>
+                         <p class="descrip-producto"> <%= product.description %>> </p>
+                         <p class="descuento"> <%= product.discount  %> </p>
+                         <p class="precio-ant"> <%= product.oldPrice %> </p>
+                         <p class="precio-nuevo"> <%= product.newPrice %> </p>
+                        </Section>
+                    </article>
+                </a>
+                </li>   
+                <% }) %>
+            </ul>
+        
+         <% } else { %>
+            <h2>No se encontraron productos</h2>
+            <% } %>
+
+<% } else { %>
+    <h2>No se encontraron productos</h2>
+    <% } %> 
+</main>
+    <%- include('../partials/footer.ejs') %>
+</body>
+</html>

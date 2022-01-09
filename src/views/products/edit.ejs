@@ -1,0 +1,35 @@
+<%- include('../partials/head.ejs') %> 
+<body>
+    <%- include('../partials/header.ejs') %>
+    <h1> <%- locals.title ? title : null %>  </h1>
+    
+    <form>
+        <label for="name" class="control-formulario">
+            <input type="text" id="name" minlength="3" maxlength="25" placeholder="Nombre del producto" class="control" value=" <%= product.name %> "  required>
+        </label>
+        <label for="oldPrice" class="control-formulario">
+            <input type="number" id="oldPrice" min="0" placeholder="Precio de lista" class="control" value=" <%= product.oldPrice %> " required>
+        </label>
+        <label for="discount" class="control-formulario">
+            <input type="number" id="discount" min="0" max="100" placeholder="Porcentaje de descuento" class="control" value=" <%= product.discount %> " required>
+        </label>
+        
+        <label for="category" class="control-formulario">
+            <select id="category" name="category" class="control" required>
+                <option value="vinos" <%= product.category ? 'selected' : null  %> >Vinos</option>
+                <option value="espumantes" <%= product.category ? 'selected' : null  %> >Espumantes</option>
+                <option value="destilados" <%= product.category ? 'selected' : null  %> >Destilados</option>
+                <option value="whiskys" <%= product.category ? 'selected' : null  %> >Whiskys</option>
+                <option value="accesorios" <%= product.category ? 'selected' : null  %> >Accesorios</option>
+            </select>
+        </label>
+       <!--  <label for="description" class="control-formulario"></label>
+            <textarea id="description" rows="4" cols="30"  required>
+        </label> -->
+        <button type="submit">Enviar</button>
+
+    </form>
+
+    <%- include('../partials/footer.ejs') %>
+</body>
+</html>

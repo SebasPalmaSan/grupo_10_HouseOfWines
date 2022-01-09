@@ -1,0 +1,9 @@
+<link rel="stylesheet" href="/css/components/header.css">
+<link rel="stylesheet" href="/css/components/footer.css">
+
+<% if (locals.styles) { %>
+    <% styles.forEach(style => { %>
+            <link rel="stylesheet" href="/css/<%= style %>.css">
+    <% }) %>
+
+<% } %>
