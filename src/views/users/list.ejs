@@ -1,0 +1,14 @@
+<html>
+    <body>
+        <%- include ('partials/header.ejs')%>
+        <link rel='stylesheet' href='/stylesheets/list.css' />
+        <h1>User list</h1>
+        <ul>
+            <% for (let i=0; i<users.length;i++){ % >
+            <li>
+            <a href = "users/detail/ <% users[i].id %>"><%= users[i].name %></a>
+            </li>  
+            % } %
+        </ul>    
+</body>
+</html>
