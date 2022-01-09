@@ -1,11 +1,14 @@
 
 <!DOCTYPE html>
 <html lang="es">
-    <%- include('./partials/head.ejs') %> 
+    <head><%- include('./partials/head.ejs') %></head>
     <body>
-    <%- include('./partials/header.ejs') %>
+    <header><%- include('./partials/header.ejs') %></header>
+    
     <%- include('./css/products/carrito.css') %>
     
+    <h1 class="titulo"> <%= product.name %> </h1>
+   
     <!-- MAIN -->
     <main>
         <h6>Mi Carrito</h6>

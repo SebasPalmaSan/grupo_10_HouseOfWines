@@ -1,6 +1,6 @@
-<%- include('../partials/head.ejs') %> 
+    <head><%- include('../partials/head.ejs') %> </head>
 <body>
-    <%- include('../partials/header.ejs') %>
+    <header><%- include('../partials/header.ejs') %></header>
     <h1> <%- locals.title ? title : null %>  </h1>
     
     <form acrion= "/products/create" method = "POST" enctype="multipart/form-data">
