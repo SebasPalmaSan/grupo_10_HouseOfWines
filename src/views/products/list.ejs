@@ -7,8 +7,9 @@
         <% if (products.legth > 0) { %>
             <ul>
                 <% products.forEach(product => { %>
+                    <li>
                     <a href="/products/<%= product.id %>"">
-                        <li>
+                        
                             <article class="producto">
                                 <% if (product.image) { %>
                                 <img src="/uploads/<% product.image.url %>" alt="Imagen del producto">}
@@ -24,8 +25,8 @@
                                 <button type="submit"><i class="fa fa-trash"></i></button>
                                 </form>
                             </article>
-                        </li> 
-                    </a>
+                        </a>
+                    </li> 
                 <% }) %>
             </ul>
          <% } else { %>
