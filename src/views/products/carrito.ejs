@@ -1,0 +1,71 @@
+
+<!DOCTYPE html>
+<html lang="es">
+    <head><%- include('./partials/head.ejs') %></head>
+    <body>
+    <header><%- include('./partials/header.ejs') %></header>
+    
+
+    <h1 class="titulo"> Mi Carrito <%= product.name %> </h1>
+   
+    <!-- MAIN -->
+    <main>
+        <h6>Mi Carrito</h6>
+        <br>
+        <div class ="box-producto">
+            <ul class=detalle-compra>
+                <li>PRODUCTO</li>
+                <li>DESCRIPCIÓN</li>
+                <li>PRECIO</li>
+                <li>CANTIDAD</li>
+                <li>SUBTOTAL</li>
+            </ul>
+  
+        </div>     
+        
+        <section class = "mi-carrito">
+            
+            <img src="/images/rutini-01.jpeg" alt="Img del producto" width="14.5%" height="10%" class = "imagen">
+    
+                <p class = "description"> Variedad: Malbec 100% <br>
+                Potencial de guarda: 5 años<br>
+                El vino se cría en barricas de <br>
+                roble francés durante 12 meses<br>
+                </p>
+                <p class="precio">$2.479</p>
+                <select class="cantidad">
+                    <option value="1">1</option> 
+                    <option value="2">2</option> 
+                    <option value="3">3</option>
+                    <option value="4">Box-4u</option> 
+                    <option value="5">Box-6u</option> 
+                    <option value="6">Box-12u</option> 
+                </select>
+                <p class="precio">$2.479</p>
+        </section>
+        <hr>
+        <div class="cuenta"> 
+            <ol class=detalle-cuenta>
+                <p>SUBTOTAL</p>
+                <p>DESCUENTO</p>
+                <p>ENVIO A DOMICILIO</p>
+                <hr>
+                <p>TOTAL</p>
+            </ol>    
+        <hr> 
+            <ol>
+                <p>$2.479</p>
+                <p>-$400</p>
+                <p>-$79</p>
+                <hr>
+                <p>$2.000</p>
+            </ol>
+        </div>
+        <div class ="boton-comprar"><button class = "boton-fc" type="submit" href="/home" > Finalizar Compra </button></div>
+    </main>
+
+<!-- FOOTER-->
+
+<%- include('./partials/footer.ejs') %>
+</body>
+</html>
