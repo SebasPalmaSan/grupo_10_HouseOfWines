@@ -1,7 +1,7 @@
-const model = require('../models/product')
+const model = require('../models/cart')
 
 module.exports = {
-    index: (req, res) =>  res.render('products/list', {
+    index: (req, res) =>  res.render('products/carrito', {
         styles: ['products/list', 'main'],
         title: 'House of Wines | Productos',
         products: model.all()
@@ -11,14 +11,13 @@ module.exports = {
         title: 'House of Wines | Crear producto'
     }),
     save: (req, res) => {
-        req.body.file = req.files;
         let created = model.create(req.body);
         return res.redirect('/products/detail/' + created.id)
     },
     show: (req, res) => {
         let result = model.serch('id', req.params.id)
-        return result ? res.render('products/detail', {
-        styles: ['products/detail', 'main'],
+        return result ? res.render('products/carrito', {
+        styles: ['products/carrito', 'main'],
         title: 'House of Wines | ' + result.name,
         product: result
         }) : res.render('error', { msg: 'Producto no encontrado'})
@@ -34,6 +33,6 @@ module.exports = {
     },
     delete: (req, res) => {
         product.delete(req.body.id);
-        return res.redirect('/products/')
+        return res.redirect('/products/carrito')
     }
 }

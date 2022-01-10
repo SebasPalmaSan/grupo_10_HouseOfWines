@@ -8,23 +8,43 @@ const model = {
     all: () => JSON.parse(model.read()),
     generate: data => Object({
         id: model.all().lenght == 0 ? 1 : model.all().pop().id + 1,
-        firstName: data.firstName,
+        firstName: data.name,
         lastName: data.lastName,
-        userName: data.userName,
         password: data.password,
         email: data.email,
-        phoneNumber: parseInt(data.phoneNumber),
-        country: data.country,
+        phone: data.phone,
+        adress: data.adress,
         birthdate: data.birthdate,
-        adress: data.adress
-    }),
+     }),
     create: data => {
-        let newProduct = model.generate(data);
+        let newUser = model.generate(data);
         let all = model.all();
-        all.push(newProduct);
+        all.push(newUser);
         model.write(all);
-        return newProduct;
-    }
+        return newUser;
+    },
+    serch: (prop, value) => model.all().find(element => element[prop] == value),
+    update: (id , data) => {
+        let all = model.all();
+        let updated = all.map(e => {
+            if (e.id == id){
+                e.firstName= data.name,
+                e.lastName= data.lastName,
+                e.password= data.password,
+                e.email= data.email,
+                e.phone= data.phone,
+                e.adress= data.adress,
+                e.birthdate= data.birthdate
+            }
+            return e;
+        })
+        model.write(updated);
+        let user = model.serch('id', id)
+        return user;
+    },
+    delete: id => model.write(model.all().filter(e => e.id != id)),
+
+    
 };
 
 module.exports = model

@@ -1,0 +1,23 @@
+<%- include('../partials/head.ejs') %> 
+<body>
+    <%- include('../partials/header.ejs') %>
+
+    <main>
+
+        <h1> <%= locals.title ? title : null %> </h1>
+
+        <form action="/files/" method="post" enctype="multipart/form-data">
+            <label for="file">
+                <input type="file" name="file" id="file" >
+            </label>
+            <fieldset>
+                <button type="submit">Enviar</button>
+            </fieldset>
+        </form>
+
+
+    </main>
+
+    <%- include('../partials/footer.ejs') %>
+</body>
+</html>
