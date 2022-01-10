@@ -1,27 +1,227 @@
 [
     {
-      "id": 1,
-      "name": "Johnnie Walker",
-      "category": "whisky",
-      "description": "Whisky de 12 anios de tipo escoces",
-      "discount": 12,
-      "oldPrice": 4200,
-      "newPrice": 3680
+     "id": 1,
+     "name": "Rutini Malbec",
+     "category": "Vinos",
+     "description": "Aclamado vino de la bodega Rutini Wines",
+     "discount": 12,
+     "oldPrice": 2479,
+     "newPrice": 2182
     },
     {
-      "id": 2,
-      "name": "vino",
-      "category": "vinos",
-      "discount": 25,
-      "oldPrice": 3000,
-      "newPrice": 2250
+     "id": 2,
+     "name": "D.V. Catena Malbec-Malbec",
+     "category": "Vinos",
+     "description": "Vino Malbec de la cosecha 2017",
+     "discount": 20,
+     "oldPrice": 4000,
+     "newPrice": 3200
     },
     {
      "id": 3,
-     "name": "vino",
-     "category": "vinos",
+     "name": "Baron B",
+     "category": "Espumantes",
+     "description":"Espumante Extra Brut",
+     "discount": 14,
+     "oldPrice": 4320,
+     "newPrice": 3715
+    },
+    {
+     "id": 4,
+     "name": "Pispi Blend 2018",
+     "category": "Vinos",
+     "description": "Blend de Tintas x 750ml",
+     "discount": 35,        
+     "oldPrice": 1220,
+     "newPrice": 780
+    },
+    {
+     "id": 5,
+     "name": "Sapo de otro Pozo",
+     "category": "Vinos",
+     "description": "Blend de Tintas x 750ml",
+     "discount": 20,
+     "oldPrice": 1380,
+     "newPrice": 1104
+    },
+    {
+     "id": 6,
+     "name": "Mosquita Muerta",
+     "category": "Vinos",
+     "description": "Blend de Tintas x 750ml",
+     "discount": 10,
+     "oldPrice": 1750,
+     "newPrice": 1575
+    },
+    {
+     "id": 7,
+     "name": "Johnnie Walker",
+     "category": "Whiskys",
+     "description": "Whisky Double Black x 750ml",
+     "discount": 12,
+     "oldPrice": 4800,
+     "newPrice": 4224
+    },
+    {
+     "id": 8,
+     "name": "Licor Sheridan's",
+     "category": "Varios",
+     "description":"Licor doble, compuesto por crema de Vainilla y licor de Café y Chocolate",
+     "discount": 10,
+     "oldPrice": 3550,
+     "newPrice": 3195
+    },
+    {
+     "id": 9,
+     "name": "Beefeater Gin",
+     "category": "Destilados",
+     "description": "Ginebra destilada estilo London Dry Tradicional",
+     "discount": 15,
+     "oldPrice": 3277,
+     "newPrice": 2850
+    },
+    {
+     "id": 10,
+     "name": "Box Johnnie Walker",
+     "category": "Whiskys",
+     "description": "Box de la marca con toda su gama de Whiskys",
+     "discount": 18,        
+     "oldPrice": 17700,
+     "newPrice": 15000
+    },
+    {
+     "id": 11,
+     "name": "Jägermeister",
+     "category": "Destilados",
+     "description": "Licor de Hierbas alemán elaborado a partir de 56 ingredientes naturales",
+     "discount": 12,
+     "oldPrice": 2899,
+     "newPrice": 2551
+    },
+    {
+     "id": 12,
+     "name": "Tanqueray",
+     "category": "Destilados",
+     "description": "Ginebra importada premium de excelente calidad",
+     "discount": 8,
+     "oldPrice": 2415,
+     "newPrice": 2221
+    },
+    {
+     "id": 13,
+     "name": "Cordero con Piel de Lobo",
+     "category": "Vinos",
+     "description": "Cabernet Franc Rosé 2020",
+     "discount": 5,
+     "oldPrice": 480,
+     "newPrice": 456
+    },
+    {
+     "id": 14,
+     "name": "Absolut",
+     "category": "Destilados",
+     "description": "Vodka Absolut varios sabores",
+     "discount": 15,
+     "oldPrice": 2199,
+     "newPrice": 1870
+    },
+    {
+     "id": 15,
+     "name": "Fernet Branca",
+     "category": "Varios",
+     "description": "Fernet Branca 1000ml",
+     "discount": 10,
+     "oldPrice": 1399,
+     "newPrice": 1260
+    },
+    {
+     "id": 16,
+     "name": "Fernet Branca",
+     "category": "Varios",
+     "description": "Fernet Branca 750ml",
+     "discount": 5,
+     "oldPrice": 899,
+     "newPrice": 854
+    },
+    {
+     "id": 17,
+     "name": "Campari",
+     "category": "Varios",
+     "description": "Aperitivo Campari 750ml",
+     "discount": 5,
+     "oldPrice": 750,
+     "newPrice": 710
+    },
+    {
+     "id": 18,
+     "name": "Fernet 1882",
+     "category": "Varios",
+     "description": "Fernet 1882 750ml",
+     "discount": 5,
+     "oldPrice": 750,
+     "newPrice": 710
+    },
+    {
+     "id": 19,
+     "name": "Mosquita Wines Variety",
+     "category": "Vinos",
+     "description": "Blend de Tintas, Mosquita Muerta + Sapo de Otro Pozo + PISPI",
      "discount": 25,
-     "oldPrice": 4000,
-     "newPrice": 3500
+     "oldPrice": 4350,
+     "newPrice": 3260
+    },
+    {
+     "id": 20,
+     "name": "José Cuervo",
+     "category": "Destilados",
+     "description": "Tequila José Cuervo Especial Silver/Gold",
+     "discount": 15,
+     "oldPrice": 4600,
+     "newPrice": 3910
+    },
+    {
+     "id": 21,
+     "name": "Jameson",
+     "category": "Whiskys",
+     "description": "Jameson Irish Whisky 750ml",
+     "discount": 10,
+     "oldPrice": 2999,
+     "newPrice": 2699
+    },
+    {
+     "id": 22,
+     "name": "Rutini Wines",
+     "category": "Vinos",
+     "description": "Combo Rutini Wines Malbec + Cabernet Malbec",
+     "discount": 15,
+     "oldPrice": 3000,
+     "newPrice": 2550
+    },
+    {
+     "id": 23,
+     "name": "Dom Pérignon",
+     "category": "Espumantes",
+     "description": "Espumante Dom Pérignon Vintage 750ml",
+     "discount": 15,
+     "oldPrice": 45000,
+     "newPrice": 38250
+    },
+    {
+     "id": 24,
+     "name": "Sidra 1888",
+     "category": "Espumantes",
+     "description": "Sidra 1888 x 750ml Cosecha Especial Sáenz Briones",
+     "discount": 15,
+     "oldPrice": 570,
+     "newPrice": 484
+    },
+    {
+    "id": 25,
+     "name": "Sidra 1888",
+     "category": "Espumantes",
+     "description": "Caja x 6Un. Sidra 1888 x 750ml",
+     "discount": 15,
+     "oldPrice": 3400,
+     "newPrice": 2910
     }
-  ]
+]
