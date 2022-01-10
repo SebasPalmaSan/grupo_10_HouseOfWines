@@ -8,11 +8,13 @@
             <ul>
                 <% products.forEach(product => { %>
                 <li> 
-                <a href="/products/">
+                <a href="/products/<%= product.id %>"">
+                   
                     <article class="producto">
+                        <% if (product.image) { %>
                         <picture class="img-product">
-                          <img src="/uploads/" alt="Imagen del producto">
-                        </picture>
+                          <img src="/uploads/<% product.image.url %>" alt="Imagen del producto">
+                        </picture>}
                         <Section class="texto">
                          <h3 class="nombre-producto"> <%= product.name %> </h3>
                          <p class="descrip-producto"> <%= product.description %>> </p>
@@ -21,6 +23,11 @@
                          <p class="precio-nuevo"> <%= product.newPrice %> </p>
                         </Section>
                     </article>
+                    <form action= "/products/?m=DELETE" method="post">
+                        <input type="hidden" name="id" value="<%= product.id %>" />
+                        <button type="submit"><i class="fa fa-trash"></i></button>
+                    </form>
+
                 </a>
                 </li>   
                 <% }) %>
@@ -28,6 +35,9 @@
          <% } else { %>
             <h2>No se encontraron productos</h2>
             <% } %>
+        <% } else { %>
+            <h2>No se encontraron productos</h2>
+        <% } %>
 </main>
     <%- include('../partials/footer.ejs') %>
 </body>
