@@ -7,29 +7,25 @@
         <% if (products.legth > 0) { %>
             <ul>
                 <% products.forEach(product => { %>
-                <li> 
-                <a href="/products/<%= product.id %>"">
-                   
-                    <article class="producto">
-                        <% if (product.image) { %>
-                        <picture class="img-product">
-                          <img src="/uploads/<% product.image.url %>" alt="Imagen del producto">
-                        </picture>}
-                        <Section class="texto">
-                         <h3 class="nombre-producto"> <%= product.name %> </h3>
-                         <p class="descrip-producto"> <%= product.description %>> </p>
-                         <p class="descuento"> <%= product.discount  %> </p>
-                         <p class="precio-ant"> <%= product.oldPrice %> </p>
-                         <p class="precio-nuevo"> <%= product.newPrice %> </p>
-                        </Section>
-                    </article>
-                    <form action= "/products/?m=DELETE" method="post">
-                        <input type="hidden" name="id" value="<%= product.id %>" />
-                        <button type="submit"><i class="fa fa-trash"></i></button>
-                    </form>
+                    <a href="/products/<%= product.id %>"">
+                        <li>
+                            <article class="producto">
+                                <% if (product.image) { %>
+                                <img src="/uploads/<% product.image.url %>" alt="Imagen del producto">}
+                                
+                                <span><%= product.name %></span>
+                                <span><%= product.description %></span>
+                                <span><%= product.discount %></span>
+                                <span><%= product.oldPrice %></span>
+                                <span><%= product.newPrice %></span>
 
-                </a>
-                </li>   
+                                <form action= "/products/?m=DELETE" method="post">
+                                <input type="hidden" name="id" value="<%= product.id %>" />
+                                <button type="submit"><i class="fa fa-trash"></i></button>
+                                </form>
+                            </article>
+                        </li> 
+                    </a>
                 <% }) %>
             </ul>
          <% } else { %>
