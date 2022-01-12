@@ -13,7 +13,10 @@ app.listen(app.get('port'), () => console.log('Listen un http://localhost:' + ap
 
 app.use(express.static(path.resolve(__dirname, '../public')));
 app.use(express.urlencoded({extended: true}));
+//app.use(express.json());
+
 app.use(method('m')); // ?m=PUT || ?m=DELETE
+
 
 
 app.use(require('./routes/main'));

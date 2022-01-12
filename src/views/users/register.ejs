@@ -1,16 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
-    <%- include('./partials/head.ejs')  %>
+    <%- include('../partials/head.ejs')  %>
+    <link rel="stylesheet" href="/css/header.css"/>
     <body>
-        <%- include('./partials/header.ejs') %>
+        <%- include('../partials/header.ejs') %>
         <main>
             <form action="/" method="GET" class="formulario">
                 <div>
                     <a href="#" class="subtitulos">Inicio</a>
                     <span class="divider"> > </span>
-                    <a href="/login" class="subtitulos">Mi cuenta</a>
+                    <a href="/users/login" class="subtitulos">Mi cuenta</a>
                     <span class="divider"> > </span>
-                    <a href="/register" class="subtitulos">Crear cuenta</a>
+                    <a href="/users/register" class="subtitulos">Crear cuenta</a>
                     </div>
                 <div class="titulo"><h1>Crear cuenta</h1></div>
                 <div class="control-formulario">
@@ -35,6 +36,6 @@
                 <div class="subtitulos"><p class="mt-3 text-center">¿Ya tenés una cuenta? <a href="/login" class="subtitulos"><b>Iniciá sesión</b></a></p></div>
             </form>
     </main>
-    <%- include('./partials/footer.ejs')  %>
+    <%- include('../partials/footer.ejs')  %>
 </body>
 </html>
