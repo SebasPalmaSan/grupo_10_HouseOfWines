@@ -1,9 +1,8 @@
 const path = require('path');
 const fs = require('fs');
-const file = require('./file')
 
 const model = {
-    file: path.resolve(__dirname, '../data', 'product.json'),
+    file: path.resolve(__dirname, '../data', 'cart.json'),
     read: () => fs.readFileSync(model.file),
     write: data => fs.writeFileSync(model.file, JSON.stringify(data, null, 2)),
     all: () => JSON.parse(model.read()),
@@ -14,8 +13,7 @@ const model = {
         description: data.description,
         discount: parseInt(data.discount),
         oldPrice: parseInt(data.oldPrice),
-        newPrice: parseInt(data.discount) > 0 ? parseInt(data.oldPrice) - parseInt(data.oldPrice) * (parseInt(data.discount) / 100) : parseInt(data.newPrice),
-        image: data.file.map(f => file.create(f).id)
+        newPrice: parseInt(data.discount) > 0 ? parseInt(data.oldPrice) - parseInt(data.oldPrice) * (parseInt(data.discount) / 100) : parseInt(data.newPrice)
     }),
     create: data => {
         let newProduct = model.generate(data);

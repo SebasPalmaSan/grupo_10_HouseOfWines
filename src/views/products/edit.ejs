@@ -3,7 +3,7 @@
     <%- include('../partials/header.ejs') %>
     <h1> <%- locals.title ? title : null %>  </h1>
     
-    <form>
+    <form action="/products/<%- product.id %>?m=PUT" method="post">
         <label for="name" class="control-formulario">
             <input type="text" id="name" minlength="3" maxlength="25" placeholder="Nombre del producto" class="control" value=" <%= product.name %> "  required>
         </label>

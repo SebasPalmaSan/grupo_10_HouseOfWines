@@ -1,20 +1,25 @@
-<%- include('../partials/head.ejs') %> 
+    <head><%- include('../partials/head.ejs') %> </head>
 <body>
-    <%- include('../partials/header.ejs') %>
+    <header><%- include('../partials/header.ejs') %></header>
     <h1> <%- locals.title ? title : null %>  </h1>
     
-    <form>
-        <label for="name" class="control-formulario">
-            <input type="text" id="name" minlength="3" maxlength="25" placeholder="Nombre del producto" class="control" required>
-        </label>
-        <label for="oldPrice" class="control-formulario">
-            <input type="number" id="oldPrice" min="0" placeholder="Precio de lista" class="control" required>
-        </label>
-        <label for="discount" class="control-formulario">
-            <input type="number" id="discount" min="0" max="100" placeholder="Porcentaje de descuento" class="control" required>
-        </label>
+    <form action= "/products/create" method = "POST" enctype="multipart/form-data">
+        <h1>Crear un producto</h1>
         
-        <label for="category" class="control-formulario">
+        <section class="contenedor">
+            <label for="name" class="control-formulario">
+            <input type="text" id="name" minlength="3" maxlength="25" placeholder="Nombre del producto" class="control" required>
+            </label>
+
+            <label for="oldPrice" class="control-formulario">
+            <input type="number" id="oldPrice" min="0" placeholder="Precio de lista" class="control" required>
+            </label>
+
+            <label for="discount" class="control-formulario">
+            <input type="number" id="discount" min="0" max="100" placeholder="Porcentaje de descuento" class="control" required>
+            </label>
+
+            <label for="category" class="control-formulario">
             <select id="category" name="category" class="control" required>
                 <option value="vinos">Vinos</option>
                 <option value="espumantes">Espumantes</option>
@@ -22,14 +27,14 @@
                 <option value="whislys">Whislys</option>
                 <option value="accesorios">Accesorios</option>
             </select>
-        </label>
-        <label for="description" class="control-formulario"></label>
+            </label>
+
+            <label for="description" class="control-formulario"></label>
             <textarea id="description" rows="4" cols="30" required>
-        </label>
-
-
+            </label>
+            <fieldset ><button type="submit">Guardar</button></fieldset>
+        </section>
     </form>
-
     <%- include('../partials/footer.ejs') %>
 </body>
 </html>
