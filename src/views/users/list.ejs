@@ -1,14 +1,17 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('./partials/head.ejs')  %>
     <body>
-        <%- include ('partials/header.ejs')%>
+        <%- include('./partials/header.ejs') %>
         <link rel='stylesheet' href='/stylesheets/list.css' />
-        <h1>User list</h1>
+        <h1><% = User list %></h1>
         <ul>
             <% for (let i=0; i<users.length;i++){ % >
             <li>
             <a href = "users/detail/ <% users[i].id %>"><%= users[i].name %></a>
             </li>  
             % } %
-        </ul>    
+        </ul> 
+    <%- include('./partials/footer.ejs')  %>   
 </body>
 </html>
