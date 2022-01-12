@@ -1,7 +1,7 @@
     <head><%- include('../partials/head.ejs') %> </head>
 <body>
     <header><%- include('../partials/header.ejs') %></header>
-    <h1> <%- locals.title ? title : null %>  </h1>
+
     
     <form action= "/products/create" method = "POST" enctype="multipart/form-data">
         <h1>Crear un producto</h1>
@@ -30,8 +30,7 @@
             </label>
 
             <label for="description" class="control-formulario"></label>
-            <textarea id="description" rows="4" cols="30" required>
-            </label>
+            <fieldset ><textarea id="description" rows="4" cols="30" required>Descripción del Producto</textarea></fieldset>
             <fieldset ><button type="submit">Guardar</button></fieldset>
         </section>
     </form>

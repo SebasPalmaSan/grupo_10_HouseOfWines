@@ -1,6 +1,6 @@
-<head><%- include('../partials/head.ejs') %></head>
+    <head><%- include('../partials/head.ejs') %> </head>
 <body>
-<header><%- include('../partials/header.ejs') %></header>
+    <header><%- include('../partials/header.ejs') %></header>
 <main>
     <h1>Lista de productos</h1>
     <% if (locals.products) { %>
@@ -8,17 +8,17 @@
             <ul>
                 <% products.forEach(product => { %>
                     <li>
-                    <a href="/products/<%= product.id %>"">
+                    <a href="/products/<%= product.id %>">
                         
                             <article class="producto">
                                 <% if (product.image) { %>
                                 <img src="/uploads/<% product.image.url %>" alt="Imagen del producto">}
                                 
-                                <span><%= product.name %></span>
-                                <span><%= product.description %></span>
-                                <span><%= product.discount %></span>
-                                <span><%= product.oldPrice %></span>
-                                <span><%= product.newPrice %></span>
+                                <span><%= product.name %>Nombre Producto</span>
+                                <span><%= product.description %> Descripcion</span>
+                                <span><%= product.discount %>Descuento</span>
+                                <span><%= product.oldPrice %>Precio Viejo</span>
+                                <span><%= product.newPrice %>Precio Nuevo</span>
 
                                 <form action= "/products/?m=DELETE" method="post">
                                 <input type="hidden" name="id" value="<%= product.id %>" />

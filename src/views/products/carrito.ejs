@@ -1,17 +1,9 @@
-
 <!DOCTYPE html>
 <html lang="es">
-    <head><%- include('../partials/head.ejs') %></head>
+    <%- include('../partials/head.ejs')  %>
+    <link rel="stylesheet" href="/css/header.css"/>
     <body>
-    <header><%- include('../partials/header.ejs') %></header>
-    
-    <!-- Hoja de estilos Carrito -->
-    <link rel="stylesheet" href="/css/products/carrito.css">
-
-    <h1 class="titulo"> Mi Carrito <%= product.name %> </h1>
-
-    <!-- MAIN -->
-    <main>
+        <%- include('../partials/header.ejs') %>
         <h6>Mi Carrito</h6>
         <br>
         <div class ="box-producto">
@@ -46,7 +38,7 @@
                 <p class="precio">$2.479</p>
         </section>
         <hr>
-        <div class="cuenta"> 
+        <nav class="cuenta"> 
             <ol class=detalle-cuenta>
                 <p>SUBTOTAL</p>
                 <p>DESCUENTO</p>
@@ -62,8 +54,8 @@
                 <hr>
                 <p>$2.000</p>
             </ol>
-        </div>
-        <div class ="boton-comprar"><button class = "boton-fc" type="submit" href="/home" > Finalizar Compra </button></div>
+        </nav>
+        <nav class ="boton-comprar"><button class = "boton-fc" type="submit" href="/home" > Finalizar Compra </button></div>
     </main>
 
 <!-- FOOTER-->
