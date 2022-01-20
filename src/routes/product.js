@@ -10,18 +10,19 @@ const upload = multer({storage: multer.diskStorage({
     filename: (req, file, cb) => cb(null, file.filename + '-' + Date.now() + path.extname(file.originalname))
 })})
 
-router.get('/', index);
-router.get('/create', create);
+router.get('/',index);
 
-router.get('/:id', show);
+router.get('/create',create);
+
+router.get('/:id',product.show);
 
 router.get('/edit/:id', edit);
 
-router.put('/:id', modify)
+router.put('/:id',product.modify)
 
-router.post('/', [upload.any()], save);
+router.post('/',save);
 
-router.delete('/', product.delete);
+router.delete('/',product.delete);
 
 
 module.exports = router
