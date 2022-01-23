@@ -4,6 +4,7 @@ const router = Router();
 const {index, create, save, show, edit, modify} = require('../controllers/product');
 
 router.get('/', index);
+
 router.get('/create', create);
 
 router.get('/:id', show);

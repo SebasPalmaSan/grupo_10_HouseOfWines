@@ -1,3 +1,10 @@
 [
-    
+    {
+        "identificador": "id",
+        "nombre": "firstName",
+        "apellido": "lastName",
+        "usuario": "email",
+        "contraseña": "password",
+        "imagen": "image"
+    }
 ]
