@@ -14,7 +14,7 @@ router.get('/',index);
 
 router.get('/create',create);
 
-router.get('/list',list);
+
 
 router.get('/:id',product.show);
 
