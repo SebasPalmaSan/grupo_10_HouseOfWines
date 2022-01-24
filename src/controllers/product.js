@@ -5,7 +5,7 @@ module.exports = {
     index: (req, res) =>  res.render('products/list', {
         styles: ['products/list', 'main'],
         title: 'House of Wines | Productos',
-        products: model.all().map(p => Object({...p, image: file.serch('id', p.image)}))
+        products: model.all().map(p => Object({...p, image: file.search('id', p.image)}))
     }),
     create: (req, res) => res.render('products/create', {
         styles: ['products/create', 'main'],
@@ -17,7 +17,7 @@ module.exports = {
         return res.redirect('/products/detail/' + created.id)
     },
     show: (req, res) => {
-        let result = model.serch('id', req.params.id)
+        let result = model.search('id', req.params.id)
         return result ? res.render('products/detail', {
         styles: ['products/detail', 'main'],
         title: 'House of Wines | ' + result.name,
@@ -27,7 +27,7 @@ module.exports = {
     edit: (req, res) =>  res.render('products/edit', {
         styles: ['products/create', 'main'],
         title: 'House of Wines | Editar producto',
-        product: model.serch('id', req.params.id)
+        product: model.search('id', req.params.id)
     }),
     modify: (req, res) => {
         let updated = product.edit(req.params.id, req.body);

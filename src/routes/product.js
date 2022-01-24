@@ -14,15 +14,13 @@ router.get('/',index);
 
 router.get('/create',create);
 
-
-
 router.get('/:id',product.show);
 
 router.get('/edit/:id', edit);
 
 router.put('/:id',product.modify)
 
-router.post('/',save);
+router.post('/',[upload.any()],product.save)
 
 router.delete('/',product.delete);
 
