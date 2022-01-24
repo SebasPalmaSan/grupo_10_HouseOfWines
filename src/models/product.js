@@ -4,7 +4,7 @@ const file = require('./file')
 
 const model = {
     file: path.resolve(__dirname, '../data', 'product.json'),
-    read: () => fs.readFileSync(model.file),
+    read: () => fs.readFileSync(model.file, 'utf8'),
     write: data => fs.writeFileSync(model.file, JSON.stringify(data, null, 2)),
     all: () => JSON.parse(model.read()),
     generate: data => Object({
@@ -48,4 +48,4 @@ const model = {
     
 };
 
-module.exports = model
+module.exports = model;

@@ -12,8 +12,8 @@
                         
                             <article class="producto">
                                 <% if (product.image) { %>
-                                <img src="/uploads/<% product.image.url %>" alt="Imagen del producto">}
-                                
+                                <img src="/uploads/<% product.image.url %>" alt="Imagen del producto">
+                                <% } %>
                                 <span><%= product.name %>Nombre Producto</span>
                                 <span><%= product.description %> Descripcion</span>
                                 <span><%= product.discount %>Descuento</span>
