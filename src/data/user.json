@@ -1,10 +1,28 @@
 [
     {
-        "identificador": "id",
-        "nombre": "firstName",
-        "apellido": "lastName",
-        "usuario": "email",
-        "contraseña": "password",
+        "id": 1,
+        "firstName": "Sofia",
+        "lastName": "V. Curcio",
+        "email": "sofiavalentinicurcio@gmail.com",
+        "password": "HolaMundo",
+        "imagen": "image"
+    },
+
+    {
+        "id": 2,
+        "firstName": "Sebastian",
+        "lastName": "Palma Sanchez",
+        "email": "maildeprueba@gmail.com",
+        "password": "HolaMundo2",
+        "imagen": "image"
+    },
+
+    {
+        "id": 3,
+        "firstName": "Sofia",
+        "lastName": "V. Curcio",
+        "email": "sofiavalentinicurcio@gmail.com",
+        "password": "HolaMundo",
         "imagen": "image"
     }
 ]
