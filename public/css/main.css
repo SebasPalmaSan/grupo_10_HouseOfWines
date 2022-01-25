@@ -35,7 +35,7 @@ main {
 .producto {
     margin: 10px 20px;
     background-color: rgb(85, 12, 24, 70%);
-    border-radius: 15px;
+    border-radius: 5px;
     display: flex;
     flex-direction: row;
 
