@@ -95,7 +95,7 @@ main{
 
 .resenia-producto{
     color: #6a6363;
-    font-size: 11px;
+    font-size: 20px;
     margin: 10px;
 }
 
@@ -151,10 +151,10 @@ main{
 
 @media(min-width:768px){
     .imagen img{
-        width: 45%;
+        width: 25%;
     }
     .resenia-producto{
-        font-size: 14px;
+        font-size: 24px;
     }
     .subtitulos,
     .divider{
@@ -165,11 +165,11 @@ main{
 
 @media(min-width:1200px){
     .imagen img{
-        width: 50%;
+        width: 30%;
         
     }
     .resenia-producto{
-        font-size: 20px;
+        font-size: 40px;
         font-weight: 300;
     }
     .subtitulos,
