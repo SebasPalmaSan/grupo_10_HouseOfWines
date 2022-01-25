@@ -35,6 +35,7 @@ main {
 .producto {
     margin: 10px 20px;
     background-color: rgb(85, 12, 24, 70%);
+    border-radius: 15px;
     display: flex;
     flex-direction: row;
 
@@ -45,6 +46,12 @@ main {
     width: 50%;
     padding: 5px;
     align-self: center;
+
+}
+.carrousel img{
+    width: 80%;
+    border-radius: 10px;
+    padding-top: 0.1%;
 
 }
 
