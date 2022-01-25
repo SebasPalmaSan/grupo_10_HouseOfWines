@@ -5,7 +5,7 @@
         "lastName": "V. Curcio",
         "email": "sofiavalentinicurcio@gmail.com",
         "password": "HolaMundo",
-        "imagen": "image"
+        "imagen": []
     },
 
     {
@@ -14,15 +14,15 @@
         "lastName": "Palma Sanchez",
         "email": "maildeprueba@gmail.com",
         "password": "HolaMundo2",
-        "imagen": "image"
+        "imagen": []
     },
 
     {
         "id": 3,
-        "firstName": "Sofia",
-        "lastName": "V. Curcio",
-        "email": "sofiavalentinicurcio@gmail.com",
-        "password": "HolaMundo",
-        "imagen": "image"
+        "firstName": "Roberto",
+        "lastName": "Carlos",
+        "email": "unmillondeamigos@gmail.com",
+        "password": "HolaMundo3",
+        "imagen": []
     }
 ]
