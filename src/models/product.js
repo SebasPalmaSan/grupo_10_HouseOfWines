@@ -24,7 +24,7 @@ const model = {
         model.write(all);
         return newProduct;
     },
-    serch: (prop, value) => model.all().find(element => element[prop] == value),
+    search: (prop, value) => model.all().find(element => element[prop] == value),
     update: (id , data) => {
         let all = model.all();
         let updated = all.map(e => {
