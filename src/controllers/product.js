@@ -2,11 +2,12 @@ const model = require('../models/product');
 const file = require('../models/file')
 
 module.exports = {
-    index: (req, res) =>  res.render('products/list', {
+    index: (req, res) =>  res.send(model.all())
+       /*  res.render('products/list', {
         styles: ['products/list', 'main'],
         title: 'House of Wines | Productos',
         products: model.all().map(p => Object({...p, image: file.search('id', p.image)}))
-    }),
+    }) */,
     create: (req, res) => res.render('products/create', {
         styles: ['products/create', 'main'],
         title: 'House of Wines | Crear producto'
