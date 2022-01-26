@@ -21,7 +21,7 @@
                         
                             <article class="producto">
                                 <% if (product.image) { %>
-                                <img src="/uploads/<% product.image.url %>" alt="Imagen del producto">
+                                    <img src="<%= product.image %>" alt="Imagen del producto" class="img-product">
                                 <% } %>
                                 <Section class="texto">
                                     <h3 class="nombre-producto"><%= product.name %></h3>
