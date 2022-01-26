@@ -13,7 +13,7 @@
 
         <h1>Lista de productos</h1>
     <% if (locals.products) { %>
-        <% if (products.legth > 0) { %>
+        <% if (products.length > 0) { %>
             <ul>
                 <% products.forEach(product => { %>
                     <li>
@@ -23,12 +23,13 @@
                                 <% if (product.image) { %>
                                 <img src="/uploads/<% product.image.url %>" alt="Imagen del producto">
                                 <% } %>
-                                <span><%= product.name %>Nombre Producto</span>
-                                <span><%= product.description %> Descripcion</span>
-                                <span><%= product.discount %>Descuento</span>
-                                <span><%= product.oldPrice %>Precio Viejo</span>
-                                <span><%= product.newPrice %>Precio Nuevo</span>
-
+                                <Section class="texto">
+                                    <h3 class="nombre-producto"><%= product.name %></h3>
+                                    <p class="descrip-producto"><%= product.description %></p>
+                                    <p class="descuento">% <%= product.discount %></p>
+                                    <p class="precio-ant">$ <%= product.oldPrice %></p>
+                                    <p class="precio-nuevo">$ <%= product.newPrice %></p>
+                                </Section>
                                 <form action= "/products/?m=DELETE" method="post">
                                 <input type="hidden" name="id" value="<%= product.id %>">
                                 <button type="submit"><i class="fa fa-trash"></i></button>
@@ -58,7 +59,7 @@
 
         <h1>Lista de productos</h1>
     <% if (locals.products) { %>
-        <% if (products.legth > 0) { %>
+        <% if (products.length > 0) { %>
             <ul>
                 <% products.forEach(product => { %>
                     <li>
@@ -68,12 +69,13 @@
                                 <% if (product.image) { %>
                                 <img src="/uploads/<% product.image.url %>" alt="Imagen del producto">
                                 <% } %>
-                                <span><%= product.name %>Nombre Producto</span>
-                                <span><%= product.description %> Descripcion</span>
-                                <span><%= product.discount %>Descuento</span>
-                                <span><%= product.oldPrice %>Precio Viejo</span>
-                                <span><%= product.newPrice %>Precio Nuevo</span>
-
+                                <Section class="texto">
+                                    <h3 class="nombre-producto"><%= product.name %></h3>
+                                    <p class="descrip-producto"><%= product.description %></p>
+                                    <p class="descuento"><%= product.discount %></p>
+                                    <p class="precio-ant"><%= product.oldPrice %></p>
+                                    <p class="precio-nuevo"><%= product.newPrice %></p>
+                                </Section>
                                 <form action= "/products/?m=DELETE" method="post">
                                 <input type="hidden" name="id" value="<%= product.id %>">
                                 <button type="submit"><i class="fa fa-trash"></i></button>
