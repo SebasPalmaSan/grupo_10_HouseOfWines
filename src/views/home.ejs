@@ -7,87 +7,47 @@
         <img class="imagen-ofertas" src="/images/mwines6.png" alt="Carrousel de ofertas">
         
     </picture>
+
+
     <section id="main-top">
 
-        
-        <article class="producto">
-            <picture class="img-product">
-                <img src="/images/rutini-01.jpeg" alt="Imagen del producto">
-            </picture>
-            <Section class="texto">
-                <h3 class="nombre-producto">RUTINI MALBEC</h3>
-                <p class="descrip-producto">Aclamado vino de la bodega Rutini Wines</p>
-                <p class="descuento">12% off</p>
-                <p class="precio-ant">$2.479</p>
-                <p class="precio-nuevo">$2.182</p>
-            </Section>
-        </article>
+        <h1>Lista de productos</h1>
+    <% if (locals.products) { %>
+        <% if (products.legth > 0) { %>
+            <ul>
+                <% products.forEach(product => { %>
+                    <li>
+                    <a href="/products/<%= product.id %>">
+                        
+                            <article class="producto">
+                                <% if (product.image) { %>
+                                <img src="/uploads/<% product.image.url %>" alt="Imagen del producto">
+                                <% } %>
+                                <span><%= product.name %>Nombre Producto</span>
+                                <span><%= product.description %> Descripcion</span>
+                                <span><%= product.discount %>Descuento</span>
+                                <span><%= product.oldPrice %>Precio Viejo</span>
+                                <span><%= product.newPrice %>Precio Nuevo</span>
 
-        <article class="producto">
-            <picture class="img-product">
-                <img src="/images/D.V Catena Malbec 2017.jpeg" alt="Imagen del producto">
-            </picture>
-            <Section class="texto">
-                <h3 class="nombre-producto">D.V. CATENA MALBEC</h3>
-                <p class="descrip-producto">Vino malbec de la cosecha 2017</p>
-                <p class="descuento">20%</p>
-                <p class="precio-ant">$4.000</p>
-                <p class="precio-nuevo">$3.200</p>
-            </Section>
-        </article>
+                                <form action= "/products/?m=DELETE" method="post">
+                                <input type="hidden" name="id" value="<%= product.id %>">
+                                <button type="submit"><i class="fa fa-trash"></i></button>
+                                </form>
+                            </article>
+                        </a>
+                    </li> 
+                <% }) %>
+            </ul>
+         <% } else { %>
+            <h2>No se encontraron productos</h2>
+            <% } %>
+        <% } else { %>
+            <h2>No se encontraron productos</h2>
+        <% } %>
 
-        <article class="producto">
-            <picture class="img-product">
-                <img src="/images/Baron B espumante.jpeg.webp" alt="Imagen del producto">
-            </picture>
-            <Section class="texto">
-                <h3 class="nombre-producto">BARON B</h3>
-                <p class="descrip-producto">Espumante extra brut</p>
-                <p class="descuento">14% off</p>
-                <p class="precio-ant">$4.320</p>
-                <p class="precio-nuevo">$3.715</p>
-            </Section>
-        </article>
 
-        <article class="producto">
-            <picture class="img-product">
-                <img src="/images/Pispi Blend 2018.jpeg" alt="Imagen del producto">
-            </picture>
-            <Section class="texto">
-                <h3 class="nombre-producto">PISPI BLEND 2018</h3>
-                <p class="descrip-producto">Blend de tintas x 750ml</p>
-                <p class="descuento">35% off</p>
-                <p class="precio-ant">$1.220</p>
-                <p class="precio-nuevo">$780</p>
-            </Section>
-        </article>
-
-        <article class="producto">
-            <picture class="img-product">
-                <img src="/images/Sapo de otro pozo Blend 2018.jpeg" alt="Imagen del producto">
-            </picture>
-            <Section class="texto">
-                <h3 class="nombre-producto">SAPO DE OTRO POZO</h3>
-                <p class="descrip-producto">Blend de tintas x 750ml</p>
-                <p class="descuento">20% off</p>
-                <p class="precio-ant">$1.380</p>
-                <p class="precio-nuevo">$1.104</p>
-            </Section>
-        </article>
-
-        <article class="producto">
-            <picture class="img-product">
-                <img src="/images/Mosquita Muerta Blend 2017.jpeg" alt="Imagen del producto">
-            </picture>
-            <Section class="texto">
-                <h3 class="nombre-producto">MOSQUITA MUERTA</h3>
-                <p class="descrip-producto">Blend de tintas x 750ml</p>
-                <p class="descuento">10% off</p>
-                <p class="precio-ant">$1.750</p>
-                <p class="precio-nuevo">$1.575</p>
-            </Section>
-        </article>   
-    </section>
+    </section> 
+       
 
     <picture class="carrousel">
         <img class="imagen-bodegas" src="/images/jameson-logo.jpg" alt="Carrousel de bodegas">
@@ -96,86 +56,44 @@
 
     <section id="main-bottom">
 
-        <article class="producto">
-            <picture class="img-product">
-                <img src="/images/johnnie-walker-double-black.jpeg" alt="Imagen del producto">
-            </picture>
-            <Section class="texto">
-                <h3 class="nombre-producto">JOHNNIE WALKER</h3>
-                <p class="descrip-producto">Whisky Double Black x 750ml</p>
-                <p class="descuento">12% off</p>
-                <p class="precio-ant">$4.800</p>
-                <p class="precio-nuevo">$4.224</p>
-            </Section>
-        </article>
+        <h1>Lista de productos</h1>
+    <% if (locals.products) { %>
+        <% if (products.legth > 0) { %>
+            <ul>
+                <% products.forEach(product => { %>
+                    <li>
+                    <a href="/products/<%= product.id %>">
+                        
+                            <article class="producto">
+                                <% if (product.image) { %>
+                                <img src="/uploads/<% product.image.url %>" alt="Imagen del producto">
+                                <% } %>
+                                <span><%= product.name %>Nombre Producto</span>
+                                <span><%= product.description %> Descripcion</span>
+                                <span><%= product.discount %>Descuento</span>
+                                <span><%= product.oldPrice %>Precio Viejo</span>
+                                <span><%= product.newPrice %>Precio Nuevo</span>
 
-        <article class="producto">
-            <picture class="img-product">
-                <img src="/images/Sheridan's Liqueur.jpeg" alt="Imagen del producto">
-            </picture>
-            <Section class="texto">
-                <h3 class="nombre-producto">LICOR SHERIDAN'S</h3>
-                <p class="descrip-producto">Licor doble, compuesto por crema de vainilla y licor de café y chocolate</p>
-                <p class="descuento">10% off</p>
-                <p class="precio-ant">$3.550</p>
-                <p class="precio-nuevo">$3.195</p>
-            </Section>
-        </article>
+                                <form action= "/products/?m=DELETE" method="post">
+                                <input type="hidden" name="id" value="<%= product.id %>">
+                                <button type="submit"><i class="fa fa-trash"></i></button>
+                                </form>
+                            </article>
+                        </a>
+                    </li> 
+                <% }) %>
+            </ul>
+         <% } else { %>
+            <h2>No se encontraron productos</h2>
+            <% } %>
+        <% } else { %>
+            <h2>No se encontraron productos</h2>
+        <% } %>
 
-        <article class="producto">
-            <picture class="img-product">
-                <img src="/images/Beefeater London Gin.jpeg" alt="Imagen del producto">
-            </picture>
-            <Section class="texto">
-                <h3 class="nombre-producto">BEEFEATER GIN</h3>
-                <p class="descrip-producto">Ginebra destilada estilo London Dry tradicional</p>
-                <p class="descuento">15% off</p>
-                <p class="precio-ant">$3.277</p>
-                <p class="precio-nuevo">$2.850</p>
-            </Section>
-        </article>
 
-        
-        <a href="/detail" class="producto"> 
-            <picture class="img-product">
-                <img src="/images/johnnie-walker-en-fila.jpeg" alt="Imagen del producto">
-            </picture>
-            <nav class="texto">
-                <h3 class="nombre-producto">BOX JOHNNIE WALKER</h3>
-                <p class="descrip-producto">Box de la marca con toda su gama de whiskys</p>
-                <p class="descuento">18% off</p>
-                <p class="precio-ant">$17.700</p>
-                <p class="precio-nuevo">$15.000</p>
-            </nav>
-        </a>
+    </section> 
 
-        <article class="producto">
-            <picture class="img-product">
-                <img src="/images/Jagermeister 02.jpeg" alt="Imagen del producto">
-            </picture>
-            <Section class="texto">
-                <h3 class="nombre-producto">JÄGER-MEISTER</h3>
-                <p class="descrip-producto">Licor de hierbas alemán elaborado a partir de 56 ingredientes naturales</p>
-                <p class="descuento">12% off</p>
-                <p class="precio-ant">$2.899</p>
-                <p class="precio-nuevo">$2.551</p>
-            </Section>
-        </article>
-
-        <article class="producto">
-            <picture class="img-product">
-                <img src="/images/Tanqueray London Dry Gin.jpeg" alt="Imagen del producto">
-            </picture>
-            <Section class="texto">
-                <h3 class="nombre-producto">TANQUERAY</h3>
-                <p class="descrip-producto">Ginebra importada premium de excelente calidad</p>
-                <p class="descuento">8% off</p>
-                <p class="precio-ant">$2.415</p>
-                <p class="precio-nuevo">$2.221</p>
-            </Section>
-        </article>   
-
-    </section>
+    
 </main>
 
 <%- include('./partials/footer.ejs') %>
