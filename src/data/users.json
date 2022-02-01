@@ -1,0 +1,83 @@
+[
+  {
+    "id": 1,
+    "firstName": "Juan",
+    "lastName": "Perez",
+    "email": "juanperez@gmail.com",
+    "phone": "1122334455",
+    "adress": "Calle falsa 123",
+    "birthdate": "1990-12-12",
+    "avatar": null,
+    "admin": false
+  },
+  {
+    "id": 2,
+    "firstName": "Lucia",
+    "lastName": "Gonzalez",
+    "email": "luciag@how.com",
+    "phone": "1122334455",
+    "adress": "Cabildo 1532",
+    "birthdate": "1993-10-19",
+    "avatar": null,
+    "admin": true
+  },
+  {
+    "id": 3,
+    "firstName": "Alan",
+    "lastName": "Castro",
+    "email": "luciag@how.com",
+    "phone": "1122334455",
+    "adress": "Cabildo 1532",
+    "birthdate": "1993-10-19",
+    "avatar": null,
+    "admin": true
+  },
+  {
+    "id": 4,
+    "firstName": "Javier",
+    "lastName": "Lopez",
+    "password": "123QWEasd.",
+    "email": "jlopez@mail.com",
+    "phone": "1122334455",
+    "adress": "Calle falsa 123",
+    "birthdate": "1900-01-01",
+    "avatar": null,
+    "admin": false
+  },
+  {
+    "id": 5,
+    "firstName": "Javier",
+    "lastName": "Lopez",
+    "password": "123QWEasd.",
+    "email": "jlopez@mail.com",
+    "phone": "1122334455",
+    "adress": "Calle falsa 123",
+    "birthdate": "1900-01-01",
+    "avatar": null,
+    "admin": false
+  },
+  {
+    "id": 6,
+    "firstName": "Javier",
+    "lastName": "Lopez",
+    "password": "123QWEasd.",
+    "email": "jlopez@mail.com",
+    "phone": "1122334455",
+    "adress": "Calle falsa 123",
+    "birthdate": "1900-01-01",
+    "avatar": null,
+    "admin": false
+  },
+  {
+    "id": 7,
+    "firstName": "Juan",
+    "lastName": "Perez",
+    "password": "123QWEasd.",
+    "email": "jlopez@mail.com",
+    "phone": "1122334455",
+    "adress": "Calle falsa 123",
+    "birthdate": "1900-01-01",
+    "avatar": null,
+    "admin": false
+  }
+]
