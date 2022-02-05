@@ -14,7 +14,8 @@
         "lastName": "Palma Sanchez",
         "email": "maildeprueba@gmail.com",
         "password": "HolaMundo2",
-        "imagen": []
+        "avatar": null,
+        "admin": true
     },
 
     {
@@ -23,6 +24,7 @@
         "lastName": "Carlos",
         "email": "unmillondeamigos@gmail.com",
         "password": "HolaMundo3",
-        "imagen": []
+        "avatar": "avatar-1643420388280.jfif",
+        "admin": false
     }
 ]
