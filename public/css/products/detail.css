@@ -81,8 +81,9 @@ main{
 }
 
 .imagen img{
-   width: 90%;
-   margin: 20px;
+   width: 3rem;
+   margin: 4px;
+   padding: 10px;
    border: solid 2px #550c18;
    float: left;
    margin-right: 10px;
@@ -95,8 +96,9 @@ main{
 
 .resenia-producto{
     color: #6a6363;
-    font-size: 11px;
-    margin: 10px;
+    font-size: 20px;
+    margin: 2px;
+    padding: 10px;
 }
 
 .agregar{
@@ -123,8 +125,15 @@ main{
     .resenia-producto{
         display: none;
     }
+    .imagen img{
+        width: 70%;
+        margin: 4rem;
+        margin-top: 4px;
+        margin-bottom: 4px;
+        
+    }
     .agregar{
-        width: 50%;
+        width: 100%;
         margin: 4px;
     }
     .subtitulos,
@@ -136,12 +145,18 @@ main{
 
 @media(min-width:361px){
     .resenia-producto{
-      font-size: 8px;
+      font-size: 12px;
 
     }
-    .agregar{
+    .imagen img{
         width: 50%;
-        margin: 4px;
+    }
+    .agregar{
+        width: 80%;
+        margin: 2px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
     .subtitulos,
     .divider{
@@ -151,10 +166,11 @@ main{
 
 @media(min-width:768px){
     .imagen img{
-        width: 45%;
+        width: 35%;
     }
     .resenia-producto{
-        font-size: 14px;
+        font-size: 20px;
+        font-weight:bold;
     }
     .subtitulos,
     .divider{
@@ -165,12 +181,13 @@ main{
 
 @media(min-width:1200px){
     .imagen img{
-        width: 50%;
+        width: 25%;
+        margin-bottom: 2px;
         
     }
     .resenia-producto{
         font-size: 20px;
-        font-weight: 300;
+        font-weight: 500;
     }
     .subtitulos,
     .divider{
