@@ -51,7 +51,8 @@ main {
 .carrousel img{
     width: 80%;
     border-radius: 10px;
-    padding-top: 0.1%;
+    padding-top: 0.10%;
+    padding-bottom: 0.1%;
 
 }
 

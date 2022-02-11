@@ -3,6 +3,7 @@
     <body>
         <%- include('../partials/header.ejs') %>
         <h6>Mi Carrito</h6>
+        <link rel="stylesheet" href="/css/products/carrito.css"/>
         <br>
         <div class ="box-producto">
             <ul class=detalle-compra>
@@ -53,9 +54,10 @@
                 <p>$2.000</p>
             </ol>
         </nav>
-        <nav class ="boton-comprar"><button class = "boton-fc" type="submit" href="/home" > Finalizar Compra </button></div>
+        <nav class ="boton-comprar"><button class = "boton-fc" type="submit" href="/home" > Finalizar Compra </button></nav>
     </main>
 
-<%- include('../partials/footer.ejs') %>
+    <%- include('../partials/footer.ejs')  %>
+
 </body>
 </html>
