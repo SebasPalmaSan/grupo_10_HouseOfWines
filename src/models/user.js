@@ -2,33 +2,37 @@ const path = require('path');
 const fs = require('fs');
 
 const model = {
-    file: path.resolve(__dirname, '../data', 'user.json'),
-    read: () => fs.readFileSync(model.file),
-    write: data => fs.writeFileSync(model.file, JSON.stringify(data, null, 2)),
-    all: () => JSON.parse(model.read()),
+    file: path.resolve(__dirname, '../data', 'users.json'),
+    read: () => fs.readFileSync(model.file, 'utf8'),
+    write: data => fs.writeFileSync(model.file, data),
+    get: () => JSON.parse(model.read()),
+    save: data => model.write(JSON.stringify(data, null, 2)),
+    search: (prop, value) => get().find(user => user[prop] === value),
     generate: data => Object({
-        id: model.all().lenght == 0 ? 1 : model.all().pop().id + 1,
-        firstName: data.name,
+        id: model.get().length > 0 ? model.get().sort((a,b) => a.id - b.id).pop().id + 1 : 1,
+        firstName: data.firstName,
         lastName: data.lastName,
         password: data.password,
         email: data.email,
         phone: data.phone,
         adress: data.adress,
         birthdate: data.birthdate,
+        avatar: data.avatar ? data.avatar : null,
+        admin: data.email.includes('@how')? true : false,
      }),
     create: data => {
-        let newUser = model.generate(data);
-        let all = model.all();
-        all.push(newUser);
-        model.write(all);
-        return newUser;
+        const users = model.get();
+        const user = model.generate(data);
+        users.push(user);
+        model.save(users);
+        return user;
     },
-    serch: (prop, value) => model.all().find(element => element[prop] == value),
-    update: (id , data) => {
-        let all = model.all();
+    
+    /* update: (id , data) => {
+        let all = model.get();
         let updated = all.map(e => {
             if (e.id == id){
-                e.firstName= data.name,
+                e.firstName= data.firstName,
                 e.lastName= data.lastName,
                 e.password= data.password,
                 e.email= data.email,
@@ -41,8 +45,9 @@ const model = {
         model.write(updated);
         let user = model.serch('id', id)
         return user;
-    },
-    delete: id => model.write(model.all().filter(e => e.id != id)),
+    }, */
+    delete: id => model.write(model.get().filter(e => e.id != id)
+    ),
 
     
 };
