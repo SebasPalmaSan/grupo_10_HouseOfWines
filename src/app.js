@@ -6,11 +6,11 @@ const method = require('method-override');
 
 const app = express();
 
-app.use(session ({
-    secret: "sshh, it's a secret",
-    resave: false,
-    saveUninitialized: false,
-}))
+//app.use(session ({
+    //secret: "sshh, it's a secret",///
+    //resave: false,
+    //saveUninitialized: false,
+//}))
 app.use(cookies);
 app.use(userLoggedMiddleware);
 
@@ -30,7 +30,12 @@ app.use(express.urlencoded({extended: true}));
 app.use(express.static(path.resolve(__dirname, '../public/')));
 app.use(express.static(path.resolve(__dirname, '../uploads')));
 app.use(express.urlencoded({extended: true}));  // req.body en los formularios
+
 app.use(session({secret:'HOW', resave: true, saveUnInitialized: false})); //req.session
+//app.use(cookie()); // req.cookies //res.cookie('name', 'value', {expires: new Date(Date.now())})
+
+
+//app.use(session({secret:'HOW', resave: true, saveUnInitialized: true})); //req.session
 //app.use(cookie()); // req.cookies //res.cookie('name', 'value', {expires: new Date(Date.now())})
 
 //app.use(express.json());
