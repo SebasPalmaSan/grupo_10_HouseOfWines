@@ -18,7 +18,7 @@ router.get('/profile', [], profile);
 router.get('/logout', [], logout);
 
 //post
-router.post('/save', /* validatorSave, */ save);
+router.post('/save', validatorSave, save);
 router.post('/access', [], access);
 
 
