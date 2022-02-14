@@ -3,35 +3,36 @@ const session = require ('express-session');
 const cookies = require ('cookie-parser');
 const path = require('path');
 const method = require('method-override');
+const userLoggedMiddleware = require('./middlewares/userLoggedMiddleware');
 
 const app = express();
 
-//app.use(session ({
-    //secret: "sshh, it's a secret",///
-    //resave: false,
-    //saveUninitialized: false,
-//}))
+app.use('/uploads', express.static(path.resolve(__dirname, '../uploads')));
+app.use(express.urlencoded({extended: true}));
+
+app.use(session ({
+    secret:'HOW',
+    resave: false, 
+    saveUninitialized: false}));
+
 app.use(cookies);
 app.use(userLoggedMiddleware);
+
+app.use(express.static(path.resolve(__dirname, '../public/')));
+//app.use(express.static(path.resolve(__dirname, '../uploads')));
+//app.use(express.urlencoded({extended: false}));  // req.body en los formularios
+
 
 app.set('view engine', 'ejs');
 
 app.set('views', path.resolve(__dirname, './views'));
 app.set('port', process.env.PORT || 3000);
 
-app.listen(app.get('port'), () => console.log('Listen un http://localhost:' + app.get('port')));
+app.listen(app.get('port'), () => console.log('Listen in http://localhost:' + app.get('port')));
 app.use(express.static(path.resolve(__dirname, '../public/')));
 
 
-
-app.use('/uploads', express.static(path.resolve(__dirname, '../uploads')));
-app.use(express.urlencoded({extended: true}));
-
-app.use(express.static(path.resolve(__dirname, '../public/')));
-app.use(express.static(path.resolve(__dirname, '../uploads')));
-app.use(express.urlencoded({extended: true}));  // req.body en los formularios
-
-app.use(session({secret:'HOW', resave: true, saveUnInitialized: false})); //req.session
+ //req.session
 //app.use(cookie()); // req.cookies //res.cookie('name', 'value', {expires: new Date(Date.now())})
 
 

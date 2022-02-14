@@ -1,5 +1,7 @@
-const model = require('../models/user')
+const bcryptjs = require ('bcryptjs');
 const {validationResult} = require("express-validator");
+const model = require('../models/user')
+
 module.exports = {
     login: (req, res) => res.render('users/login',{
         styles: ['login'],
@@ -29,7 +31,16 @@ module.exports = {
         }
         //return errors.isEmpty() ? res.send(user.create(req.body)) : res.send(errors.mapped()) ;
     },
-    logout: (req,res) => res.send(logout),
-    profile: (req,res) => res.render('users/profile')
+    profile: (req,res) => {
+        return res.render('users/profile',{
+        user: req.session.userLogged
+    });
+},
+    logout: (req,res) => {
+        res.clearCookie('userEmail');
+        req.session.destroy();
+        return res.redirect('/');
+    },
+    
 }
 

@@ -1,7 +1,9 @@
 const {Router} = require('express');
 const router = Router();
 const {login, register, create, profile, logout, save, access, uploadPassword, uploadAvatar} = require('../controllers/user');
-const validatorSave = require('../middlewares/save')
+
+const validatorSave = require('../middlewares/save');
+
 const path = require('path');
 const multer = require('multer');
 const storage = multer.diskStorage({
@@ -10,15 +12,18 @@ const storage = multer.diskStorage({
 })
 const upload = multer({storage});
 
+//Middlewares
+const guestMiddleware = require('../middlewares/guestMiddleware');
+const authMiddleware = require('../middlewares/authMiddleware');
 
 //get
-router.get('/login', login);
-router.get('/register', register);
-router.get('/profile', [], profile);
-router.get('/logout', [], logout);
+router.get('/login', guestMiddleware, login);
+router.get('/register', guestMiddleware, register);
+router.get('/profile', authMiddleware, profile);
+router.get('/logout', logout);
 
 //post
-router.post('/save', validatorSave, save);
+router.post('/register', validatorSave, save);
 router.post('/access', [], access);
 
 
@@ -26,4 +31,4 @@ router.post('/access', [], access);
 //router.put('/upload/password', [], uploadPassword);
 //router.put('/upload/avatar', [], uploadAvatar);
 
-module.exports = router
+module.exports = router;
