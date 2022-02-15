@@ -1,0 +1,62 @@
+[
+  {
+    "id": 1,
+    "firstName": "Juan",
+    "lastName": "Castro",
+    "password": "Hola123.",
+    "email": "juancastro@how.com",
+    "phone": "1122334455",
+    "adress": "Calle falsa 123",
+    "birthdate": "2000-01-01",
+    "avatar": null,
+    "admin": true
+  },
+  {
+    "id": 2,
+    "firstName": "Juan",
+    "lastName": "Castro",
+    "password": "QWEas1.",
+    "email": "juancastro@no.com",
+    "phone": "1122334455",
+    "adress": "Calle falsa 123",
+    "birthdate": "2000-05-05",
+    "avatar": null,
+    "admin": false
+  },
+  {
+    "id": 3,
+    "firstName": "Leandro",
+    "lastName": "Medina",
+    "password": "RTvc34.",
+    "email": "medinaleandro@how.com",
+    "phone": "1122334455",
+    "adress": "Calle falsa 123",
+    "birthdate": "2005-02-02",
+    "avatar": null,
+    "admin": true
+  },
+  {
+    "id": 4,
+    "firstName": "Cristian",
+    "lastName": "Castro",
+    "password": "TRew2.",
+    "email": "cristian@how.com",
+    "phone": "123456789",
+    "adress": "Calle falsa 123",
+    "birthdate": "2009-03-03",
+    "avatar": null,
+    "admin": true
+  },
+  {
+    "id": 5,
+    "firstName": "Cristian",
+    "lastName": "Perez",
+    "password": "ERT3452.",
+    "email": "cristianperez@how.com",
+    "phone": "1122334455",
+    "adress": "Calle falsa 123",
+    "birthdate": "2005-01-01",
+    "avatar": null,
+    "admin": true
+  }
+]

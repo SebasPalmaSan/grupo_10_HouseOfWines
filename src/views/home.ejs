@@ -14,7 +14,7 @@
         <% if (products.length > 0) { %>
             <ul>
                 <% products.forEach(product => { %>
-                    <div><li>
+                    <section class="productOrden">
                     <a href="/products/<%= product.id %>">
                         
                             <article class="producto">
@@ -34,7 +34,7 @@
                                 </form>
                             </article>
                     </a>
-                    </li></div>
+                    </section>
                 <% }) %>
             </ul>
          <% } else { %>

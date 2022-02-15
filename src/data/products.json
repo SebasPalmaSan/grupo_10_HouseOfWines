@@ -8,7 +8,7 @@
      "discount": 12,
      "oldPrice": 2479,
      "newPrice": 2182,
-     "image": "/uploads/rutini-01.jpeg"
+     "image": "/products/rutini-01.jpeg"
     },
     {
      "id": 2,
@@ -19,7 +19,7 @@
      "discount": 20,
      "oldPrice": 4000,
      "newPrice": 3200,
-     "image": "/uploads/D.V Catena Malbec 2017.jpeg"
+     "image": "/products/D.V Catena Malbec 2017.jpeg"
     },
     {
      "id": 3,
@@ -30,7 +30,7 @@
      "discount": 14,
      "oldPrice": 4320,
      "newPrice": 3715,
-     "image": "/uploads/Baron B espumante.jpeg.webp"
+     "image": "/products/Baron B espumante.jpeg.webp"
     },
     {
      "id": 4,
@@ -41,7 +41,7 @@
      "discount": 35,        
      "oldPrice": 1220,
      "newPrice": 780,
-     "image": "/uploads/Pispi Blend 2018.jpeg"
+     "image": "/products/Pispi Blend 2018.jpeg"
     },
     {
      "id": 5,
@@ -52,7 +52,7 @@
      "discount": 20,
      "oldPrice": 1380,
      "newPrice": 1104,
-     "image": "/uploads/Sapo de otro pozo Blend 2018.jpeg"
+     "image": "/products/Sapo de otro pozo Blend 2018.jpeg"
     },
     {
      "id": 6,
@@ -63,7 +63,7 @@
      "discount": 10,
      "oldPrice": 1750,
      "newPrice": 1575,
-     "image": "/uploads/Mosquita Muerta Blend 2017.jpeg"
+     "image": "/products/Mosquita Muerta Blend 2017.jpeg"
     },
     {
      "id": 7,
@@ -74,7 +74,7 @@
      "discount": 12,
      "oldPrice": 4800,
      "newPrice": 4224,
-     "image": "/uploads/johnnie-walker-double-black.jpeg"
+     "image": "/products/johnnie-walker-double-black.jpeg"
     },
     {
      "id": 8,
@@ -85,7 +85,7 @@
      "discount": 10,
      "oldPrice": 3550,
      "newPrice": 3195,
-     "image": "/uploads/Sheridan's Liqueur.jpeg"
+     "image": "/products/Sheridan's Liqueur.jpeg"
     },
     {
      "id": 9,
@@ -96,7 +96,7 @@
      "discount": 15,
      "oldPrice": 3277,
      "newPrice": 2850,
-     "image": "/uploads/Beefeater London Gin.jpeg"
+     "image": "/products/Beefeater London Gin.jpeg"
     },
     {
      "id": 10,
@@ -107,7 +107,7 @@
      "discount": 18,        
      "oldPrice": 17700,
      "newPrice": 15000,
-     "image": "/uploads/johnnie-walker-en-fila.jpeg"
+     "image": "/products/johnnie-walker-en-fila.jpeg"
     },
     {
      "id": 11,
@@ -118,7 +118,7 @@
      "discount": 12,
      "oldPrice": 2899,
      "newPrice": 2551,
-     "image": "/uploads/Jagermeister 01.jpeg"
+     "image": "/products/Jagermeister 01.jpeg"
     },
     {
      "id": 12,
@@ -129,7 +129,7 @@
      "discount": 8,
      "oldPrice": 2415,
      "newPrice": 2221,
-     "image": "/uploads/Tanqueray London Dry Gin.jpeg"
+     "image": "/products/Tanqueray London Dry Gin.jpeg"
     },
     {
      "id": 13,
@@ -140,7 +140,7 @@
      "discount": 5,
      "oldPrice": 480,
      "newPrice": 456,
-     "image": "/uploads/Cordero con piel de lobo Cabernet Franc Rosé 2020.jpeg"
+     "image": "/products/Cordero con piel de lobo Cabernet Franc Rosé 2020.jpeg"
     },
     {
      "id": 14,
@@ -151,7 +151,7 @@
      "discount": 15,
      "oldPrice": 2199,
      "newPrice": 1870,
-     "image": "/uploads/Absolut varios 01.jpeg"
+     "image": "/products/Absolut varios 01.jpeg"
     },
     {
      "id": 15,
@@ -162,7 +162,7 @@
      "discount": 10,
      "oldPrice": 1399,
      "newPrice": 1260,
-     "image": "/uploads/Branca 750ml.jpeg"
+     "image": "/products/Branca 750ml.jpeg"
     },
     {
      "id": 16,
@@ -173,7 +173,7 @@
      "discount": 5,
      "oldPrice": 899,
      "newPrice": 854,
-     "image": "/uploads/Branca 750ml.jpeg"
+     "image": "/products/Branca 750ml.jpeg"
     },
     {
      "id": 17,
@@ -184,7 +184,7 @@
      "discount": 5,
      "oldPrice": 750,
      "newPrice": 710,
-     "image": "/uploads/Campari 750ml.jpeg"
+     "image": "/products/Campari 750ml.jpeg"
     },
     {
      "id": 18,
@@ -195,7 +195,7 @@
      "discount": 5,
      "oldPrice": 750,
      "newPrice": 710,
-     "image": "/uploads/1882 750ml.jpeg"
+     "image": "/products/1882 750ml.jpeg"
     },
     {
      "id": 19,
@@ -206,7 +206,7 @@
      "discount": 25,
      "oldPrice": 4350,
      "newPrice": 3260,
-     "image": "/uploads/mwines3.jpeg"
+     "image": "/products/mwines3.jpeg"
     },
     {
      "id": 20,
@@ -217,7 +217,7 @@
      "discount": 15,
      "oldPrice": 4600,
      "newPrice": 3910,
-     "image": "/uploads/Jose Cuervo especial.jpeg"
+     "image": "/products/Jose Cuervo especial.jpeg"
     },
     {
      "id": 21,
@@ -228,7 +228,7 @@
      "discount": 10,
      "oldPrice": 2999,
      "newPrice": 2699,
-     "image": "/uploads/Jameson750ml.jpeg"
+     "image": "/products/Jameson750ml.jpeg"
     },
     {
      "id": 22,
@@ -239,7 +239,7 @@
      "discount": 15,
      "oldPrice": 3000,
      "newPrice": 2550,
-     "image": "/uploads/rutini-02.jpeg"
+     "image": "/products/rutini-02.jpeg"
     },
     {
      "id": 23,
@@ -250,7 +250,7 @@
      "discount": 15,
      "oldPrice": 45000,
      "newPrice": 38250,
-     "image": "/uploads/domperignon.jpeg"
+     "image": "/products/domperignon.jpeg"
     },
     {
      "id": 24,
@@ -261,7 +261,7 @@
      "discount": 15,
      "oldPrice": 570,
      "newPrice": 484,
-     "image": "/uploads/sidra1888.jpg"
+     "image": "/products/sidra1888.jpg"
     },
     {
     "id": 25,
@@ -272,6 +272,6 @@
      "discount": 15,
      "oldPrice": 3400,
      "newPrice": 2910,
-     "image": "/uploads/sidra1888.jpg"
+     "image": "/products/sidra1888.jpg"
     }
 ]
