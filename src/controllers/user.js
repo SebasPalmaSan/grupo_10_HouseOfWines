@@ -55,7 +55,6 @@ module.exports = {
       return res.redirect("/users/profile");
     },
 
-
     save: (req, res) =>{
         const errors = validationResult(req)
         //res.send(errors.mapped())
@@ -77,11 +76,18 @@ module.exports = {
         user: req.session.userLogged
     });
 },
-    logout: (req,res) => {
-        res.clearCookie('userEmail');
-        req.session.destroy();
-        return res.redirect('/');
-    },
+  logout: (req, res) => {
+    delete req.session.user;
+    res.cookie("user", null, { maxAge: -1 });
+    return res.redirect("/");
+    }
+
+    //logout: (req,res) => {
+        //res.clearCookie('userEmail');
+        //req.session.destroy();
+        //return res.redirect('/');
+    
+    
     
 }
 

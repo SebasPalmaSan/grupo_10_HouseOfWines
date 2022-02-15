@@ -4,7 +4,7 @@ function userLoggedMiddleware (req, res, next){
     res.locals.isLogeed = false;
 
     let emailInCookie = req.cookies.userEmail;
-    let userFromCookie = user.findByField('email', emailInCookie);
+    let userFromCookie = user.search("email", emailInCookie);
 
 
 

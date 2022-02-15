@@ -138,6 +138,7 @@
     color: #c4c4c4;
     margin: 5px 10px;
     transition: all 300ms;
+    text-decoration: none;
 }
 
 .link:hover {
