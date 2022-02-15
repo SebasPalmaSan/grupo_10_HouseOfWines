@@ -99,7 +99,7 @@ save: (req, res) => {
   logout: (req, res) => {
     delete req.session.user;
     res.cookie("user", null, { maxAge: -1 });
-    return res.redirect("/users/login");
+    return res.redirect("/");
     }
 
     //logout: (req,res) => {
