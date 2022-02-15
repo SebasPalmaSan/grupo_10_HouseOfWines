@@ -3,8 +3,9 @@
     <body>
         <%- include('../partials/header.ejs') %>
         <main>
-            <form action="/" method="GET" class="formulario">
-                <div>
+            <link rel="stylesheet" href="/css/users/login.css"/>
+            <!--<form action="/" method="GET" class="formulario">-->
+                <form action="/users/access" method="post" class="formulario">
                     <a href="#" class="subtitulos">Inicio</a>
                     <span class="divider"> > </span>
                     <a href="/users/login" class="subtitulos">Mi cuenta</a>
@@ -20,7 +21,7 @@
                 </div>
                     <div><a href="#" class="reset-password"><b>¿Olvidaste tu contraseña?</b></a></div>
                 <button type="submit" class="boton-formulario">INICIAR SESIÓN</button>
-                <div class="subtitulos"><p class="mt-3 text-center">¿No tenés cuenta aún? <a href="/register" class="subtitulos"><b>Crear cuenta</b></a></p></div>
+                <div class="subtitulos"><p class="mt-3 text-center">¿No tenés cuenta aún? <a href="/users/register" class="subtitulos"><b>Crear cuenta</b></a></p></div>
             </form>
     
         </main> 

@@ -4,6 +4,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
 }
 
 #main-header{
@@ -115,6 +116,7 @@
 #nav-left{
     width: 60%;
     display: flex;
+    text-decoration:none;
     flex-direction: column;
     flex-wrap: wrap;
     justify-content: space-evenly;
@@ -124,6 +126,7 @@
 #nav-right{
     width: 40%;
     display: flex;
+    text-decoration:none;
     flex-direction: column;
     flex-wrap: wrap;
     justify-content: space-evenly;

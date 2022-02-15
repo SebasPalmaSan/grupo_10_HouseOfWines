@@ -1,0 +1,21 @@
+<%- include('../partials/head.ejs') %> 
+<body>
+<%- include('../partials/header.ejs') %>
+<main>
+    <section>
+        <% if (user.avatar) { %>
+            <figure>
+                <img src="/avatars/<%=user.avatar%> " alt="<%- user.name %> ">
+            </figure>
+        
+        <% } else { %>
+            <figure>
+                <img src="/avatars/default-avatar.png" alt="avatar generico">
+            </figure>
+         <% } %>
+    </section>
+    
+</main>
+
+<%- include('../partials/footer.ejs') %>
+</body>
