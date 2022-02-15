@@ -46,5 +46,17 @@
     "birthdate": "2009-03-03",
     "avatar": null,
     "admin": true
+  },
+  {
+    "id": 5,
+    "firstName": "Cristian",
+    "lastName": "Perez",
+    "password": "ERT3452.",
+    "email": "cristianperez@how.com",
+    "phone": "1122334455",
+    "adress": "Calle falsa 123",
+    "birthdate": "2005-01-01",
+    "avatar": null,
+    "admin": true
   }
 ]

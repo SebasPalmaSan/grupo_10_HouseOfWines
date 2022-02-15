@@ -4,6 +4,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
 }
 
 footer {
@@ -17,6 +18,7 @@ footer {
 }
 #footer-top {
     font-size: light;
+    font-size: 25px;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -33,7 +35,7 @@ footer h2 {
     margin: 5px;
 }
 .cuerpo-de-texto{
-    font-size: 15px;
+    font-size: 20px;
     margin-top: 0px ;
     margin-bottom: 0px;
 }

@@ -16,7 +16,7 @@
         <% if (products.length > 0) { %>
             <ul>
                 <% products.forEach(product => { %>
-                    <li>
+                    <section class="productOrden">
                     <a href="/products/<%= product.id %>">
                         
                             <article class="producto">
@@ -35,8 +35,8 @@
                                 <button type="submit"><i class="fa fa-trash"></i></button>
                                 </form>
                             </article>
-                        </a>
-                    </li> 
+                    </a>
+                    </section>
                 <% }) %>
             </ul>
          <% } else { %>
@@ -55,45 +55,7 @@
         
     </picture>
 
-    <section id="main-bottom">
-
-        <h1>Lista de productos</h1>
-    <% if (locals.products) { %>
-        <% if (products.length > 0) { %>
-            <ul>
-                <% products.forEach(product => { %>
-                    <li>
-                    <a href="/products/<%= product.id %>">
-                        
-                            <article class="producto">
-                                <% if (product.image) { %>
-                                <img src="/uploads/<% product.image.url %>" alt="Imagen del producto">
-                                <% } %>
-                                <Section class="texto">
-                                    <h3 class="nombre-producto"><%= product.name %></h3>
-                                    <p class="descrip-producto"><%= product.description %></p>
-                                    <p class="descuento"><%= product.discount %></p>
-                                    <p class="precio-ant"><%= product.oldPrice %></p>
-                                    <p class="precio-nuevo"><%= product.newPrice %></p>
-                                </Section>
-                                <form action= "/products/?m=DELETE" method="post">
-                                <input type="hidden" name="id" value="<%= product.id %>">
-                                <button type="submit"><i class="fa fa-trash"></i></button>
-                                </form>
-                            </article>
-                        </a>
-                    </li> 
-                <% }) %>
-            </ul>
-         <% } else { %>
-            <h2>No se encontraron productos</h2>
-            <% } %>
-        <% } else { %>
-            <h2>No se encontraron productos</h2>
-        <% } %>
-
-
-    </section> 
+     
 
     
 </main>

@@ -1,7 +1,7 @@
 const {Router} = require('express');
 const product = require('../controllers/product');
 const router = Router();
-const {index, create, save, show, edit, modify} = require('../controllers/product');
+const {index, create, save, show, edit, modify} = require('../controllers/cart');
 
 router.get('/', index);
 
