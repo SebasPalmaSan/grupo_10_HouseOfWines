@@ -93,7 +93,7 @@ save: (req, res) => {
         },
       });
     }
-    let userRegistred = user.create(req.body);
+    let userRegisted = user.create(req.body);
     return res.redirect("/users/login");
   },
   logout: (req, res) => {

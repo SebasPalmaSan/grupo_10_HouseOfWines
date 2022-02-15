@@ -23,14 +23,13 @@
                 <a href="/" class="link">Accesorios</a>
             </section>
             <section id="nav-right">
-                <%if (locals.isLogged) {%>
-                    <a class = "dropdown-item" href ="/users/profile"> Mi Perfil</a>
-                    <li><hr class= "dropdown-divider"></li>
-                    <a class = "dropdown-item" href ="/"> Cerrar Sesión</a>
-
-                <a href="/users/register" class="link">Crear cuenta</a>
-                <a href="/users/login" class="link">Iniciar sesión</a>
-                <a href="/carrito" class="link">Mi carrito</a>
+                <!--<%if (locals.isLogged) {%> -->
+                    <a href ="/users/profile" class="link">Mi Perfil</a>
+                    <a href ="/" class="link">Cerrar Sesión</a>
+                <!-- <% } else { %> -->
+                    <a href="/users/register" class="link">Crear cuenta</a>
+                    <a href="/users/login" class="link">Iniciar sesión</a>
+                    <a href="/carrito" class="link">Mi carrito</a>
             </section>
             <section>
                 <a href="#" class="close-menu">Cerrar</i></a>
