@@ -99,13 +99,14 @@ main{
     font-size: 20px;
     margin: 2px;
     padding: 10px;
+    max-width: 80%;
 }
 
 .agregar{
     color: #c4c4c4;
     font-size: 12px;
     font-weight: 400;
-    width: 25%;
+    width: 100%;
     display: flex;
     justify-content: center;
     text-decoration: none;
@@ -114,6 +115,7 @@ main{
     background-color: #550c18;
     border-radius: 5px;
     margin-bottom: 4px;
+
 }
 
 .agregar:hover{
@@ -132,10 +134,10 @@ main{
         margin-bottom: 4px;
         
     }
-    .agregar{
+    /*.agregar{
         width: 100%;
         margin: 4px;
-    }
+    }*/
     .subtitulos,
     .divider{
         font-size: 10px;
@@ -145,19 +147,20 @@ main{
 
 @media(min-width:361px){
     .resenia-producto{
-      font-size: 12px;
+      font-size: 20px;
+      max-width:95%;
 
     }
     .imagen img{
         width: 50%;
     }
-    .agregar{
-        width: 80%;
+    /*.agregar{
+        width: 100%;
         margin: 2px;
         display: flex;
         justify-content: center;
         align-items: center;
-    }
+    }*/
     .subtitulos,
     .divider{
         font-size: 12px;
@@ -169,8 +172,8 @@ main{
         width: 35%;
     }
     .resenia-producto{
-        font-size: 20px;
-        font-weight:bold;
+        font-size: 30px;
+        font-weight: 400;
     }
     .subtitulos,
     .divider{
@@ -186,8 +189,8 @@ main{
         
     }
     .resenia-producto{
-        font-size: 20px;
-        font-weight: 500;
+        font-size: 35px;
+        font-weight: 400;
     }
     .subtitulos,
     .divider{
