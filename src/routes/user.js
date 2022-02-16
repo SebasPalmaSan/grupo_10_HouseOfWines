@@ -5,12 +5,20 @@ const {login, register, create, profile, logout, save, access, uploadPassword, u
 const validatorSave = require('../middlewares/save');
 
 const path = require('path');
+
+//Imagenes con Multer
 const multer = require('multer');
-const storage = multer.diskStorage({
-    destination: (req, file, cb) => cb(null, path.resolve(__dirname, '../../uploads')),
-    filename: (req, file, cb) => cb(null, 'user-image-' + Date.now() + path.extname(file.originalname))
+const multerDiskStorage = multer.diskStorage({
+    destination: (req, file, cb) => {
+        const folder = path.join(__dirname, '../uploads/avatars')
+        cb (null, folder);
+    },
+    filename: (req, file, cb) => {
+        const nombreArchivo = 'imagenUsuario' + Date.now() + path.extname (file.originalname);
+        cb(null, nombreArchivo)
+    }
 })
-const upload = multer({storage});
+const fileUpload = multer({ storage: multerDiskStorage});
 
 //Middlewares
 const guestMiddleware = require('../middlewares/guestMiddleware');
@@ -25,7 +33,7 @@ router.get('/logout', logout);
 //post
 router.post('/register', validatorSave, save);
 router.post('/access', [], access);
-
+router.post('/register', fileUpload.single('imagenUsuario'), validatorSave, save);
 
 //put
 //router.put('/upload/password', [], uploadPassword);

@@ -20,7 +20,7 @@
                         <% } %>
                     <% } %>
                 </section>
-            <form action="/users/register" method="POST" class="formulario">    
+            <form action="/users/register" method="POST" class="formulario" enctype="multipart/form-datas">    
                 <div class="titulo"><h1> <%- title %>  </h1></div>
                 <div class="control-formulario">
                     <input type="text" name="firstName" placeholder="Nombre completo" minlength="3" class="control" required="">
@@ -43,6 +43,13 @@
                 <div class="control-formulario">
                     <input type="password" name="password" placeholder="Contraseña" class="control" required="">
                 </div>
+                
+                <div>
+                    <legend class="imgagenUsuario">Seleccione su imagen de perfil</legend>
+                    <input  action= "/uploads" type="file" name="imagenUsuario">
+                </div>
+
+                <br>
                 <!-- <div class="control-formulario">
                     <input type="password" name="repetirPass" placeholder="Repetir contraseña" class="control" required="">
                 </div> -->

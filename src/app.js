@@ -4,7 +4,7 @@ const method = require('method-override');
 const app = express();
 const session = require('express-session');
 const cookie = require('cookie-parser');
-
+const multer = require ('multer');
 
 const userLoggedMiddleware = require('./middlewares/userLoggedMiddleware');
 
@@ -32,6 +32,10 @@ app.use('/products', require('./routes/product'));
 app.use('/users', require('./routes/user'));
 app.use(userLoggedMiddleware);
 
+//Imagenes con multer
+app.use(multer({
+    dest: path.join(__dirname, 'src/uploads')
+}).single('img-profile'));
 
 //app.use(express.json());
 //app.use('/carrito', require('./routes/cart'));
