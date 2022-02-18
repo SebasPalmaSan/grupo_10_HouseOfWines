@@ -4,7 +4,7 @@
         <%- include('../partials/header.ejs') %>
         <main>
             <link rel="stylesheet" href="/css/users/register.css"/>
-           
+            <form action="/users/register" method="POST" class="formulario" enctype="multipart/form-datas">
                 <nav>
                     <a href="#" class="subtitulos">Inicio</a>
                     <span class="divider"> > </span>
@@ -20,7 +20,7 @@
                         <% } %>
                     <% } %>
                 </section>
-            <form action="/users/register" method="POST" class="formulario" enctype="multipart/form-datas">    
+                
                 <div class="titulo"><h1> <%- title %>  </h1></div>
                 <div class="control-formulario">
                     <input type="text" name="firstName" placeholder="Nombre completo" minlength="3" class="control" required="">
