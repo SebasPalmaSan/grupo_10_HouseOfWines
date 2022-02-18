@@ -118,5 +118,17 @@
     "birthdate": "1905-04-04",
     "avatar": null,
     "admin": true
+  },
+  {
+    "id": 11,
+    "firstName": "sebas",
+    "lastName": "palma",
+    "password": "$2a$10$5leZzqAkgNI7Z6bTK2ayKOhJ761qXpK9iy5OcUQjx24urCxE/1Aci",
+    "email": "seba@how.com",
+    "phone": "1511435441",
+    "adress": "av siempre viva 753",
+    "birthdate": "1986-01-06",
+    "avatar": null,
+    "admin": true
   }
 ]

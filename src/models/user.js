@@ -53,4 +53,4 @@ const model = {
     
 };
 
-module.exports = model
+module.exports = model;
