@@ -130,5 +130,17 @@
     "birthdate": "1986-01-06",
     "avatar": null,
     "admin": true
+  },
+  {
+    "id": 12,
+    "firstName": "Denisse",
+    "lastName": "Porta",
+    "password": "$2a$10$kKRIRWj6rDTAQmn98QDSSeZFtHwOfE4PEvXNpA9.Chk5d1u2/PUNu",
+    "email": "deni@how.com",
+    "phone": "15334138",
+    "adress": "av Sebastian Palma 3450",
+    "birthdate": "2011-01-01",
+    "avatar": null,
+    "admin": true
   }
 ]

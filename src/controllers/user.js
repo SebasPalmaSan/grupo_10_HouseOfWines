@@ -1,6 +1,7 @@
 const bcryptjs = require ('bcryptjs');
 const {validationResult} = require("express-validator");
 const model = require('../models/user')
+//const validator = require('express-validator');
 
 module.exports = {
     login: (req, res) => res.render('users/login',{
@@ -15,7 +16,7 @@ module.exports = {
         styles: ['register'],
     }),
     access: (req, res) => {
-      let errors = validator.validationResult(req);
+      let errors = validationResult(req);
   
       if (!errors.isEmpty()) {
         return res.render("users/login", {
@@ -36,7 +37,7 @@ module.exports = {
         });
       }
   
-      if (!bcryptjs.compareSync(req.body.password, exist.password)) {
+      else if (!bcryptjs.compareSync(req.body.password, exist.password)) {
         return res.render("users/login", {
           styles: ["login"],
           errors: {
@@ -47,7 +48,7 @@ module.exports = {
         });
       }
   
-      if (req.body.remember) {
+      else if (req.body.remember) {
         res.cookie("email", req.body.email, { maxAge: 1000 * 60 * 60 * 24 * 30 });
       }
       req.session.user = exist;
@@ -56,8 +57,8 @@ module.exports = {
     },
 
     save: (req, res) =>{
-        //const errors = validationResult(req)
-        //res.send(errors.mapped())
+        const errors = validationResult(req)
+        res.send(errors.mapped())
         const create = model.create(req.body);
           return res.redirect('/users/login');
         /*if(errors.isEmpty()){
