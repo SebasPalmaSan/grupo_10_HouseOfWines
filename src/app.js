@@ -26,11 +26,11 @@ app.listen(app.get('port'), () => console.log('Listen in http://localhost:' + ap
 app.use(cookie()); // req.cookies //res.cookie('name', 'value', {expires: new Date(Date.now())})
 app.use(session({secret:'HOW', resave: false, saveUninitialized: true})); //req.session
 
-
+app.use(userLoggedMiddleware);
 app.use('/', require('./routes/main'));
 app.use('/products', require('./routes/product'));
 app.use('/users', require('./routes/user'));
-app.use(userLoggedMiddleware);
+
 
 
 //app.use(express.json());

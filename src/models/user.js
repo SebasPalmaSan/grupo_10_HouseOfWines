@@ -1,5 +1,6 @@
 const path = require('path');
 const fs = require('fs');
+const bcryptjs = require('bcryptjs')
 
 const model = {
     file: path.resolve(__dirname, '../data', 'users.json'),
@@ -12,7 +13,7 @@ const model = {
         id: model.get().length > 0 ? model.get().sort((a,b) => a.id - b.id).pop().id + 1 : 1,
         firstName: data.firstName,
         lastName: data.lastName,
-        password: data.password,
+        password: bcryptjs.hashSync(data.password,10),
         email: data.email,
         phone: data.phone,
         adress: data.adress,

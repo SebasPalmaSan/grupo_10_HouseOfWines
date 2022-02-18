@@ -58,5 +58,65 @@
     "birthdate": "2005-01-01",
     "avatar": null,
     "admin": true
+  },
+  {
+    "id": 6,
+    "firstName": "Sebastian Este",
+    "lastName": "Palma Sanchez",
+    "password": "Hola123",
+    "email": "seba@seba.com",
+    "phone": "01168055530",
+    "adress": "av siempre viva 758",
+    "birthdate": "1980-01-01",
+    "avatar": null,
+    "admin": false
+  },
+  {
+    "id": 7,
+    "firstName": "Sebastian",
+    "lastName": "Palmiña",
+    "password": "$2a$10$MHrvGECnhC.jAd6I04qcbun4O4H9JAD58.20wYop.MyHD2L1kHB12",
+    "email": "seba@uol.com",
+    "phone": "08003335533",
+    "adress": "av siempre viva 753",
+    "birthdate": "1765-01-01",
+    "avatar": null,
+    "admin": false
+  },
+  {
+    "id": 8,
+    "firstName": "Santiago ",
+    "lastName": "Gonzaliño",
+    "password": "$2a$10$bcLtoKlZK9bO/nZwdxZ.c.pPCA25.ODxGi7JvdtScXbTwSluikhZ.",
+    "email": "sant@sant.com",
+    "phone": "011555888666",
+    "adress": "av Sebastian Palma 3450",
+    "birthdate": "1865-02-02",
+    "avatar": null,
+    "admin": false
+  },
+  {
+    "id": 9,
+    "firstName": "Melisa",
+    "lastName": "Mendeziño",
+    "password": "$2a$10$cKW3wg14O1azAs7E9yEyCuWy1NJ8OAZrejzPXfz8aDqxeHMckgtWu",
+    "email": "meli@meli.com",
+    "phone": "154466333",
+    "adress": "av siempre viva 753",
+    "birthdate": "1902-03-03",
+    "avatar": null,
+    "admin": false
+  },
+  {
+    "id": 10,
+    "firstName": "Sofia",
+    "lastName": "Curciño",
+    "password": "$2a$10$KQ9AsnT.OFwvyQrY32pGnOgvAWHI51KA0tYMETalvqWS5.JyKuG.C",
+    "email": "sofi@how.com",
+    "phone": "2456341344",
+    "adress": "River Plate 1905",
+    "birthdate": "1905-04-04",
+    "avatar": null,
+    "admin": true
   }
 ]

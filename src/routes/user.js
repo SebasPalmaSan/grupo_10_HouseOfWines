@@ -23,7 +23,7 @@ router.get('/profile', authMiddleware, profile);
 router.get('/logout', logout);
 
 //post
-router.post('/register', validatorSave, save);
+router.post('/register', save);
 router.post('/access', [], access);
 
 

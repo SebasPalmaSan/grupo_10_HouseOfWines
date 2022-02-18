@@ -57,11 +57,13 @@ module.exports = {
 
 
     save: (req, res) =>{
-        const errors = validationResult(req)
+        //const errors = validationResult(req)
         //res.send(errors.mapped())
-        if(errors.isEmpty()){
-            const create = model.create(req.body);
-            res.redirect('/users/login');
+        const create = model.create(req.body);
+          return res.redirect('/users/login');
+        /*if(errors.isEmpty()){
+          const create = model.create(req.body);
+          res.redirect('/users/login');
         }else{
             return res.render('users/register', {
                 styles: ['register'],
@@ -69,7 +71,7 @@ module.exports = {
                 errors: errors.mapped(), 
                 user: req.body
             });
-        }
+        }*/
         //return errors.isEmpty() ? res.send(user.create(req.body)) : res.send(errors.mapped()) ;
     },
     profile: (req,res) => {
