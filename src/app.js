@@ -32,10 +32,11 @@ app.use('/products', require('./routes/product'));
 app.use('/users', require('./routes/user'));
 
 
-//Imagenes con multer
+/* Imagenes con multer
 app.use(multer({
     dest: path.join(__dirname, 'src/uploads')
 }).single('img-profile'));
+*/
 
 //app.use(express.json());
 //app.use('/carrito', require('./routes/cart'));
