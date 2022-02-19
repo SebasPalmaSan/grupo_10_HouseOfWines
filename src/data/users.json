@@ -238,5 +238,17 @@
     "birthdate": "2022-02-18",
     "avatar": "imagenUsuario1645230899077.jpg",
     "admin": false
+  },
+  {
+    "id": 21,
+    "firstName": "Juan",
+    "lastName": "Perez",
+    "password": "$2a$10$26pIaIQw/gs5lj45D0qpTugGudUbfIcrQRt4zN6l2cTNrjEUnvPOe",
+    "email": "juanperez@dh.com",
+    "phone": "1122334455",
+    "adress": "Aguero 123",
+    "birthdate": "2022-02-19",
+    "avatar": "imagenUsuario1645299054245.jpg",
+    "admin": false
   }
 ]
