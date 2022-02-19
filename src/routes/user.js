@@ -10,7 +10,7 @@ const path = require('path');
 const multer = require('multer');
 const multerDiskStorage = multer.diskStorage({
     destination: (req, file, cb) => {
-        const folder = path.join(__dirname, '../uploads/avatars')
+        const folder = path.join(__dirname, '../../uploads/avatars')
         cb (null, folder);
     },
     filename: (req, file, cb) => {
@@ -21,19 +21,19 @@ const multerDiskStorage = multer.diskStorage({
 const fileUpload = multer({ storage: multerDiskStorage});
 
 //Middlewares
-const guestMiddleware = require('../middlewares/guestMiddleware');
-const authMiddleware = require('../middlewares/authMiddleware');
+//const guestMiddleware = require('../middlewares/guestMiddleware');
+//const authMiddleware = require('../middlewares/authMiddleware');
 
 //get
-router.get('/login', guestMiddleware, login);
-router.get('/register', guestMiddleware, register);
-router.get('/profile', authMiddleware, profile);
+router.get('/login', login);
+router.get('/register', register);
+router.get('/profile', profile);
 router.get('/logout', logout);
 
 //post
-router.post('/register', save);
+//router.post('/register', save);
 router.post('/access', [], access);
-router.post('/register', fileUpload.single('imagenUsuario'), validatorSave, save);
+router.post('/register', [fileUpload.single('imagenUsuario'), validatorSave], save);
 
 //put
 //router.put('/upload/password', [], uploadPassword);
