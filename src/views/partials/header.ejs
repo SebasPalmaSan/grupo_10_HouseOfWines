@@ -23,9 +23,9 @@
                 <a href="/" class="link">Accesorios</a>
             </section>
             <section id="nav-right">
-                <% if (locals.isLogged) { %>
+                <% if (locals.userLogged) { %>
                     <a href ="/users/profile" class="link">Mi Perfil</a>
-                    <a href ="/" class="link">Cerrar Sesión</a>
+                    <a href ="/users/logout" class="link">Cerrar Sesión</a>
 
                 <% } else { %>
                     <a href="/users/register" class="link">Crear cuenta</a>
