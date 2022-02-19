@@ -12,6 +12,14 @@
                     <span class="divider"> > </span>
                     <a href="/users/login" class="subtitulos">Login</a>
                 </nav>
+
+                <section>
+                    <% if (locals.errors) { %>
+                        <% for( let error in errors ) { %>
+                            <p>  <%= errors[error].msg %>  </p>
+                        <% } %>
+                    <% } %>
+                </section>
                 
                 <div class="titulo"><h1>Iniciá sesión</h1></div>
                 <div class="control-formulario">

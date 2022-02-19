@@ -142,5 +142,101 @@
     "birthdate": "2011-01-01",
     "avatar": null,
     "admin": true
+  },
+  {
+    "id": 13,
+    "firstName": "juan",
+    "lastName": "perez",
+    "password": "$2a$10$aUohB36aZ5YLcz5ko/JJh.2x7uf6wDr3nMScfTHafOk9ZOwHANTi2",
+    "email": "juan@dh.com",
+    "phone": "1122334455",
+    "adress": "calle falsa 123",
+    "birthdate": "2022-02-18",
+    "avatar": null,
+    "admin": false
+  },
+  {
+    "id": 14,
+    "firstName": "Juan",
+    "lastName": "Perez",
+    "password": "$2a$10$Pui6elS1NnEboexcYaclV.ltXLTT5asFoJiaBTQc0fR17hDV40USa",
+    "email": "juan@dh.com",
+    "phone": "1122334455",
+    "adress": "calle falsa 123",
+    "birthdate": "2022-02-18",
+    "avatar": null,
+    "admin": false
+  },
+  {
+    "id": 15,
+    "firstName": "Juan",
+    "lastName": "Perez",
+    "password": "$2a$10$zl5zEeO4hQy4Yt5MLkrxROK61eNmaAVaYOEXmUP6sWAbGVq5XBgZK",
+    "email": "juan@dh.com",
+    "phone": "1122334455",
+    "adress": "Calle falsa 123",
+    "birthdate": "2022-02-18",
+    "avatar": null,
+    "admin": false
+  },
+  {
+    "id": 16,
+    "firstName": "Diego",
+    "lastName": "Perez",
+    "password": "$2a$10$T10lP75ZlXc5itNNy1ShmO2V0HZQwwqN5oO9kofDGIRgZmuEODI36",
+    "email": "diego@dh.com",
+    "phone": "1122334455",
+    "adress": "Calle falsa 123",
+    "birthdate": "2022-02-18",
+    "avatar": null,
+    "admin": false
+  },
+  {
+    "id": 17,
+    "firstName": "Santiago",
+    "lastName": "Perez",
+    "password": "$2a$10$idJR24NuuzwSfC/oUqnQ3e5dPmVA3taSR4vdRs5t3a3mewoaNjT6u",
+    "email": "santi@dh.com",
+    "phone": "1122334455",
+    "adress": "Calle falsa 123",
+    "birthdate": "2022-02-18",
+    "avatar": null,
+    "admin": false
+  },
+  {
+    "id": 18,
+    "firstName": "Mel",
+    "lastName": "Mendez",
+    "password": "$2a$10$G8x.lPrJ40HMNBPwprmmuua9YSAhWLWnpBRh2iHvem/ySmuTHT3MO",
+    "email": "mel@dh.com",
+    "phone": "1122334455",
+    "adress": "calle falsa 123",
+    "birthdate": "2022-02-18",
+    "avatar": null,
+    "admin": false
+  },
+  {
+    "id": 19,
+    "firstName": "Lola",
+    "lastName": "lopez",
+    "password": "$2a$10$F0wgieFwtYu/uLBDkE2YxOG4fwHaPSqt1SUa49wK9dYLuXPY89mam",
+    "email": "lola@dh.com",
+    "phone": "1133557799",
+    "adress": "Aguirre 555",
+    "birthdate": "2022-02-18",
+    "avatar": "imagenUsuario1645230399339.jpg",
+    "admin": false
+  },
+  {
+    "id": 20,
+    "firstName": "lola",
+    "lastName": "lopez",
+    "password": "$2a$10$wdE2LI0nLLBLgMgUMWrsR.rUwCXMEXi0eSN184pAtLV/Dcd2mElWa",
+    "email": "lolalopez@dh.com",
+    "phone": "1122334455",
+    "adress": "aguirre 111",
+    "birthdate": "2022-02-18",
+    "avatar": "imagenUsuario1645230899077.jpg",
+    "admin": false
   }
 ]
