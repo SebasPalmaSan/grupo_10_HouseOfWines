@@ -51,7 +51,7 @@ main {
 
 }
 .carrousel img{
-    width: 95%;
+    width: 60%;
     border-radius: 10px;
     padding-top: 0.10%;
     padding-bottom: 0.9%;
@@ -116,7 +116,7 @@ main {
 }
 
 .imagen-bodegas {
-    width: 80%;
+    width: 60%;
     display: block;
     margin: auto;
 }
