@@ -32,15 +32,15 @@ const model = {
                 e.name = data.name;
                 e.category = data.category;
                 e.description = data.description;
-                e.discount = data.discount;
-                e.oldPrice = data.oldPrice;
-                e.newPrice = data.newPrice;
+                e.discount = parseInt(data.discount);
+                e.oldPrice = parseInt(data.oldPrice);
+                e.newPrice = parseInt(data.discount) > 0 ? parseInt(data.oldPrice) - parseInt(data.oldPrice) * (parseInt(data.discount) / 100) : parseInt(data.newPrice);
                 return e;
             }
             return e;
         })
         model.write(updated);
-        let product = model.serch('id', id)
+        let product = model.search('id', id)
         return product;
     },
     delete: id => model.write(model.all().filter(e => e.id != id)),

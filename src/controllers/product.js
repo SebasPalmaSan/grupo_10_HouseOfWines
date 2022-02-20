@@ -26,12 +26,12 @@ module.exports = {
         }) : res.render('error', { msg: 'Producto no encontrado'})
     },
     edit: (req, res) =>  res.render('products/edit', {
-        styles: ['products/create', 'main'],
+        styles: ['products/edit', 'main'],
         title: 'House of Wines | Editar producto',
         product: model.search('id', req.params.id)
     }),
     modify: (req, res) => {
-        let updated = product.edit(req.params.id, req.body);
+        let updated = model.update(req.params.id, req.body);
         return res.redirect('/products/detail/' + updated.id)
     },
     delete: (req, res) => {
