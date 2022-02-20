@@ -2,26 +2,28 @@
 <body>
 <%- include('../partials/header.ejs') %>
 <main>
+    <link rel="stylesheet" href="/css/users/profile.css"/>
     <section>
+        <h1 class="saludoBienvenida">Bienvenido a House of Wines <%=user.firstName%></h1>
         <% if (user.avatar) { %>
             <figure>
-                <img src="/avatars/<%=userLogged.avatar%> " alt="<%= user.firstName %> ">
+                <img id="imgCentral"src="/avatars/<%=userLogged.avatar%> " alt="<%= user.firstName %> "class="avatar">
             </figure>
         
         <% } else { %>
             <figure>
-                <img src="/avatars/default-avatar.png" alt="avatar generico">
+                <img id="imgCentral"src="/avatars/default-avatar.png" alt="avatar generico" class="avatar">
             </figure>
          <% } %>
     </section>
     
     <section>
-        <article>
-            <h2> <%= user.firstName %> <%= user.lastName %>  </h2>
-            <h2> <%= user.birthdate %>  </h2>
-            <h2> <%= user.phone %>  </h2>
-            <h2> <%= user.adress %>  </h2>
-            <h2> <%= user.email %>  </h2>
+        <article class="datosProfile">
+            <h2> <%= user.firstName %> <%= user.lastName %></h2>
+            <h2> <%= user.birthdate %></h2>
+            <h2> <%= user.phone %></h2>
+            <h2> <%= user.adress %></h2>
+            <h2> <%= user.email %></h2>
         </article>
     </section>
     
