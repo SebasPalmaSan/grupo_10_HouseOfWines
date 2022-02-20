@@ -238,5 +238,29 @@
     "birthdate": "2022-02-18",
     "avatar": "imagenUsuario1645230899077.jpg",
     "admin": false
+  },
+  {
+    "id": 21,
+    "firstName": "Sebastian",
+    "lastName": "Palma Sanchez",
+    "password": "$2a$10$1C6o7FYg24YLG9SUYviKruPtAw2jNxBWzxR3dsF9J2egvachORQe6",
+    "email": "sebastian@how.com",
+    "phone": "01168055530",
+    "adress": "av siempre viva 758",
+    "birthdate": "1986-01-06",
+    "avatar": null,
+    "admin": true
+  },
+  {
+    "id": 22,
+    "firstName": "Homero",
+    "lastName": "Thomson",
+    "password": "$2a$10$7BAazgNlWlp8wf0L60dkBewxchYDBHBlA97oNSZeqqYnosfvX0Cj2",
+    "email": "homero@how.com",
+    "phone": "123456789",
+    "adress": "av siempre viva 758",
+    "birthdate": "1960-05-05",
+    "avatar": "imagenUsuario1645326587463.jpg",
+    "admin": true
   }
 ]

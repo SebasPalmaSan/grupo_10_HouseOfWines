@@ -81,11 +81,11 @@ main{
 }
 
 .imagen img{
-   width: 3rem;
+   width: 10%;
    margin: 4px;
    padding: 10px;
    border: solid 2px #550c18;
-   float: left;
+   /*float: left;*/
    margin-right: 10px;
    border-radius: 5px;
 }
@@ -184,7 +184,7 @@ main{
 
 @media(min-width:1200px){
     .imagen img{
-        width: 25%;
+        width: 15%;
         margin-bottom: 2px;
         
     }
