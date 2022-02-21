@@ -226,7 +226,7 @@
     "discount": 10,
     "oldPrice": 2999,
     "newPrice": 2699,
-    "image": "/products/Jameson750ml.jpeg"
+    "image": "/products/jameson2.jpg"
   },
   {
     "id": 22,
@@ -248,7 +248,7 @@
     "discount": 15,
     "oldPrice": 45000,
     "newPrice": 38250,
-    "image": "/products/domperignon.jpeg"
+    "image": "/products/domperignon.jpg"
   },
   {
     "id": 24,

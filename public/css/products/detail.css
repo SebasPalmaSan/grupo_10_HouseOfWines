@@ -8,15 +8,16 @@
     
 }
 
-main{
+body{
     background-color: #f5f5f5 ;
-    width: 100%;
     border: solid 2px #550c18;
 }
+
 .ref{
     text-align: center;
     margin-bottom: 10px;
 }
+
 .subtitulos,
 .divider{
     color: #736E6E;
@@ -81,13 +82,18 @@ main{
 }
 
 .imagen img{
-   width: 10%;
+   width: 20%;
    margin: 4px;
    padding: 10px;
    border: solid 2px #550c18;
-   /*float: left;*/
    margin-right: 10px;
    border-radius: 5px;
+}
+
+#imgCentral{
+    display: block;
+    margin-left:auto;
+    margin-right:auto;
 }
 
 .imagen img:hover{
@@ -100,28 +106,32 @@ main{
     margin: 2px;
     padding: 10px;
     max-width: 80%;
+    text-align: center;
+}
+
+.botonAgregar{
+    display: flex;
+    justify-content: center;
 }
 
 .agregar{
     color: #c4c4c4;
     font-size: 12px;
     font-weight: 400;
-    width: 100%;
+    width: 40%;
     display: flex;
     justify-content: center;
     text-decoration: none;
     outline: none;
     border: solid 1px #000000;
-    background-color: #550c18;
+    background-color: rgb(85, 12, 24, 70%);
     border-radius: 5px;
     margin-bottom: 4px;
-
 }
 
 .agregar:hover{
     color: #6a6363;
 }
-
 
 @media(max-width:360px){
     .resenia-producto{
@@ -142,7 +152,7 @@ main{
     .divider{
         font-size: 10px;
    
-}
+    }
 }
 
 @media(min-width:361px){
@@ -184,7 +194,7 @@ main{
 
 @media(min-width:1200px){
     .imagen img{
-        width: 15%;
+        width: 40%;
         margin-bottom: 2px;
         
     }
