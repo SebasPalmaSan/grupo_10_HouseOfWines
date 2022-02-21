@@ -32,7 +32,7 @@ module.exports = {
     }),
     modify: (req, res) => {
         let updated = model.update(req.params.id, req.body);
-        return res.redirect('/products/detail/' + updated.id)
+        return res.redirect('/products/' + updated.id)
     },
     delete: (req, res) => {
         product.delete(req.body.id);
