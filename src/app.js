@@ -30,10 +30,10 @@ app.use(userLoggedMiddleware);
 app.use('/', require('./routes/main'));
 app.use('/products', require('./routes/product'));
 app.use('/users', require('./routes/user'));
+app.use('/carrito', require('./routes/cart'));
 
 
 //app.use(express.json());
-//app.use('/carrito', require('./routes/cart'));
 //app.use('/file/', require('./routes/file'));
 //app.use('/detail', require('./routes/detail'));
 //app.use('/files', require('./routes/file'));
