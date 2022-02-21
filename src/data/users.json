@@ -241,6 +241,18 @@
   },
   {
     "id": 21,
+
+    "firstName": "Juan",
+    "lastName": "Perez",
+    "password": "$2a$10$26pIaIQw/gs5lj45D0qpTugGudUbfIcrQRt4zN6l2cTNrjEUnvPOe",
+    "email": "juanperez@dh.com",
+    "phone": "1122334455",
+    "adress": "Aguero 123",
+    "birthdate": "2022-02-19",
+    "avatar": "imagenUsuario1645299054245.jpg",
+    "admin": false
+  },
+  {
     "firstName": "Sebastian",
     "lastName": "Palma Sanchez",
     "password": "$2a$10$1C6o7FYg24YLG9SUYviKruPtAw2jNxBWzxR3dsF9J2egvachORQe6",
@@ -262,5 +274,6 @@
     "birthdate": "1960-05-05",
     "avatar": "imagenUsuario1645326587463.jpg",
     "admin": true
+
   }
 ]
