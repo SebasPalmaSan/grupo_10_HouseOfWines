@@ -15,7 +15,7 @@ module.exports = {
         return res.redirect('/products/detail/' + created.id)
     },
     show: (req, res) => {
-        let result = model.serch('id', req.params.id)
+        let result = model.search('id', req.params.id)
         return result ? res.render('products/carrito', {
         styles: ['products/carrito', 'main'],
         title: 'House of Wines | ' + result.name,
@@ -25,7 +25,7 @@ module.exports = {
     edit: (req, res) =>  res.render('products/edit', {
         styles: ['products/create', 'main'],
         title: 'House of Wines | Editar producto',
-        product: model.serch('id', req.params.id)
+        product: model.search('id', req.params.id)
     }),
     modify: (req, res) => {
         let updated = product.edit(req.params.id, req.body);

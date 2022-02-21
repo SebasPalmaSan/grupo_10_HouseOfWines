@@ -22,7 +22,7 @@ const model = {
         model.write(all);
         return newProduct;
     },
-    serch: (prop, value) => model.all().find(element => element[prop] == value),
+    search: (prop, value) => model.all().find(element => element[prop] == value),
     update: (id , data) => {
         let all = model.all();
         let updated = all.map(e => {
@@ -38,7 +38,7 @@ const model = {
             return e;
         })
         model.write(updated);
-        let product = model.serch('id', id)
+        let product = model.search('id', id)
         return product;
     },
     delete: id => model.write(model.all().filter(e => e.id != id)),

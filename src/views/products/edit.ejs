@@ -2,19 +2,25 @@
 <body>
     <%- include('../partials/header.ejs') %>
     <h1> <%- locals.title ? title : null %>  </h1>
-    
-    <form action="/products/<%- product.id %>?m=PUT" method="post">
-        <label for="name" class="control-formulario">
-            <input type="text" id="name" minlength="3" maxlength="25" placeholder="Nombre del producto" class="control" value=" <%= product.name %> "  required>
+
+    <section id="prodedit">
+
+    <picture class="imagen">
+        <img src="<%=product.image%>"/>
+    </picture>
+
+    <form action="/products/<%- product.id %>?m=PUT" method="post" class='formulario'>
+        <label for="name" class="control-formulario"> Nombre del prducto:
+            <input type="text" id="name" minlength="3" maxlength="25" placeholder="<%= product.name %>" class="control" value=" <%= product.name %> "  required>
         </label>
-        <label for="oldPrice" class="control-formulario">
-            <input type="number" id="oldPrice" min="0" placeholder="Precio de lista" class="control" value=" <%= product.oldPrice %> " required>
+        <label for="oldPrice" class="control-formulario"> Precio de lista:
+            <input type="number" id="oldPrice" min="0" placeholder=" $ <%= product.oldPrice %>" class="control" value=" <%= product.oldPrice %> " required>
         </label>
-        <label for="discount" class="control-formulario">
-            <input type="number" id="discount" min="0" max="100" placeholder="Porcentaje de descuento" class="control" value=" <%= product.discount %> " required>
+        <label for="discount" class="control-formulario"> Porcentaje de descuento:
+            <input type="number" id="discount" min="0" max="100" placeholder=" % <%= product.discount %>" class="control" value=" <%= product.discount %> " required>
         </label>
         
-        <label for="category" class="control-formulario">
+        <label for="category" class="control-formulario"> Categoria:
             <select id="category" name="category" class="control" required>
                 <option value="vinos" <%= product.category ? 'selected' : null  %> >Vinos</option>
                 <option value="espumantes" <%= product.category ? 'selected' : null  %> >Espumantes</option>
@@ -29,7 +35,7 @@
         <button type="submit">Enviar</button>
 
     </form>
-
+</section>
     <%- include('../partials/footer.ejs') %>
 </body>
 </html>

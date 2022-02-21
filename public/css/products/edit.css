@@ -13,87 +13,67 @@ main{
     width: 100%;
     border: solid 2px #550c18;
 }
-.ref{
+
+.formulario {
+    width: 100%;
+    padding: 20px 20px;
+    background-color: #f5f5f5;
     text-align: center;
-    margin-bottom: 10px;
 }
-.subtitulos,
-.divider{
-    color: #736E6E;
-    font-size: 25px;
-    display: inline;
-    text-align: center;
-    text-decoration: none;
-    outline: none;
-    padding: 2px 1px 0;
-}
-
-.titulo{
-    color: #6a6363;
-    font-size: 20px;
-    font-weight: bold;
+#prodedit {
+    margin: 10px 20px;
+    background-color: #f5f5f5;
+    border-radius: 5px;
     display: flex;
-    justify-content: center;
+    flex-direction: row;
+    border: solid 2px #550c18;
+   border-radius: 5px;
 }
 
-.descripcion{
-    color: #6a6363;
-    font-size: 14px;
-    font-weight: 500;
-    display: flex;
-    justify-content: center;
+.imagen{
+    width: 30%;
 }
-
-
-.precio{
-    color: #6a6363;
-    font-size: 20px;
-    font-weight: bold;
-    display: flex;
-    justify-content: center;
-}
-
-.cuotas{
-    color: #6a6363;
-    font-size: 12px;
-    font-weight: 500;
-    display: flex;
-    justify-content: center;
-}
-
-.medios{
-    font-size: 10px;
-    text-align: center;
-    color: #c4c4c4;
-    font-weight: 400;
-    
-}
-
-.m-pagos{
-    text-decoration: none;
-    outline: none;
-    color: #c4c4c4;
-    
-}
-
-.m-pagos:hover{
-    color: #6a6363;
-}
-
 .imagen img{
-   width: 10%;
+   width: 30%;
    margin: 4px;
    padding: 10px;
-   border: solid 2px #550c18;
-   /*float: left;*/
-   margin-right: 10px;
-   border-radius: 5px;
 }
 
 .imagen img:hover{
     box-shadow: 0px 0px 10px #6a6363;
 }
 
+form {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+
+}
+.control-formulario {
+    width: 80%;
+    background-color: #f5f5f5;
+    border: solid 3px #BAB7B7;
+    outline: none;
+    margin-bottom: 45px;
+    text-align: left; 
+    margin-left: 10%;
+    border-radius: 5px;
+}
+
+.control{
+    background-color: #f5f5f5;
+    width: 80%;
+    padding: 8px;
+    border-radius: 5px;
+    border: solid 1px #f5f5f5;
+    outline: none;
+}
+
+label {
+    width: 70%;
+    border: solid 2px #550c18;
+}
 .resenia-producto{
     color: #6a6363;
     font-size: 20px;
@@ -102,11 +82,11 @@ main{
     max-width: 80%;
 }
 
-.agregar{
+button{
     color: #c4c4c4;
-    font-size: 12px;
+    font-size: 22px;
     font-weight: 400;
-    width: 100%;
+    width: 30%;
     display: flex;
     justify-content: center;
     text-decoration: none;
@@ -115,7 +95,7 @@ main{
     background-color: #550c18;
     border-radius: 5px;
     margin-bottom: 4px;
-
+    align-self: center;
 }
 
 .agregar:hover{
@@ -128,16 +108,13 @@ main{
         display: none;
     }
     .imagen img{
-        width: 70%;
+        width: 90%;
         margin: 4rem;
         margin-top: 4px;
         margin-bottom: 4px;
         
     }
-    /*.agregar{
-        width: 100%;
-        margin: 4px;
-    }*/
+    
     .subtitulos,
     .divider{
         font-size: 10px;
@@ -152,15 +129,9 @@ main{
 
     }
     .imagen img{
-        width: 50%;
+        width: 85%;
     }
-    /*.agregar{
-        width: 100%;
-        margin: 2px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }*/
+   
     .subtitulos,
     .divider{
         font-size: 12px;
@@ -169,7 +140,7 @@ main{
 
 @media(min-width:768px){
     .imagen img{
-        width: 35%;
+        width: 85%;
     }
     .resenia-producto{
         font-size: 30px;
@@ -184,7 +155,7 @@ main{
 
 @media(min-width:1200px){
     .imagen img{
-        width: 15%;
+        width: 80%;
         margin-bottom: 2px;
         
     }
