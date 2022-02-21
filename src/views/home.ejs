@@ -16,10 +16,9 @@
     <% if (locals.products) { %>
         <% if (products.length > 0) { %>
                 <% products.forEach(product => { %>
-                    <section class="productOrden">
-                    <a href="/products/<%= product.id %>" class="caja">
-                        
+                    
                             <article class="producto">
+                              <a href="/products/<%= product.id %>" class="caja">  
                                 <% if (product.image) { %>
                                     <img src="<%= product.image %>" alt="Imagen del producto" class="img-product">
                                 <% } %>
@@ -29,20 +28,11 @@
                                     <p class="descuento">% <%= product.discount %></p>
                                     <p class="precio-ant">$ <%= product.oldPrice %></p>
                                     <p class="precio-nuevo">$ <%= product.newPrice %></p>
+                                    
                                 </Section>
-                                <% if (locals.userLogged && locals.user.admin == true) { %>
-                                    <section class="edit">
-                                        <a href="/products/edit/<%= product.id %>"> <i class="fa-solid fa-pen-to-square"></i> </a>
-                                        <form action= "/products/?m=DELETE" method="post">
-                                            <input type="hidden" name="id" value="<%= product.id %>">
-                                            <button type="submit"><i class="fa fa-trash"></i></button>
-                                        </form>
-                                    </section>
-                                <% } %>
-                                
+                                </a>
                             </article>
-                    </a>
-                    </section>
+                    
                 <% }) %>
          <% } else { %>
             <h2>No se encontraron productos</h2>
