@@ -252,13 +252,11 @@
   },
   {
     "id": 24,
-    "name": "Sidra 1888",
-    "category": "Espumantes",
-    "description": "Sidra 1888 x 750ml Cosecha Especial Sáenz Briones",
+    "category": "espumantes",
     "resenia": "Producida desde 1888, y ubicada en el Alto Valle de Río Negro, Saenz Briones 1888 es elaborada con extremo cuidado en cada uno de sus procesos. 1888 cosecha y selecciona durante los meses de verano las mejores manzanas para su delicada elaboración. ",
-    "discount": 15,
-    "oldPrice": 570,
-    "newPrice": 484,
+    "discount": null,
+    "oldPrice": null,
+    "newPrice": null,
     "image": "/products/sidra1888.jpg"
   },
   {

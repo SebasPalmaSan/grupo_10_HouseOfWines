@@ -4,7 +4,7 @@
 <main>
     <link rel="stylesheet" href="/css/users/profile.css"/>
     <section>
-        <h1 class="saludoBienvenida">Bienvenido a House of Wines <%=user.firstName%></h1>
+        <h1 class="saludoBienvenida"> ¡Bienvenido a House of Wines <%=user.firstName%>!</h1>
         <% if (user.avatar) { %>
             <figure>
                 <img id="imgCentral"src="/avatars/<%=userLogged.avatar%> " alt="<%= user.firstName %> "class="avatar">
@@ -21,11 +21,12 @@
     
     <section>
         <article class="datosProfile">
-            <h2> <%= user.firstName %> <%= user.lastName %></h2>
-            <h2> <%= user.birthdate %></h2>
-            <h2> <%= user.phone %></h2>
-            <h2> <%= user.adress %></h2>
-            <h2> <%= user.email %></h2>
+            <h2>Mis datos</h2>
+            <h3> Nombre y Apellido: <%= user.firstName %> <%= user.lastName %></h3>
+            <h3> Fecha de nacimiento: <%= user.birthdate %></h3>
+            <h3> Teléfono: <%= user.phone %></h3>
+            <h3> Dirección: <%= user.adress %></h3>
+            <h3> Email: <%= user.email %></h3>
         </article>
     </section>
     
