@@ -4,7 +4,7 @@
 <main>
     <link rel="stylesheet" href="/css/users/profile.css"/>
     <section>
-        <h1 class="saludoBienvenida"> ¡Bienvenido a House of Wines <%=user.firstName%>!</h1>
+        <h3 class="saludoBienvenida"> ¡Bienvenido a House of Wines <%=user.firstName%>!</h3>
         <% if (user.avatar) { %>
             <figure>
                 <img id="imgCentral"src="/avatars/<%=userLogged.avatar%> " alt="<%= user.firstName %> "class="avatar">
