@@ -9,7 +9,10 @@
     </picture>
 
 
-    <h1>Lista de productos</h1>
+    <h1 class="bienvenida">¡BIENVENIDO A NUESTRA TIENDA ONLINE!</h1>
+	<div class="linea"></div>
+    <h2 class="destacados">PRODUCTOS DESTACADOS</h2>
+    <div class="linea"></div>
     <section id="main-top">
 
         
@@ -22,14 +25,15 @@
                                 <% if (product.image) { %>
                                     <img src="<%= product.image %>" alt="Imagen del producto" class="img-product">
                                 <% } %>
-                                <Section class="texto">
+                                <section class="texto">
                                     <h3 class="nombre-producto"><%= product.name %></h3>
                                     <p class="descrip-producto"><%= product.description %></p>
-                                    <p class="descuento">% <%= product.discount %></p>
-                                    <p class="precio-ant">$ <%= product.oldPrice %></p>
-                                    <p class="precio-nuevo">$ <%= product.newPrice %></p>
+                                    <p class="descuento"> <%= product.discount %> % OFF</p>
+                                    <p class="precio-ant"> $ <%= product.oldPrice %> </p>
+                                    <p class="precio-nuevo"> $ <%= product.newPrice %> </p></p>
+                                    <p class="descrip-producto">Hasta 24 cuotas <i class="far fa-2x fa-credit-card service-icon"></i></p>
                                     
-                                </Section>
+                                </section>
                                 </a>
                             </article>
                     

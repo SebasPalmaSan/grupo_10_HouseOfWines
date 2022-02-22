@@ -16,6 +16,28 @@ main {
     border: solid 2px #550c18;
     
 }
+.bienvenida{
+    margin: 50px;
+    padding: auto;
+    font-size: 70px;
+    color: #791223;
+    text-align: center;
+}
+
+.linea{
+    border-top: 1px solid rgb(153, 150, 150);
+    height: 2px;
+    padding: 0;
+    margin: 20px auto 0 auto;
+}
+
+.destacados{
+    margin: 30px;
+    text-align: center;
+    color: rgb(153, 150, 150);
+    font-size: 35px;
+    font-weight: 350;
+}
 
 #main-top {
     display: flex;
@@ -104,34 +126,35 @@ main {
     color: #FEC85C;
     justify-self: center;
     text-align: center;
-    font-size: 22px;
+    font-size: 30px;
+    font-weight: 400;
     max-width: 90%;
     flex-wrap: wrap;
 }
 
 .descrip-producto {
-    color: #FEC85C;
+    color: #C4C4C4;
     justify-self: center;
     text-align: center;
     font-size: 16px;
 }
 
 .descuento {
-    font-size: 16px;
+    font-size: 30px;
+    color: rgb(86, 2, 165);
 }
 
 .precio-ant {
-    font-size: 14px;
+    font-size: 30px;
     text-decoration: line-through;
+    color: #f5f5f5;
 }
 
-.texto p {
-    color: #C4C4C4;
-}
 
 .precio-nuevo {
-    font-size: 20px;
+    font-size: 38px;
     font-weight: bold;
+    color: #ececec;
 }
 
 .imagen-ofertas {
