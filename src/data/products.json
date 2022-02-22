@@ -251,15 +251,6 @@
     "image": "/products/domperignon.jpg"
   },
   {
-    "id": 24,
-    "category": "espumantes",
-    "resenia": "Producida desde 1888, y ubicada en el Alto Valle de Río Negro, Saenz Briones 1888 es elaborada con extremo cuidado en cada uno de sus procesos. 1888 cosecha y selecciona durante los meses de verano las mejores manzanas para su delicada elaboración. ",
-    "discount": null,
-    "oldPrice": null,
-    "newPrice": null,
-    "image": "/products/sidra1888.jpg"
-  },
-  {
     "id": 25,
     "name": "Sidra 1888",
     "category": "Espumantes",

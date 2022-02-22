@@ -147,11 +147,10 @@ main {
 }
 
 .carrousel img{
-    width: 60%;
-    border-radius: 10px;
-    padding-top: 0.10%;
-    padding-bottom: 0.9%;
-
+    width:100%;
+}
+.carrousel2 img{
+    width: 70%;
 }
 @media (min-width: 769px){
     .producto{
