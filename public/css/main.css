@@ -175,7 +175,19 @@ main {
 .carrousel2 img{
     width: 70%;
 }
+
+@media(min-width:361px){
+    .bienvenida{
+        font-size: 30px;
+    }
+    
+
+}
+
 @media (min-width: 769px){
+    .bienvenida{
+        font-size: 40px;
+    }
     .producto{
         width: 40%;
     }
@@ -189,6 +201,9 @@ main {
 
 
 @media (min-width: 1200px){
+    .bienvenida{
+        font-size: 70px;
+    }
     .producto {
         width: 30%;
         transition: all 400ms;
