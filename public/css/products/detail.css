@@ -31,7 +31,7 @@ body{
 
 .titulo{
     color: #6a6363;
-    font-size: 30px;
+    font-size: 45px;
     font-weight: bold;
     display: flex;
     justify-content: center;
@@ -39,7 +39,7 @@ body{
 
 .descripcion{
     color: #6a6363;
-    font-size: 14px;
+    font-size: 20px;
     font-weight: 500;
     display: flex;
     justify-content: center;
@@ -110,9 +110,9 @@ body{
 
 .resenia-producto{
     color: #6a6363;
-    font-size: 20px;
+    font-size: 15px;
     margin: 2px;
-    padding: 10px;
+    padding-left: 40px;
     max-width: 80%;
     text-align: center;
 }
@@ -120,8 +120,13 @@ body{
 .botonAgregar{
     display: flex;
     justify-content: center;
+    padding-bottom:5px;
 }
 
+.botonAgregar:hover {
+    transform: translatey(3px);
+    box-shadow: none;
+}
 .agregar{
     color: #c4c4c4;
     font-size: 12px;

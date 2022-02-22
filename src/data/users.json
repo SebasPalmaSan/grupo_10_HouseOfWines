@@ -241,7 +241,6 @@
   },
   {
     "id": 21,
-
     "firstName": "Juan",
     "lastName": "Perez",
     "password": "$2a$10$26pIaIQw/gs5lj45D0qpTugGudUbfIcrQRt4zN6l2cTNrjEUnvPOe",
@@ -274,6 +273,29 @@
     "birthdate": "1960-05-05",
     "avatar": "imagenUsuario1645326587463.jpg",
     "admin": true
-
+  },
+  {
+    "id": 23,
+    "firstName": "Carlota",
+    "lastName": "Maria",
+    "password": "$2a$10$kGhLEdQB6z0zarJNUZHqFeHarQbdar09cGZ2i6G5ydjxirKLqMl7K",
+    "email": "Carlotta@dh.com",
+    "phone": "1122334455",
+    "adress": "Arieta 1234",
+    "birthdate": "1998-01-12",
+    "avatar": "imagenUsuario1645488396422.jpg",
+    "admin": false
+  },
+  {
+    "id": 24,
+    "firstName": "pingui",
+    "lastName": "noo",
+    "password": "$2a$10$/oMGH7f2PI4ZiGaCbAfwTej/gu1HLp8TWNGAubuP3sM156DPmrscK",
+    "email": "pinguino@dh.com",
+    "phone": "1122334455",
+    "adress": "avenida corrientes 1235",
+    "birthdate": "1998-03-02",
+    "avatar": "imagenUsuario1645488577438.jpg",
+    "admin": false
   }
 ]
