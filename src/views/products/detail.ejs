@@ -21,12 +21,16 @@
 
     <section class="resenia-producto"> <%= product.resenia %> </section>
 
-    <section class="botonAgregar">
-        <a href="/carrito" class="agregar"><h2>AGREGAR AL CARRITO</h2></a>
+    <section>
+        <a href="/carrito" class="agregar">
+            <button type="submit" class="botonAgregar">AGREGAR AL CARRITO<i class="fa fa-shopping-cart"></i></button>
+        </a>
     </section>
 
-    <section class="botonAgregar">
-        <a href="/" class="agregar"><h2>VER PRODUCTOS RELACIONADOS</h2></a>
+    <section>
+        <a href="/" class="agregar">
+            <button type="submit" class="botonAgregar">VER PRODUCTOS RELACIONADOS<i class="fa-solid fa-eye"></i></button>
+        </a>
     </section>
 
     <%- include('../partials/footer.ejs') %>

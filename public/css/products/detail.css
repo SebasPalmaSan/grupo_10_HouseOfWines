@@ -112,14 +112,23 @@ body{
     color: #6a6363;
     font-size: 15px;
     margin: 2px;
+    margin-bottom: 20px;
     padding-left: 40px;
     max-width: 80%;
     text-align: center;
 }
-
 .botonAgregar{
+    width: 40%;
+    background-color: #f5f5f5;
+    border: solid 3px #BAB7B7;
+    font-size: 20px;
+    color: #736E6E;
+    padding: 5px 10px;
+    border-radius: 5px;
+    margin-bottom: 20px;
     display: flex;
     justify-content: center;
+    text-align: center;
     padding-bottom:5px;
 }
 
@@ -127,26 +136,12 @@ body{
     transform: translatey(3px);
     box-shadow: none;
 }
-.agregar{
-    color: #c4c4c4;
-    font-size: 12px;
-    font-weight: 400;
-    width: 40%;
-    display: flex;
-    justify-content: center;
-    text-decoration: none;
-    outline: none;
-    border: solid 1px #000000;
-    background-color: rgb(85, 12, 24, 70%);
-    border-radius: 5px;
-    margin-bottom: 4px;
-}
 
-.agregar:hover{
-    color: #6a6363;
-}
 
 @media(max-width:360px){
+    .descripcion{
+        text-align: center;
+    }
     .resenia-producto{
         display: none;
     }
@@ -157,10 +152,10 @@ body{
         margin-bottom: 4px;
         
     }
-    /*.agregar{
+    .botonAgregar{
         width: 100%;
-        margin: 4px;
-    }*/
+        margin: 1px;
+    }
     .subtitulos,
     .divider{
         font-size: 10px;
@@ -169,34 +164,45 @@ body{
 }
 
 @media(min-width:361px){
+    .descripcion{
+        text-align: center;
+    }
     .resenia-producto{
-      font-size: 20px;
-      max-width:95%;
+        font-size: 15px;
+        max-width:95%;
 
     }
     .imagen img{
-        width: 50%;
+        width: 70%;
     }
-    /*.agregar{
+    .agregar{
         width: 100%;
         margin: 2px;
         display: flex;
         justify-content: center;
         align-items: center;
-    }*/
+    }
+
+    .botonAgregar{
+        width: 80%;
+    }
+
     .subtitulos,
     .divider{
-        font-size: 12px;
+        font-size: 10px;
     }
 }
 
 @media(min-width:768px){
     .imagen img{
-        width: 35%;
+        width: 40%;
     }
     .resenia-producto{
         font-size: 30px;
         font-weight: 400;
+    }
+    .botonAgregar{
+        width: 50%;
     }
     .subtitulos,
     .divider{
@@ -207,7 +213,7 @@ body{
 
 @media(min-width:1200px){
     .imagen img{
-        width: 40%;
+        width: 24%;
         margin-bottom: 2px;
         
     }
@@ -218,5 +224,8 @@ body{
     .subtitulos,
     .divider{
         font-size: 25px;
+    }
+    .botonAgregar{
+        width: 40%;
     }
 }

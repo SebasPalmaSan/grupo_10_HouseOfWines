@@ -57,6 +57,10 @@ main{
     border-radius: 5px;
     margin-bottom: 20px;
 }
+.boton-formulario:hover{
+    transform: translatey(3px);
+    box-shadow: none;
+}
 
 .control{
     background-color: #f5f5f5;

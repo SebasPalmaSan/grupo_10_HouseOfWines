@@ -33,7 +33,7 @@ ul{
 }
 
 li{
-    border-right: dotted 3px #c4c4c4;
+    border-right: 3px #c4c4c4;
     padding: 10px;
     text-decoration: none;
     outline: none;
@@ -57,6 +57,10 @@ li{
 .imagen:hover{
     transform:scale(1.20);
 }
+.description,
+.precio{
+    color: #6a6363;
+}
 
 .mi-carrito{
     display: inline-flex;
@@ -67,23 +71,25 @@ li{
 
 
 .boton-fc {
-    padding: 19px 39px 18px 39px;
-    color: #FFF;
-    background-color: #550C18;
-    font-size: 18px;
+    width: 40%;
+    background-color: #f5f5f5;
+    font-size: 20px;
+    color: #736E6E;
+    padding: 5px 10px;
+    display: flex;
+    justify-content: center;
     text-align: center;
-    font-style: normal;
-    border-radius: 5px;
-    width: 20%;
-    border: 1px solid black;
-    border-width: 1px 1px 3px;
-    box-shadow: 0 -1px 0 rgba(255,255,255,0.1) inset;
-    margin-bottom: 10px;
+    padding-bottom:5px;
   }
 
 .boton-fc:hover {
     transform: translatey(3px);
     box-shadow: none;
+}
+.boton-comprar{
+    border: solid 3px #BAB7B7;
+    margin-bottom: 20px;
+    border-radius: 5px;
 }
 
 hr {
@@ -95,6 +101,7 @@ hr {
 .cuenta{
     margin-left: 60%;
     display: flex;
+    color: #6a6363;
 }
 
 @media(max-width:360px){

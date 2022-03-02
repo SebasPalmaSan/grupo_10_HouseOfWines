@@ -52,7 +52,6 @@ main{
     color: #736E6E;
     outline: none;
     margin-bottom: 45px;
-    
     margin-left: 10%;
     border-radius: 5px;
 }
@@ -65,6 +64,10 @@ main{
     padding: 5px 10px;
     border-radius: 5px;
     margin-bottom: 20px;
+}
+.boton-formulario:hover{
+    transform: translatey(3px);
+    box-shadow: none;
 }
 
 .control{
