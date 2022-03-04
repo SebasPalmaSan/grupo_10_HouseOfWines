@@ -1,0 +1,9 @@
+let path = require('path')
+
+module.exports = {
+  'env': 'development',
+  'config': path.join(__dirname,'src/database', 'config', 'database.json'),
+  'migrations-path': path.join(__dirname,'src/database', 'migrations'),
+  'models-path': path.join(__dirname, 'src/database', 'models'),
+  'seeders-path': path.join(__dirname,'src/database', 'seeders'),
+}

@@ -4,8 +4,12 @@
   "description": "",
   "main": "src/app.js",
   "scripts": {
-    "test": "clear && nodemon src/app.js -e js, mjs, ejs, html, css, ajs",
-    "start": "node app.js"
+    "test": "clear && nodemon src/app.js -e js, mjs, ejs, css, ajs",
+    "start": "node src/app.js",
+    "db:init": "sequelize init",
+    "db:create": "sequelize db:create",
+    "md:create": "sequelize model:create --name Users_Products --attributes name:string,email:string,password:string",
+    "db:migrate": "sequelize db:migrate:undo:all && sequelize db:migrate"
   },
   "keywords": [],
   "author": "",
@@ -19,9 +23,12 @@
     "express-session": "^1.17.2",
     "express-validator": "^6.14.0",
     "method-override": "^3.0.0",
-    "multer": "^1.4.4"
+    "multer": "^1.4.4",
+    "mysql2": "^2.3.3",
+    "sequelize": "^6.17.0"
   },
   "devDependencies": {
-    "nodemon": "^2.0.15"
+    "nodemon": "^2.0.15",
+    "sequelize-cli": "^6.4.1"
   }
 }
