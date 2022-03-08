@@ -1,0 +1,56 @@
+<%- include('../partials/head.ejs') %> 
+<body>
+<%- include('../partials/header') %> 
+<main>
+    <link rel="stylesheet" href="/css/users/userUpdate.css"/>
+     <form action="/users/userUpdate" method="POST" class="formulario" enctype="multipart/form-data">
+        <nav>
+            <a href="#" class="subtitulos">Inicio</a>
+            <span class="divider"> > </span>
+            <a href="/users/login" class="subtitulos">Mi cuenta</a>
+            <span class="divider"> > </span>
+        </nav>
+
+        <section>
+            <% if (locals.errors) { %>
+                <% for( let error in errors ) { %>
+                    <p>  <%= errors[error].msg %>  </p>
+                <% } %>
+            <% } %>
+        </section>
+
+        <div class="titulo"><h1> <%- title %>  </h1></div>
+        <div class="control-formulario">
+         <input type="text" name="firstName" placeholder="Nombre completo" minlength="3" class="control" required="" value="<%= user.firstName %>">
+        </div>
+
+        <div class="control-formulario">
+        <input type="text" name="lastName" placeholder="Apellido completo" minlength="3" class="control" required="" value="<%= user.lastName %>">
+        </div>
+       
+        <div class="control-formulario">
+        <input type="date" name="birthdate" placeholder="Fecha de nacimiento" class="control" required="" value="<%= user.birthdate %>">
+        </div> 
+
+        <div class="control-formulario">
+        <input type="tel" name="phone" placeholder="Teléfono" class="control" required="" value="<%= user.phone %>">
+        </div>
+
+        <div class="control-formulario">
+        <input type="text" name="adress" placeholder="Domicilio" minlength="3" class="control" required="" value="<%= user.adress %>">
+        </div>
+
+        <div class="control-formulario">
+        <input type="text" name="email" placeholder="Email" value="<%= user.email %>">
+        </div>    
+
+    
+        <button type="submit" class="boton-formulario">MODIFICAR</button>
+        <a class="boton-formulario" href="/users/profile/ <%= user.id %> ">VOLVER</a>
+  
+
+</form> 
+ </section>
+</main>
+<%- include('../partials/footer') %> 
+</body>   

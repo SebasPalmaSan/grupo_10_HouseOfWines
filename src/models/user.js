@@ -47,6 +47,13 @@ const model = {
         let user = model.serch('id', id)
         return user;
     }, */
+    update: (id,data) => {
+        const users = model.get();
+        const updates = users.map(user => user.id === id ? {...user, ...data} : user);
+        model.save(updates);
+        return updates.find(user => user.id === id);
+    },
+
     delete: id => model.write(model.get().filter(e => e.id != id)
     ),
 

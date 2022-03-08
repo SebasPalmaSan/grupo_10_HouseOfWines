@@ -1,5 +1,6 @@
 module.exports = function(sequelize, DataTypes){
-  let user = sequelize.define('user', {
+let alias = "User";
+let cols = {
       id:{
         type: DataTypes.INTEGER,
         autoIncrement: true,
@@ -40,19 +41,24 @@ module.exports = function(sequelize, DataTypes){
       admin:{
         type: DataTypes.BOOLEAN
       }
-  },{
-    tableName : 'users',
-    timestamp : false,
-  });
-    user.associated= function(models){
-      user.belongsTo(models.image,{
+  };
+
+    let config = {
+      tableName : 'users',
+      timestamp : false,
+  };
+
+    let User = sequelize.define(alias, cols, config);
+
+    User.associated= function(models){
+      User.belongsTo(models.image,{
         foreignKey:"avatar",
         as: "avatar"
       });
-      user.belongsToMany(model.image,{
+      User.belongsToMany(models.image,{
         foreignKey:"products",
         as: "products"
       });
     }
-    return user;
+    return User;
   };
