@@ -1,6 +1,6 @@
 const {Router} = require('express');
 const router = Router();
-const {login, register, create, profile, logout, save, access, uploadPassword, uploadAvatar} = require('../controllers/user');
+const {login, register, create, profile, logout, save, access, userUpdate, user_delete} = require('../controllers/user');
 
 const validatorSave = require('../middlewares/save');
 
@@ -30,13 +30,19 @@ router.get('/register', register);
 router.get('/profile', profile);
 router.get('/logout', logout);
 
+router.get('/userUpdate', userUpdate);
+
+
 //post
-//router.post('/register', save);
+router.post('/register', save);
 router.post('/access', [], access);
 router.post('/register', [fileUpload.single('imagenUsuario'), validatorSave], save);
 
 //put
+router.post('/userUpdate/:id', userUpdate);
 //router.put('/upload/password', [], uploadPassword);
 //router.put('/upload/avatar', [], uploadAvatar);
+
+router.delete('/delete/:id', user_delete);
 
 module.exports = router;

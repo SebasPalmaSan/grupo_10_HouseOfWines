@@ -21,15 +21,28 @@
     
     <section>
         <article class="datosProfile">
-            <h2>Mis datos</h2>
-            <h3> Nombre y Apellido: <%= user.firstName %> <%= user.lastName %></h3>
-            <h3> Fecha de nacimiento: <%= user.birthdate %></h3>
-            <h3> Teléfono: <%= user.phone %></h3>
-            <h3> Dirección: <%= user.adress %></h3>
-            <h3> Email: <%= user.email %></h3>
+            <h2 class="datosUsuario">Mis datos</h2>
+            <br>
+            <h3> <i class="fa-solid fa-user"></i> <%= user.firstName %> <%= user.lastName %></h3>
+            <br>
+            <h3> <i class="footer-icon fa fa-lg fa-fw fa-at"></i> <%= user.email %> </h3>
+            <br>
+            <h3> <i class="footer-icon fa fa-lg fa-fw fa-phone"></i> <%= user.phone %> </h3>
+            <br>
+            <h3> <i class="fa-solid fa-cake-candles"></i> <%= user.birthdate %> </h3>
+            <br>
+            <h3> <i class="footer-icon fa fa-lg fa-fw fa-map-marker-alt"></i><%= user.adress %></h3>
         </article>
     </section>
     
+    <section>
+        <article>
+            <h2 class="datosUsuario">Editar mi perfil</h2> 
+            <a href="/users/userUpdate"><button type="submit" class="boton-formulario">MODIFICAR</button></a>
+            <a class="boton-formulario" href="/">VOLVER</a>
+
+        </article>
+    </section>
 </main>
 
 <%- include('../partials/footer.ejs') %>
