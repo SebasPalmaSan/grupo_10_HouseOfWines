@@ -36,11 +36,51 @@ main{
 .datosUsuario{
     font-size: 50px;
     font-weight: 300;
+    color: #736E6E;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 2rem;
 }
+.boton-formulario{
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 20px;
+    color: #736E6E;
+    border-radius:  #BAB7B7;
+    outline: none;
+    text-decoration: none;
+    padding: 2px 1px 0;
+}
+   
+.boton-formulario:link {
+    color: #550c18;;
+}
+  
+.boton-formulario:visited {
+    color: #550c18;;
+}
+  
+.boton-formulario:focus {
+   border-bottom: 1px solid;
+   background: #BAE498;
+}
+  
+.boton-formulario:hover {
+   border-bottom: 1px solid;
+   background: #BAB7B7;
+}
+  
+.boton-formulario:active {
+   background: #550c18;;
+   color: #BAB7B7;
+}
+
 .datosProfile{
     color: #736E6E;
     font-size: 20px;
-    font-weight: 50;
     margin: 2rem;
     display: flex;
     flex-direction: column;
@@ -92,6 +132,9 @@ h3{
         font-size: 50px;
     }
     .datosProfile{
+        font-size: 20px;
+    }
+    .boton-formulario{
         font-size: 20px;
     }
     .avatar{
