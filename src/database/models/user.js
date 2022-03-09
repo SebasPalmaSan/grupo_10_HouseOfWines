@@ -32,7 +32,7 @@ let cols = {
         allowNull: false,
       },
       birthDate:{
-        type: DataTypes.DATE,
+        type: DataTypes.STRING,
         allowNull: false,
       },
       avatar:{
@@ -55,7 +55,7 @@ let cols = {
         foreignKey:"avatar",
         as: "avatar"
       });
-      User.belongsToMany(models.image,{
+      User.belongsToMany(models.product,{
         foreignKey:"products",
         as: "products"
       });

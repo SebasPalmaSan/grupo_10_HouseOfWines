@@ -1,6 +1,6 @@
 const {Router} = require('express');
 const router = Router();
-const {login, register, create, profile, logout, save, access, userUpdate, user_delete} = require('../controllers/user');
+const {login, register, create, profile, edit, logout, save, access, userUpdate, user_delete} = require('../controllers/user');
 
 const validatorSave = require('../middlewares/save');
 
@@ -30,7 +30,7 @@ router.get('/register', register);
 router.get('/profile', profile);
 router.get('/logout', logout);
 
-router.get('/userUpdate', userUpdate);
+router.get('/userUpdate/:id?', edit);
 
 
 //post
