@@ -1,6 +1,6 @@
 const bcryptjs = require ('bcryptjs');
 const {validationResult} = require("express-validator");
-const model = require('../models/user')
+//const model = require('../database/models/User')
 //const validator = require('express-validator');
 const db = require('../database/models');
 
@@ -58,28 +58,35 @@ module.exports = {
     },
 
     save: (req, res) =>{
-        const errors = validationResult(req)
-        /*res.send(errors.mapped())
-        const create = model.create(req.body);
-          return res.redirect('/users/login');*/
-        if(errors.isEmpty()){
-          //return res.send(req.body)
-          req.body.avatar = req.file?req.file.filename:null;
-          //return res.send(req.body);
-          const create = model.create(req.body);
+      const errors = validationResult(req)
+      if(errors.isEmpty()){
+        db.User.create({
+          firstName: req.body.firstName,
+          lastName: req.body.lastName,
+          password: req.body.password, //bcryptjs.hashSync(req.body.password,10),
+          email: req.body.email,
+          phone: req.body.phone,
+          adress: req.body.adress,
+          birthdate: req.body.birthdate,
+          avatar: req.file?req.file.filename:null, 
+          admin: String(req.body.email).includes('@how')? 1 : 0,
+        }).then(user => {
           res.redirect('/users/login');
-        }else{
-            return res.render('users/register', {
-                styles: ['register'],
-                title: 'Crear tu cuenta',
-                errors: errors.mapped(), 
-                user: req.body
-            });
-        }
-        //return errors.isEmpty() ? res.send(user.create(req.body)) : res.send(errors.mapped()) ;
+
+        }).catch(error => res.send(error))
+        
+      }else{
+        return res.render('users/register', {
+          styles: ['register'],
+          title: 'Crear tu cuenta',
+          errors: errors.mapped(), 
+          user: req.body
+      });
+
+      } 
     },
     list: (req, res) => {
-      db.user.findAll()
+      db.User.findAll()
           .then(users => { res.render("users/list", {
               styles: ["list"],
               title: "Usuarios registados",
@@ -93,11 +100,11 @@ module.exports = {
     });
 },
     edit: (req, res) => {
-      db.user.findByPk(req.params.id)
+      db.User.findByPk(req.params && req.params.id ? req.params.id : req.session.userLogged.id)
       .then(users => { 
         res.render('users/userUpdate',{
           styles:["userUpdate"],
-          title: 'Usuario: '+ user.firstName,
+          title: 'Usuario: '+ users.firstName,
           users:users})
   })
   .catch(error => res.send(error))

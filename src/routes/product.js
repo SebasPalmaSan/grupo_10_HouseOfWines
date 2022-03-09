@@ -10,7 +10,7 @@ const upload = multer({storage: multer.diskStorage({
     filename: (req, file, cb) => cb(null, file.filename + '-' + Date.now() + path.extname(file.originalname))
 })})
 
-router.get('/',index);
+router.get('/', index);
 
 router.get('/create',create);
 

@@ -3,29 +3,48 @@ const db = require('../database/models')
 const file = require('../models/file')
 
 module.exports = {
-    index: (req, res) =>  res.send(model.all())
-       /*  res.render('products/list', {
+    index: (req, res) =>  {
+        db.Product.findAll({
+            include: ['Nombre Producto', 'Descripcion', 'Descuento', 'Precio Viejo', 'Precio Nuevo'],
+    })
+        .then((products =>{
+       res.render('products/list', {
         styles: ['products/list', 'main'],
         title: 'House of Wines | Productos',
-        products: model.all().map(p => Object({...p, image: file.search('id', p.image)}))
-    }) */,
-    create: (req, res) => res.render('products/create', {
+        products: products
+       })
+    })
+    .catch(error => res.send(error))
+    )
+    },
+
+    create: (req, res) => Promise.all([db.Product.findAll(), db.Description.findAll(), db.Discount.findAll(), db.OldPrice.findAll(), db.NewPrice.findAll()])
+    .then(([Name, description, discount, oldPrice, newPrice]) =>{
+    res.render('products/create', {
         styles: ['products/create', 'main'],
         title: 'House of Wines | Crear producto'
+    })
     }),
+
     save: (req, res) => {
         req.body.file = req.files;
         let created = model.create(req.body);
         return res.redirect('/products/detail/' + created.id)
     },
     show: (req, res) => {
-        let result = model.search('id', req.params.id)
-        return result ? res.render('products/detail', {
+        db.Product.findByPk(req.params.id, 
+            {
+               include: ['product', 'description', 'discount', 'oldPrice', 'newPrice']
+            })
+               .then(product => {
+        res.render('products/detail', {
         styles: ['products/detail', 'main'],
-        title: 'House of Wines | ' + result.name,
-        product: result
-        }) : res.render('error', { msg: 'Producto no encontrado'})
+        title: 'House of Wines | ' + product.name,
+        product: product,
+        });
+    })
     },
+
     edit: (req, res) =>  res.render('products/edit', {
         styles: ['products/edit', 'main'],
         title: 'House of Wines | Editar producto',
