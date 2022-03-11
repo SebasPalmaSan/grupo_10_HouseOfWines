@@ -3,7 +3,7 @@ const router = Router();
 const {login, register, create, profile, edit, logout, save, access, userUpdate, user_delete} = require('../controllers/user');
 
 const validatorSave = require('../middlewares/save');
-
+const user = require('../controllers/user');
 const path = require('path');
 
 //Imagenes con Multer
@@ -29,14 +29,15 @@ router.get('/login', login);
 router.get('/register', register);
 router.get('/profile', profile);
 router.get('/logout', logout);
-
-router.get('/userUpdate/:id?', edit);
+router.get('/userUpdate/:id?', user.edit);
 
 
 //post
-router.post('/register', save);
-router.post('/access', [], access);
+//router.post('/create', create);
+//router.post('/register', save);
+router.post('/access', [],access);
 router.post('/register', [fileUpload.single('imagenUsuario'), validatorSave], save);
+router.post('/edit', edit)
 
 //put
 router.post('/userUpdate/:id', userUpdate);

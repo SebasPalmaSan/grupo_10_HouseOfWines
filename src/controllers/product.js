@@ -1,11 +1,11 @@
 //const model = require('../models/product');
 const db = require('../database/models')
-const file = require('../models/file')
+const file = require('../../disabled/data/models/file')
 
 module.exports = {
     index: (req, res) =>  {
         db.Product.findAll({
-            include: ['Nombre Producto', 'Descripcion', 'Descuento', 'Precio Viejo', 'Precio Nuevo'],
+            include: ['Producto', 'Description', 'Discount', 'OldPrice', 'NewPrice'],
     })
         .then((products =>{
        res.render('products/list', {
@@ -18,8 +18,9 @@ module.exports = {
     )
     },
 
-    create: (req, res) => Promise.all([db.Product.findAll(), db.Description.findAll(), db.Discount.findAll(), db.OldPrice.findAll(), db.NewPrice.findAll()])
-    .then(([Name, description, discount, oldPrice, newPrice]) =>{
+    create: (req, res) => 
+    Promise.all([db.Product.findAll(), db.Description.findAll(), db.Discount.findAll(), db.OldPrice.findAll(), db.NewPrice.findAll()])
+    .then(([name, description, discount, oldPrice, newPrice]) =>{
     res.render('products/create', {
         styles: ['products/create', 'main'],
         title: 'House of Wines | Crear producto'
@@ -45,11 +46,25 @@ module.exports = {
     })
     },
 
-    edit: (req, res) =>  res.render('products/edit', {
+    edit: (req, res) =>  {
+        const productID = req.params.id
+        const product = db.Product.findByPk(productID, {
+            include: ['discount', 'oldPrice', 'newPrice'],
+        })
+    
+        promise.all([product, db.Discount.findAll(), db.OldPrice.findAll(), db.NewPrice.findAll()])
+        .then(([product, discount, oldPrice, newPrice]) => {
+        res.render('products/edit', {
         styles: ['products/edit', 'main'],
         title: 'House of Wines | Editar producto',
-        product: model.search('id', req.params.id)
-    }),
+        product: product,
+        discount: discount,
+        oldPrice: oldPrice,
+        newPrice: newPrice
+    })
+    })
+},
+
     modify: (req, res) => {
         let updated = model.update(req.params.id, req.body);
         return res.redirect('/products/' + updated.id)

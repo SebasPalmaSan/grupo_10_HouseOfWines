@@ -38,7 +38,7 @@ let cols = {
 
   let config = {
     tableName : 'products',
-    timestamp : false,
+    timestamps : false,
   };
 
   let Product = sequelize.define(alias, cols, config);

@@ -1,7 +1,8 @@
 const {body} = require('express-validator');
-const user = require('../models/user');
+//const user = require('../../disabled/data/models/user');
+const db = require('../database/models')
 const validations = [
-    body('email').isEmail().withMessage('Email invalid').custom(value => {
+    body('email').isEmail().withMessage('Email invalido').custom(value => {
         let search = user.search('email', value);
         return search ? Promise.reject('Email used') : Promise.resolve();
     }),

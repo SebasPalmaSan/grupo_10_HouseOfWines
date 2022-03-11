@@ -1,4 +1,4 @@
-const file = require('../models/file')
+//const file = require('../../disabled/data/models/file')
 
 module.exports = {
     upload: (req, res) => res.render('files/upload',{

@@ -3,6 +3,8 @@ const {validationResult} = require("express-validator");
 //const model = require('../database/models/User')
 //const validator = require('express-validator');
 const db = require('../database/models');
+const user = require('../database/models/user');
+//const Op = db.Sequelize.Op
 
 module.exports = {
     login: (req, res) => res.render('users/login',{
@@ -17,6 +19,12 @@ module.exports = {
         styles: ['register'],
     }),
     access: (req, res) => {
+      db.User.findOne({
+        where: {
+          email: req.body.email
+        }
+      })
+      .then(users => {
       let errors = validationResult(req);
   
       if (!errors.isEmpty()) {
@@ -26,8 +34,7 @@ module.exports = {
         });
       }
   
-      let exist = model.search("email", req.body.nombreUsuario);
-      if (!exist) {
+      if (!users) {
         return res.render("users/login", {
           styles: ["login"],
           errors: {
@@ -38,7 +45,7 @@ module.exports = {
         });
       }
   
-      if (!bcryptjs.compareSync(req.body.contrasena, exist.password)) {
+      if (!bcryptjs.compareSync(req.body.password,users.password)) {
         return res.render("users/login", {
           styles: ["login"],
           errors: {
@@ -47,15 +54,20 @@ module.exports = {
             },
           },
         });
-      }
+      
+      }else {
   
       if (req.body.remember) {
         res.cookie("email", req.body.email, { maxAge: 1000 * 60 * 60 * 24 * 30 });
       }
-      req.session.userLogged = exist;
+      req.session.userLogged = users;
   
       return res.redirect("/users/profile");
-    },
+    }
+    })
+
+    .catch(error => res.send(error))
+  },
 
     save: (req, res) =>{
       const errors = validationResult(req)
@@ -80,14 +92,15 @@ module.exports = {
           styles: ['register'],
           title: 'Crear tu cuenta',
           errors: errors.mapped(), 
-          user: req.body
+          user: user
       });
 
       } 
     },
     list: (req, res) => {
       db.User.findAll()
-          .then(users => { res.render("users/list", {
+          .then(users => { 
+            res.render("users/list", {
               styles: ["list"],
               title: "Usuarios registados",
               users: users
@@ -95,9 +108,14 @@ module.exports = {
           })
   },
     profile: (req,res) => {
-      return res.render('users/profile',{
-          user: req.session.userLogged
-    });
+      db.User.findByPk(req.session.user.id,{
+        include: ['avatar']
+      })
+          .then(user => {
+            res.render('users/profile',{
+          user: user
+    })
+  })
 },
     edit: (req, res) => {
       db.User.findByPk(req.params && req.params.id ? req.params.id : req.session.userLogged.id)

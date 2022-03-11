@@ -45,7 +45,7 @@ let cols = {
 
     let config = {
       tableName : 'users',
-      timestamp : false,
+      timestamps : false,
   };
 
     let User = sequelize.define(alias, cols, config);
