@@ -4,7 +4,8 @@ let cols = {
       id:{
         type: DataTypes.INTEGER,
         autoIncrement: true,
-        primaryKey: true
+        primaryKey: true,
+        allowNull: false
       },
       firstName:{
         type: DataTypes.STRING,
@@ -39,7 +40,7 @@ let cols = {
         type: DataTypes.INTEGER,
       },
       admin:{
-        type: DataTypes.BOOLEAN
+        type: DataTypes.BOOLEAN,
       }
   };
 
@@ -50,15 +51,18 @@ let cols = {
 
     let User = sequelize.define(alias, cols, config);
 
-    User.associated= function(models){
-      User.belongsTo(models.image,{
-        foreignKey:"avatar",
-        as: "avatar"
+    User.associate = function(models){
+      User.belongsTo(models.Image,{
+        foreignKey:"Avatar",
+        as: "avatars"
       });
-      User.belongsToMany(models.product,{
-        foreignKey:"products",
+      User.belongsTo(models.Product,{
+        foreignKey:"ProductsID",
         as: "products"
       });
     }
     return User;
   };
+
+
+  
