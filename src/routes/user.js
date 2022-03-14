@@ -8,6 +8,7 @@ const path = require('path');
 
 //Imagenes con Multer
 const multer = require('multer');
+//const userController = require('../controllers/user');
 const multerDiskStorage = multer.diskStorage({
     destination: (req, file, cb) => {
         const folder = path.join(__dirname, '../../uploads/avatars')
@@ -25,10 +26,10 @@ const fileUpload = multer({ storage: multerDiskStorage});
 //const authMiddleware = require('../middlewares/authMiddleware');
 
 //get
-router.get('/login', login);
-router.get('/register', register);
-router.get('/profile', profile);
-router.get('/logout', logout);
+router.get('/login',login);
+router.get('/register',register);
+router.get('/profile',profile);
+router.get('/logout',logout);
 router.get('/userUpdate/:id?', user.edit);
 
 

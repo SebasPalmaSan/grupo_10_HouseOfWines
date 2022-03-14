@@ -4,7 +4,8 @@ module.exports = function(sequelize, DataTypes){
       id:{
         type: DataTypes.INTEGER,
         autoIncrement: true,
-        primaryKey: true
+        primaryKey: true,
+        allowNull: false
       },
       name:{
         type: DataTypes.TEXT,
@@ -20,9 +21,9 @@ module.exports = function(sequelize, DataTypes){
 
   let Categorie = sequelize.define(alias, cols, config);
 
-    Categorie.associated= function(models){
-      Categorie.hasMany(models.product,{
-        foreignKey:"products",
+    Categorie.associate = function(models){
+      Categorie.hasMany(models.Product,{
+        foreignKey:"ProductsID",
         as: "products"
       }); 
     }

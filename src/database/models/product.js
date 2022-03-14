@@ -4,7 +4,8 @@ let cols = {
       id:{
         type: DataTypes.INTEGER,
         autoIncrement: true,
-        primaryKey: true
+        primaryKey: true,
+        allowNull: false
       },
       name:{
         type: DataTypes.STRING,
@@ -43,13 +44,13 @@ let cols = {
 
   let Product = sequelize.define(alias, cols, config);
 
-    Product.associated= function(models){
-      Product.belongsTo(models.image,{
-        foreignKey:"images",
+    Product.associate = function(models){
+      Product.belongsTo(models.Image,{
+        foreignKey:"ImagesID",
         as: "images"
       });
-      Product.belongsTo(models.categorie,{
-        foreignKey:"categories",
+      Product.belongsTo(models.Categorie,{
+        foreignKey:"Categories",
         as: "categories"
       });
     }
