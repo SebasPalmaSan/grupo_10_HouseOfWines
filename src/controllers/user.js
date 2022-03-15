@@ -3,10 +3,10 @@ const {validationResult} = require("express-validator");
 //const model = require('../database/models/User')
 //const validator = require('express-validator');
 const db = require('../database/models');
-const user = require('../database/models/user');
-//const Op = db.Sequelize.Op
+//const user = require('../database/models/user');
 
-module.exports = {
+
+const userController = {
     login: (req, res) => res.render('users/login',{
         styles: ['login'],
         title: 'Iniciá sesión',
@@ -19,12 +19,12 @@ module.exports = {
         styles: ['register'],
     }),
     access: (req, res) => {
-      db.User.findOne({
+      const usuarioLogueado = db.User.findOne({
         where: {
           email: req.body.email
         }
       })
-      .then(users => {
+      .then(user => {
       let errors = validationResult(req);
   
       if (!errors.isEmpty()) {
@@ -34,7 +34,7 @@ module.exports = {
         });
       }
   
-      if (!users) {
+      if (!user) {
         return res.render("users/login", {
           styles: ["login"],
           errors: {
@@ -45,7 +45,9 @@ module.exports = {
         });
       }
   
-      if (!bcryptjs.compareSync(req.body.password,users.password)) {
+      if (usuarioLogueado){
+        const passOk = bcryptjs.compareSync(req.body.password,user.password);
+        if(passOk){
         return res.render("users/login", {
           styles: ["login"],
           errors: {
@@ -54,18 +56,20 @@ module.exports = {
             },
           },
         });
-      
+      }
       }else {
   
       if (req.body.remember) {
         res.cookie("email", req.body.email, { maxAge: 1000 * 60 * 60 * 24 * 30 });
       }
-      req.session.userLogged = users;
+      req.session.userLogged = usuarioLogueado;
   
       return res.redirect("/users/profile");
+      
+      }
     }
-    })
-
+      )  
+  
     .catch(error => res.send(error))
   },
 
@@ -75,7 +79,7 @@ module.exports = {
         db.User.create({
           firstName: req.body.firstName,
           lastName: req.body.lastName,
-          password: req.body.password, //bcryptjs.hashSync(req.body.password,10),
+          password: bcryptjs.hashSync(req.body.password,10),
           email: req.body.email,
           phone: req.body.phone,
           adress: req.body.adress,
@@ -92,7 +96,7 @@ module.exports = {
           styles: ['register'],
           title: 'Crear tu cuenta',
           errors: errors.mapped(), 
-          user: user
+          user: req.body.user
       });
 
       } 
@@ -123,7 +127,8 @@ module.exports = {
         res.render('users/userUpdate',{
           styles:["userUpdate"],
           title: 'Usuario: '+ users.firstName,
-          users:users})
+          users:users
+        })
   })
   .catch(error => res.send(error))
 },
@@ -160,3 +165,6 @@ module.exports = {
         return res.redirect('/');
 }
 }
+
+
+module.exports = userController

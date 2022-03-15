@@ -1,6 +1,6 @@
 //const model = require('../models/product');
 const db = require('../database/models')
-const file = require('../../disabled/data/models/file')
+//const file = require('../../disabled/data/models/file')
 
 module.exports = {
     index: (req, res) =>  {

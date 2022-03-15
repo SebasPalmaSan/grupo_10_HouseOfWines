@@ -4,7 +4,8 @@ module.exports = function(sequelize, DataTypes){
       id:{
         type: DataTypes.INTEGER,
         autoIncrement: true,
-        primaryKey: true
+        primaryKey: true,
+        allowNull: false,
       },
       url:{
         type: DataTypes.TEXT,
@@ -19,13 +20,13 @@ module.exports = function(sequelize, DataTypes){
 
   let Image = sequelize.define(alias, cols, config);
 
-    Image.associated= function(models){
-      Image.hasMany(models.product,{
-        foreignKey:"products",
+    Image.associate = function(models){
+      Image.hasMany(models.Product,{
+        foreignKey:"ProductsID",
         as: "products"
       });
-      Image.hasMany(models.user,{
-        foreignKey:"users",
+      Image.hasMany(models.User,{
+        foreignKey:"User",
         as: "users"
       });
     }
