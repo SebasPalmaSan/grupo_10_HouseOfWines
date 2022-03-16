@@ -7,6 +7,11 @@
     font-family: "Roboto";   
 }
 
+body{
+    background-color: #f5f5f5 ;
+    border: solid 2px #550c18;
+}
+
 main{
     background-color: #f5f5f5;
     width: 100%;
@@ -30,19 +35,58 @@ h1{
     outline: none;
     padding: 2px 1px 0;
 }
-.titulo {
+.title {
     color: #736E6E;
-    font-size: 25px;
-    font-weight: normal;
+    font-size: 45px;
+    font-weight: bold;
     margin: 5px;
     padding: 5px;
+    display: flex;
+    justify-content: center;
 }
-.control-formulario {
+#name,
+#oldPrice,
+#discount,
+#category {
     width: 80%;
     background-color: #f5f5f5;
     border: solid 3px #BAB7B7;
     outline: none;
-    margin-bottom: 45px;
+    margin-bottom: 25px;
+    text-align: left; 
+    margin-left: 10%;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+}
+
+#file{
+    width: 50%;
+    background-color: #f5f5f5;
+    border: solid 3px #BAB7B7;
+    outline: none;
+    margin-bottom: 30px;
+    text-align: center; 
+    margin: auto;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+}
+
+#description{
+    width: 80%;
+    background-color: #f5f5f5;
+    border: solid 3px #BAB7B7;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.control {
+    width: 20%;
+    background-color: #f5f5f5;
+    border: solid 3px #BAB7B7;
+    outline: none;
+    margin-bottom: 20px;
     text-align: left; 
     margin-left: 10%;
     border-radius: 5px;
@@ -69,16 +113,18 @@ h1{
 }
 
 button{
-    padding: 19px 39px 18px 39px;
-    color: #FFF;
-    background-color: #550C18;
-    font-size: 18px;
-    text-align: center;
+    width: 40%;
+    background-color: #f5f5f5;
+    border: solid 3px #BAB7B7;
+    font-size: 20px;
+    color: #736E6E;
+    padding: 5px 10px;
     border-radius: 5px;
-    width: 20%;
-    border: 1px solid black;
-    box-shadow: 0 -1px 0 rgba(255,255,255,0.1) inset;
     margin: 10px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    padding-bottom:5px;
 }
 
 button:hover {
