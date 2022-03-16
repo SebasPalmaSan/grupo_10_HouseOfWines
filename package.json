@@ -8,7 +8,7 @@
     "start": "node src/app.js",
     "db:init": "sequelize init",
     "db:create": "sequelize db:create",
-    "md:create": "sequelize model:create --name Users_Products --attributes name:string,email:string,password:string",
+    "md:create": "sequelize model:create --name Image --attributes name:string,email:string,password:string",
     "db:migrate": "sequelize db:migrate:undo:all && sequelize db:migrate"
   },
   "keywords": [],

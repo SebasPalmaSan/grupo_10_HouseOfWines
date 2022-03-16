@@ -27,9 +27,6 @@ module.exports = {
       phone: {
         type: Sequelize.TEXT,
       },
-      birthDate: {
-        type: Sequelize.STRING,
-      },
       avatar:{
         type: Sequelize.INTEGER,
         allowNull: true

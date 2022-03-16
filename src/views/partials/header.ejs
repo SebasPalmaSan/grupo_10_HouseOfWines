@@ -23,10 +23,10 @@
                 <a href="/" class="link">Accesorios</a>
             </section>
             <section id="nav-right">
-                <% if (locals.userLogged) { %>
-                    <a href ="/users/profile" class="link">Mi Perfil</a>
-                    <a href="/carrito" class="link">Mi Carrito <i class="fa fa-shopping-cart"></i></a>
-                    <a href ="/users/logout" class="link">Cerrar Sesión</a>
+                <% if (user) { %>
+                    <a href ="/users/profile" class="link"><i class="fa-solid fa-user"></i> Bienvenido <%= user.firstName %>!</a>
+                <a href="/carrito" class="link">Tus Compras <i class="fa fa-shopping-cart"></i></a>
+                <a href ="/users/logout" class="link">Cerrar Sesión</a>
 
                 <% } else { %>
                     <a href="/users/register" class="link">Crear cuenta</a>

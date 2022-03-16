@@ -1,4 +1,3 @@
-//const user = require ('../models/user');
 const db = require ('../database/models');
 
 /*const userLoggedMiddleware = (req, res, next) => {
@@ -27,26 +26,22 @@ const userLoggedMiddleware = (req, res, next) => {
             email: req.cookies && req.cookies.user ? req.cookies.user : null,
         }
     })
-    //.then(users =>{
-    res.locals.isLogeed = false;
+    .then(users =>{
+    let userLogged = users;
 
-    if (req.cookies && req.cookies.email) {
-        let emailInCookie = req.cookies.email;
-        let userFromCookie = user.search('email', emailInCookie);
-        req.session.userLogged = userFromCookie;
+    if (req.session && req.session.user){
+        userLogged = req.session.user;
+       
     }
 
-    if (req.session.userLogged){
-        res.locals.isLogeed = true;
-        res.locals.userLogged = req.session.userLogged;
-    }
+    res.locals.user = userLogged;
     
     next();
+})
+.catch(error => res.send(error))
 }
     
-module.exports = userLoggedMiddleware;
-
-
+module.exports = userLoggedMiddleware
 
 
 

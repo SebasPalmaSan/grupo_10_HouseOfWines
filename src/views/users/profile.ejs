@@ -7,10 +7,10 @@
         <h3 class="saludoBienvenida"> ¡Bienvenido a House of Wines <%=user.firstName%>!</h3>
         <% if (user.avatar) { %>
             <figure>
-                <img id="imgCentral"src="/avatars/<%=userLogged.avatar%> " alt="<%= user.firstName %> "class="avatar">
+                <img id="imgCentral"src="/avatars/<%=user.avatars.url%> " alt="photo<%= user.email %> "class="avatar">
             </figure>
         
-        <% } else { %>
+        <% }  else { %>
             <figure>
                 <img id="imgCentral"src="/avatars/default-avatar.png" alt="avatar generico" class="avatar">
             </figure>
@@ -29,8 +29,6 @@
             <br>
             <h3> <i class="footer-icon fa fa-lg fa-fw fa-phone"></i> <%= user.phone %> </h3>
             <br>
-            <h3> <i class="fa-solid fa-cake-candles"></i> <%= user.birthdate %> </h3>
-            <br>
             <h3> <i class="footer-icon fa fa-lg fa-fw fa-map-marker-alt"></i><%= user.adress %></h3>
         </article>
     </section>
@@ -46,5 +44,5 @@
     </section>
 </main>
 
-<%- include('../partials/footer.ejs') %>
 </body>
+<%- include('../partials/footer.ejs') %>

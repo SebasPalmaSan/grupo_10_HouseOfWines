@@ -1,5 +1,3 @@
-//const model = require('../../disabled/data/models/cart')
-
 module.exports = {
     index: (req, res) =>  res.render('products/carrito', {
         styles: ['products/list', 'main'],
