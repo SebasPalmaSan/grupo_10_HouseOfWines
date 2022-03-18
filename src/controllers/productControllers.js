@@ -18,6 +18,7 @@ const productControllers = {
     },
     
     save: (req, res) => {
+        return res.send(req.body)
         db.Image.create({
             url: req.files[0].filename,Type:1
         }).then(ImagenProducto => {

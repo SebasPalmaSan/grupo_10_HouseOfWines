@@ -49,7 +49,7 @@ module.exports = function(sequelize, DataTypes){
   
       User.associated = function(models){
         User.belongsTo(models.Image,{
-          foreignKey:"images_id",
+          foreignKey:"avatar",
           as: "image"
         });
         User.belongsToMany(models.Product,{

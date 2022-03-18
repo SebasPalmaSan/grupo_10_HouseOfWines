@@ -18,7 +18,9 @@ const userController = {
     save: (req, res) =>{
       const errors = validationResult(req)
       if(errors.isEmpty()){
-        
+          db.Image.create({
+            url: req.file.filename,Type:1
+          }).then(ImagenAvatar => {
           db.User.create({
             firstName: req.body.firstName,
             lastName: req.body.lastName,
@@ -26,13 +28,13 @@ const userController = {
             email: req.body.email,
             phone: req.body.phone,
             adress: req.body.adress,
-            avatar: req.body.avatar,
+            avatar: ImagenAvatar.id,
             admin: String(req.body.email).includes('@how')? 1 : 0,
           }).then(user => {
               res.redirect('/users/login');
           
           })
-          .catch(error => res.send(error))
+          .catch(error => res.send(error))})
         }else{
           return res.render('users/register', 
                 {
@@ -56,15 +58,16 @@ const userController = {
                 where: {
                   email: req.body.email
                 }
-              })
+              }, {include: ['image']})
               .then(users => {
+               // return res.send(users)
               let errors = validationResult(req);
           
               if (!errors.isEmpty()) {
                 return res.render("users/login", {
                   styles: ["login"],
                   errors: errors.mapped(),
-                });
+                },{include: ['image']});
               }
           
               if (!users) {
@@ -105,9 +108,9 @@ const userController = {
           },
                
 
-    list: async (req, res) => {
-      await db.User.findAll({
-        include: ['avatars']
+    list: (req, res) => {
+       db.User.findAll({
+        include: ['image']
       })
       .then(users => {
         res.render('users/list', {
@@ -115,7 +118,7 @@ const userController = {
           title: 'Usuarios',
           users: users
         })
-      })
+      }).catch(error => res.send(error))
     },
     
     /*list: (req, res) => {
@@ -129,52 +132,62 @@ const userController = {
           })
   },*/
     profile: (req,res) => {
-      //return res.send(req.body)  
+     // return res.send(req.body)  
       db.User.findOne(
         { where: 
           { email: req.session.user.email} },
         {
-        include: ['avatar']
+        include: ["image"]
       })
           .then(user => {
-            res.render('users/profile',{
+           //return res.send(body)
+           return res.render('users/profile',{
           user: user
     })
   })
   .catch(error => res.send(error))
 },
     edit: (req, res) => {
-      db.User.findByPk(req.params && req.params.id ? req.params.id : req.session.userLogged.id)
+      db.User.findOne(
+        { where: 
+          { email: req.session.user.email} },
+        {
+        include: ['image']
+      })
       .then(users => { 
-        res.render('users/edit',{
+        res.render('users/userUpdate',{
           styles:["userUpdate"],
           title: 'Usuario: '+ users.firstName,
-          users:users
+          users: users
         })
   })
   .catch(error => res.send(error))
 },
 
     userUpdate: (req, res) =>{
-      db.User.update({
+      //return res.send(req.body)
+        db.User.update({
         firstName: req.body.firstName,
         lastName: req.body.lastName,
-        birthdate: req.body.birthdate,
+        //birthdate: req.body.birthdate,
         phone: req.body.phone,
         adress: req.body.adress,
-        email: req.body.email,
-
-  },{
-        where:{
-        id: req.params.id
-    }
-  })
-  
-      res.redirect('/users/userUpdate');
+        email: req.body.email, 
+      }, {
+        where: { email: req.session.user.email}
+      })
+      .then(user => {
+        db.User.findOne({where: { email: req.session.user.email}}).then(user => {
+          req.session.user = user;
+              res.redirect('users/profile') 
+        })
+        
+})
+.catch(error => res.send(error))
 },
 
     user_delete: (req,res) => {
-      db.user.destroy({
+      db.User.destroy({
         where: {
         id: req.params.id
     }

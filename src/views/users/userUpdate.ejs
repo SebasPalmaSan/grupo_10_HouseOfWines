@@ -3,7 +3,7 @@
 <%- include('../partials/header') %> 
 <main>
     <link rel="stylesheet" href="/css/users/update.css"/>
-     <form action="/users/userUpdate" method="POST" class="formulario" enctype="multipart/form-data">
+     <form action="/users/userUpdate" method="POST" class="formulario">
         <nav>
             <a href="#" class="subtitulos">Inicio</a>
             <span class="divider"> > </span>
@@ -28,9 +28,9 @@
         <input type="text" name="lastName" placeholder="Apellido completo" minlength="3" class="control" required="" value="<%= user.lastName %>">
         </div>
        
-        <div class="control-formulario">
+        <!-- <div class="control-formulario">
         <input type="date" name="birthdate" placeholder="Fecha de nacimiento" class="control" required="" value="<%= user.birthdate %>">
-        </div> 
+        </div>  -->
 
         <div class="control-formulario">
         <input type="tel" name="phone" placeholder="Teléfono" class="control" required="" value="<%= user.phone %>">

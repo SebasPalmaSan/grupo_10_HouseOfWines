@@ -5,9 +5,9 @@
     <link rel="stylesheet" href="/css/users/profile.css"/>
     <section>
         <h3 class="saludoBienvenida"> ¡Bienvenido a House of Wines <%=user.firstName%>!</h3>
-        <% if (user.avatar) { %>
+        <% if (user.avatar.url) { %>
             <figure>
-                <img id="imgCentral"src="/avatars/<%=user.avatars.url%> " alt="photo<%= user.email %> "class="avatar">
+                <img id="imgCentral"src="/avatars/<%=user.avatar.url%> " alt="photo<%= user.email %> "class="avatar">
             </figure>
         
         <% }  else { %>
@@ -36,7 +36,7 @@
     <section>
         <article class="datosProfile">
             <h2 class="datosUsuario">Editar mi perfil</h2> 
-            <a class="boton-formulario" href='/users/userUpdate'>MODIFICAR</a>
+            <a class="boton-formulario" href='/users/edit/'>MODIFICAR</a>
             <br>
             <a class="boton-formulario" href="/">VOLVER</a>
 

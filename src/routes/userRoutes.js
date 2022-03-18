@@ -47,8 +47,8 @@ router.get('/list', userControllers.list);
 router.get('/logout',userControllers.logout);
 
 //Editar un Usuario
-router.post('/edit', userControllers.edit)
-router.post('/userUpdate/:id', userControllers.userUpdate);
+router.get('/edit', userControllers.edit)
+router.post('/userUpdate/', userControllers.userUpdate);
 
 //Eliminar un Usuario
 router.delete('/delete/:id', userControllers.user_delete);
