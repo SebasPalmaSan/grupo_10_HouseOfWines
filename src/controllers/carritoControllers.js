@@ -1,8 +1,7 @@
 module.exports = {
     index: (req, res) =>  res.render('products/carrito', {
         styles: ['products/list', 'main'],
-        title: 'House of Wines | Productos',
-        products: model.all()
+        title: 'House of Wines | Productos'
     }),
     create: (req, res) => res.render('products/create', {
         styles: ['products/create', 'main'],
