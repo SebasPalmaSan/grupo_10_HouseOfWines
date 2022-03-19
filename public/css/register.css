@@ -12,6 +12,9 @@ main{
     border: solid 2px #550c18;
     width: 100%;
 }
+section.errores{
+    color: red
+}
 .formulario {
     width: 100%;
     padding: 20px 20px;

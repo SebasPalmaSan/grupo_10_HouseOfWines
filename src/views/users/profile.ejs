@@ -6,6 +6,7 @@
     <section>
         <h3 class="saludoBienvenida"> ¡Bienvenido a House of Wines <%= user.firstName %>!</h3>
         <% if (user.image) { %>
+
             <figure>
                 <img id="imgCentral"src="/avatars/<%= user.image.url %> " alt="photo<%= user.email %> "class="avatar">
             </figure>
