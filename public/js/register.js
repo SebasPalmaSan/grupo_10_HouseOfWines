@@ -24,7 +24,6 @@ window.addEventListener('load', function () {
     //VARIABLES
     let firstName = document.querySelector('input.name');
     let lastName = document.querySelector('input.last-name');
-    let birthdate = document.querySelector('input.birthdate');
     let phone = document.querySelector('input.phone');
     let adress = document.querySelector('input.adress');
     let email = document.querySelector('input.email');
@@ -49,15 +48,6 @@ window.addEventListener('load', function () {
             };
         })
     }
-
- 
-    //EVENTOS PARA DATE
-    birthdate.addEventListener("blur", function () {
-        if (!birthdate.value == 0) {
-            birthdate.style.display = 'unset';
-            birthdate.innerHTML = "Completa este campo";
-        };
-    })
 
 
     // VALIDACIONES
