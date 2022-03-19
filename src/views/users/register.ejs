@@ -1,10 +1,16 @@
-<%- include('../partials/head.ejs')  %>
-    <link rel="stylesheet" href="/css/header.css"/>
+<head>
+    <%- include('../partials/head.ejs')  %>
+    <script src="../public/js/register.js"></script>
+</head>
+
+    <!-- <link rel="stylesheet" href="/css/header.css"/> -->
+    
     <body>
         <%- include('../partials/header.ejs') %>
         <main>
-            <link rel="stylesheet" href="/css/users/register.css"/>
-            <form action="/users/register" method="POST" class="formulario" enctype="multipart/form-data">
+            <%- include('../partials/styles.ejs') %>
+            <!-- <link rel="stylesheet" href="/css/users/register.css"/> -->
+            <form action="/users/register" method="POST" class="formulario" >
                 <nav>
                     <a href="#" class="subtitulos">Inicio</a>
                     <span class="divider"> > </span>
@@ -13,41 +19,42 @@
                     <a href="/users/register" class="subtitulos">Crear cuenta</a>
                 </nav>
 
-                <section>
+                <section class="errores">
+                    <ul>
                     <% if (locals.errors) { %>
                         <% for( let error in errors ) { %>
                             <p>  <%= errors[error].msg %>  </p>
                         <% } %>
                     <% } %>
+                    </ul>
                 </section>
                 
                 <div class="titulo"><h1> <%- title %>  </h1></div>
                 <div class="control-formulario">
-                    <input type="text" name="firstName" placeholder="Nombre completo" minlength="3" class="control" required="">
+                    <input type="text" name="firstName" placeholder="Nombre completo" minlength="3" class="control name"  required="">
                 </div>
                 <div class="control-formulario">
-                    <input type="text" name="lastName" placeholder="Apellido completo" minlength="3" class="control" required="">
+                    <input type="text" name="lastName" placeholder="Apellido completo" minlength="3" class="control last-name" required="">
                 </div>
                 <div class="control-formulario">
-                    <input type="date" name="birthdate" placeholder="Fecha de nacimiento" class="control" required="">
+                    <input type="tel" name="phone" placeholder="Teléfono" class="control phone" required="">  
                 </div>
                 <div class="control-formulario">
-                    <input type="tel" name="phone" placeholder="Teléfono" class="control" required="">
+                    <input type="text" name="adress" placeholder="Domicilio" minlength="3" class="control adress" required="">
                 </div>
                 <div class="control-formulario">
-                    <input type="text" name="adress" placeholder="Domicilio" minlength="3" class="control" required="">
+                    <input type="email" name="email" placeholder="E-mail" class="control email" required="">
                 </div>
                 <div class="control-formulario">
-                    <input type="email" name="email" placeholder="E-mail" class="control" required="">
-                </div>
-                <div class="control-formulario">
-                    <input type="password" name="password" placeholder="Contraseña" class="control" required="">
+                    <input type="password" name="password" placeholder="Contraseña" class="control password" required="">
                 </div>
                 <div class="control-formulario2">
                     <legend class="">Seleccione su imagen de perfil<legend>
-                    <input type="file" name="imagenUsuario">
+                    <input type="file" class="avatar" name="imagenUsuario">
                 </div>
                 <br>
+                
+
                 <!-- <div class="control-formulario">
                     <input type="password" name="repetirPass" placeholder="Repetir contraseña" class="control" required="">
                 </div> -->
@@ -56,5 +63,6 @@
             </form>
     </main>
     <%- include('../partials/footer.ejs')  %>
+  <!-- <script src="../public/js/register.js"></script> -->
 </body>
 </html>
