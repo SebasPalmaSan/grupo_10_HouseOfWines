@@ -179,7 +179,7 @@ const userController = {
       .then(user => {
         db.User.findOne({where: { email: req.session.user.email}}).then(user => {
           req.session.user = user;
-              res.redirect('users/profile') 
+              res.redirect('profile') 
         })
         
 })
