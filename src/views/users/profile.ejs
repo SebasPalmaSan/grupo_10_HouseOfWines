@@ -5,7 +5,7 @@
     <link rel="stylesheet" href="/css/users/profile.css"/>
     <section>
         <h3 class="saludoBienvenida"> ¡Bienvenido a House of Wines <%=user.firstName%>!</h3>
-        <% if (user.avatar.url) { %>
+        <% if (user.avatars) { %>
             <figure>
                 <img id="imgCentral"src="/avatars/<%=user.avatar.url%> " alt="photo<%= user.email %> "class="avatar">
             </figure>
