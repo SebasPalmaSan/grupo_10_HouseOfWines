@@ -18,8 +18,9 @@ const userController = {
     save: (req, res) =>{
       const errors = validationResult(req)
       if(errors.isEmpty()){
+        if(req.file){
           db.Image.create({
-            url: req.file.filename,Type:1
+            url: req.file.filename,
           }).then(ImagenAvatar => {
           db.User.create({
             firstName: req.body.firstName,
@@ -33,8 +34,26 @@ const userController = {
           }).then(user => {
               res.redirect('/users/login');
           
-          })
-          .catch(error => res.send(error))})
+          }).catch(error => res.send(error))})
+
+        }else{
+          db.User.create({
+            firstName: req.body.firstName,
+            lastName: req.body.lastName,
+            password: bcryptjs.hashSync(req.body.password,10),
+            email: req.body.email,
+            phone: req.body.phone,
+            adress: req.body.adress,
+            avatar: null,
+            admin: String(req.body.email).includes('@how')? 1 : 0,
+          }).then(user => {
+              res.redirect('/users/login');
+          
+          }).catch(error => res.send(error))
+
+        }
+          
+          
         }else{
           return res.render('users/register', 
                 {
@@ -132,15 +151,14 @@ const userController = {
           })
   },*/
     profile: (req,res) => {
-     // return res.send(req.body)  
-      db.User.findOne(
-        { where: 
-          { email: req.session.user.email} },
-        {
-        include: ["image"]
+     console.clear();
+     console.log('sql')
+      //return res.send(req.body)  
+      db.User.findByPk(req.session.user.id,{
+        include:['image']
       })
           .then(user => {
-           //return res.send(body)
+           ///return res.send(user)
            return res.render('users/profile',{
           user: user
     })

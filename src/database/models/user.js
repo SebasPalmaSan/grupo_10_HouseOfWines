@@ -34,6 +34,7 @@ module.exports = function(sequelize, DataTypes){
         },
         avatar:{
           type: DataTypes.INTEGER,
+          allowNull: true,
         },
         admin:{
           type: DataTypes.BOOLEAN,
@@ -47,7 +48,7 @@ module.exports = function(sequelize, DataTypes){
   
       let User = sequelize.define(alias, cols, config);
   
-      User.associated = function(models){
+      User.associate = function(models){
         User.belongsTo(models.Image,{
           foreignKey:"avatar",
           as: "image"
