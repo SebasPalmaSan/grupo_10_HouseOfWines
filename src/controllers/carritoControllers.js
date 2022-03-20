@@ -1,12 +1,9 @@
 module.exports = {
     index: (req, res) =>  res.render('products/carrito', {
         styles: ['products/list', 'main'],
-<<<<<<< HEAD
-        title: 'House of Wines | Productos'
-=======
         title: 'House of Wines | Productos',
         //products: model.all()
->>>>>>> e2e90279377ea6e08babe82af864163b4b750f58
+
     }),
     create: (req, res) => res.render('products/create', {
         styles: ['products/create', 'main'],
