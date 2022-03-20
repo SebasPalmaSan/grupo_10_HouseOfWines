@@ -8,30 +8,32 @@
         
         <section class="contenedor">
             <label for="name" class="control-formulario">
-            <input type="text" id="name" minlength="3" maxlength="25" placeholder="Nombre del producto" class="control" required>
+            <input type="text" id="name" name="name" minlength="3" maxlength="25" placeholder="Nombre del producto" class="control" required>
             </label>
 
-            <label for="oldPrice" class="control-formulario">
-            <input type="number" id="oldPrice" min="0" placeholder="Precio de lista" class="control" required>
+            <label for="price" class="control-formulario">
+            <input type="number" id="price" name="price" min="0" placeholder="Precio de lista" class="control" required>
             </label>
 
             <label for="discount" class="control-formulario">
-            <input type="number" id="discount" min="0" max="100" placeholder="Porcentaje de descuento" class="control" required>
+            <input type="number" id="discount" name="discount" min="0" max="100" placeholder="Porcentaje de descuento" class="control" required>
             </label>
 
             <label for="category" class="control-formulario">
             <select id="category" name="category" class="control" required>
-                <option value="vinos">Vinos</option>
-                <option value="espumantes">Espumantes</option>
-                <option value="destilados">Destilados</option>
-                <option value="whiskys">Whiskys</option>
-                <option value="accesorios">Accesorios</option>
+                <option value="1">Vinos</option>
+                <option value="2">Espumantes</option>
+                <option value="3">Destilados</option>
+                <option value="4">Whiskys</option>
+                <option value="5">Accesorios</option>
             </select>
             </label>
             <label for="file" class="control-formulario">
-                <input type="file" id="file" name="file">
+                <input type="file" id="file" name="file"></label>
+
             <label for="description" class="control-formulario"></label>
-            <fieldset ><textarea id="description" rows="4" cols="30" required>Descripción del Producto</textarea></fieldset>
+            <fieldset ><textarea id="description" name="description" rows="4" cols="30" required>Descripción del Producto</textarea></fieldset>
+            <fieldset ><textarea id="review" name="review" rows="4" cols="30" required>Reseña del Producto</textarea></fieldset>
             <fieldset ><button type="submit">Guardar</button></fieldset>
         </section>
     </form>
