@@ -45,7 +45,7 @@ h1{
     justify-content: center;
 }
 #name,
-#oldPrice,
+#price,
 #discount,
 #category {
     width: 80%;

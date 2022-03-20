@@ -1,26 +1,27 @@
 const db = require('../database/models');
-const file = require('../models/file')
+//const file = require('../models/file')
 const sequelize = db.sequelize;
 
 
 const productControllers = {
 
     create: (req, res) => {
-        db.Category.findAll()
-        .then(function(categoria) {
+        //return res.send(req.body)
+        db.Product.findAll()
+        .then(function(producto) {
             return res.render('products/create', 
             { 
                 styles: ['products/create'],
                 title:'House of Wines | Creá un Producto nuevo',
-                categoria: categoria 
+                producto: producto 
             });
         })
     },
     
     save: (req, res) => {
-        return res.send(req.body)
+        //return res.send(req.body)
         db.Image.create({
-            url: req.files[0].filename,Type:1
+            url: req.files[0].filename
         }).then(ImagenProducto => {
         db.Product.create({
             name: req.body.name,
@@ -29,7 +30,7 @@ const productControllers = {
             review: req.body.review, 
             price: req.body.oldPrice,
             discount: req.body.discount,
-            image: ImagenProducto.id
+            image: ImagenProducto.id,
         })
         .then(()=>{
             return res.redirect('/products/')

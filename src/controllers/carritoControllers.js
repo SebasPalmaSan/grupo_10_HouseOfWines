@@ -2,7 +2,7 @@ module.exports = {
     index: (req, res) =>  res.render('products/carrito', {
         styles: ['products/list', 'main'],
         title: 'House of Wines | Productos',
-        products: model.all()
+        //products: model.all()
     }),
     create: (req, res) => res.render('products/create', {
         styles: ['products/create', 'main'],

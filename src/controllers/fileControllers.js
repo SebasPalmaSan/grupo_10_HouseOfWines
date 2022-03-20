@@ -6,9 +6,9 @@ module.exports = {
         styles: ['files/upload'],
         title: 'House of Wines | Subir imagenes',
     }),
-    store: (req, res) => res.send(req.files.map(f => file.create(f))),
+    
 
-    uploadAvatar: (req, res) => {
+    /*uploadAvatar: (req, res) => {
 
         if (req.files && req.files.length > 0) {
           db.Image.create({
@@ -32,5 +32,5 @@ module.exports = {
             })
             .catch((error) => res.send(error));
         }
-      },
-}
+      },*/
+    }
