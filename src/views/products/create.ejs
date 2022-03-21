@@ -1,25 +1,25 @@
-    <head><%- include('../partials/head.ejs') %> </head>
+<%- include('../partials/head.ejs') %>
 <body>
-    <header><%- include('../partials/header.ejs') %></header>
+<%- include('../partials/header.ejs') %>
 
     
     <form action= "/products/create" method = "POST" enctype="multipart/form-data">
         <h1 class="title">Crear un producto</h1>
         
         <section class="contenedor">
-            <label for="name" class="control-formulario">
+            <label for="name">
             <input type="text" id="name" name="name" minlength="3" maxlength="25" placeholder="Nombre del producto" class="control" required>
             </label>
 
-            <label for="price" class="control-formulario">
+            <label for="price"class="">
             <input type="number" id="price" name="price" min="0" placeholder="Precio de lista" class="control" required>
             </label>
 
-            <label for="discount" class="control-formulario">
+            <label for="discount"class="">
             <input type="number" id="discount" name="discount" min="0" max="100" placeholder="Porcentaje de descuento" class="control" required>
             </label>
 
-            <label for="category" class="control-formulario">
+            <label for="category" class="">
             <select id="category" name="category" class="control" required>
                 <option value="1">Vinos</option>
                 <option value="2">Espumantes</option>
@@ -28,14 +28,19 @@
                 <option value="5">Accesorios</option>
             </select>
             </label>
-            <label for="file" class="control-formulario">
-                <input type="file" id="file" name="file"></label>
+            
+            
+            <!--<label for="description" class=""></label>-->
+            <fieldset ><textarea id="description" name="description" rows="4" cols="30" placeholder="Descripción del Producto"></textarea></fieldset>
+            <fieldset ><textarea id="review" name="review" rows="4" cols="30" placeholder="Reseña del Producto"></textarea></fieldset>
+            
+        
+            <label for="file" class="control-formulario2">
+            <input type="file" id="file" name="file">
+            </label>
 
-            <label for="description" class="control-formulario"></label>
-            <fieldset ><textarea id="description" name="description" rows="4" cols="30" required>Descripción del Producto</textarea></fieldset>
-            <fieldset ><textarea id="review" name="review" rows="4" cols="30" required>Reseña del Producto</textarea></fieldset>
             <fieldset ><button type="submit">Guardar</button></fieldset>
-        </section>
+    </section>
     </form>
     <%- include('../partials/footer.ejs') %>
 </body>

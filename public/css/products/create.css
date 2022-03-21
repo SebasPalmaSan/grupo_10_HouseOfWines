@@ -60,36 +60,28 @@ h1{
     flex-direction: column;
 }
 
-#file{
-    width: 50%;
-    background-color: #f5f5f5;
-    border: solid 3px #BAB7B7;
-    outline: none;
-    margin-bottom: 30px;
-    text-align: center; 
-    margin: auto;
-    border-radius: 5px;
-    display: flex;
-    justify-content: center;
-}
-
-#description{
+#description,
+#review{
     width: 80%;
     background-color: #f5f5f5;
     border: solid 3px #BAB7B7;
     border-radius: 5px;
     margin-bottom: 20px;
+    text-align: left; 
+    outline: none;
 }
 
-.control {
-    width: 20%;
+.control-formulario2 {
+    width: 80%;
     background-color: #f5f5f5;
     border: solid 3px #BAB7B7;
+    color: #736E6E;
     outline: none;
-    margin-bottom: 20px;
-    text-align: left; 
+    margin-bottom: 45px;
+    margin-top: 45px;
     margin-left: 10%;
     border-radius: 5px;
+    justify-self: center;
 }
 
 .boton-formulario{
@@ -135,6 +127,7 @@ fieldset{
     display: flex;
     justify-content: center;
     border-top: #FFF;
+    border-bottom: #FFF;
 }
 textarea{
     width: 50%;
