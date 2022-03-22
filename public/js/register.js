@@ -1,5 +1,5 @@
 window.addEventListener('load', function () {
-    let form = document.querySelector('form.formulario')
+    let form = document.querySelector('form')
     
     const data = {
         firstName:e.target[0].value.trim().toLowerCase(),
@@ -28,26 +28,33 @@ window.addEventListener('load', function () {
     let adress = document.querySelector('input.adress');
     let email = document.querySelector('input.email');
     let avatar = document.getElementById('input.avatar');
-    let campos = document.querySelectorAll("form.control")
+    let inputs = document.querySelectorAll(".inputs")
 
-    
     // EVENTOS PARA FORMULARIO
-    for (let i = 0; i < campos.length; i++){
-        campos[i].addEventListener("focus", function () {
-            this.style.borderColor= "red";
-        })
+    inputs.addEventListener("focus", function (){
+        this.style.borderColor="red";
+    })
 
-        campos[i].addEventListener("change", function () {
-            this.style.backgroundColor = 'green';
-        })
+    inputs.addEventListener("change", function (){
+        style.backgroundColor="orange"
+    })
+    
+    // for (let i = 0; i < campos.length; i++){
+    //     campos[i].addEventListener("focus", function () {
+    //         this.style.borderColor= "red";
+    //     })
 
-        campos[i].addEventListener("blur", function () {
-            if (!campos.value.length) {
-                this.style.display = 'unset';
-                campos[i].innerHTML = "Completa este campo";
-            };
-        })
-    }
+    //     campos[i].addEventListener("change", function () {
+    //         this.style.borderColor = 'green';
+    //     })
+
+    //     campos[i].addEventListener("blur", function () {
+    //         if (!campos.value.length) {
+    //             this.style.display = 'unset';
+    //             campos[i].innerHTML = "Completa este campo";
+    //         };
+    //     })
+    // }
 
 
     // VALIDACIONES

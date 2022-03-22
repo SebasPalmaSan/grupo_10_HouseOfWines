@@ -3,8 +3,8 @@
     <body>
         <%- include('../partials/header.ejs') %>
         <main>
-            <link rel="stylesheet" href="/css/users/login.css"/>
-                <form action="/users/access" method="post" class="formulario">
+        <%- include('../partials/styles.ejs') %>
+                <form action="/users/access" method="post" class="formulario" id="login">
                 <nav>
                     <a href="#" class="subtitulos">Inicio</a>
                     <span class="divider"> > </span>
@@ -22,12 +22,14 @@
                 </section>
                 
                 <div class="titulo"><h1>Iniciá sesión</h1></div>
-                <div class="control-formulario">
-                    <input type="text" name="email" placeholder="Email" class="control" required="">
-                </div>
-                <div class="control-formulario">
-                    <input type="password" name="password" placeholder="Contraseña" class="control" required="">
-                </div>
+                <section class="inputs">
+                    <div class="control-formulario">
+                        <input type="text" name="email" placeholder="Email" class="control" required="" id="email">
+                    </div>
+                    <div class="control-formulario">
+                        <input type="password" name="password" placeholder="Contraseña" class="control" required="" id="password" value="">
+                    </div>
+                </section>
                     <div><a href="#" class="reset-password"><b>¿Olvidaste tu contraseña?</b></a></div>
                 <button type="submit" class="boton-formulario">INICIAR SESIÓN</button>
                 <div class="subtitulos"><p class="mt-3 text-center">¿No tenés cuenta aún? <a href="/users/register" class="subtitulos"><b>Crear cuenta</b></a></p></div>
@@ -35,5 +37,6 @@
     
         </main> 
         <%- include('../partials/footer.ejs')  %>
+        <script src = "../js/login.js"></script>
 </body>
 </html>
