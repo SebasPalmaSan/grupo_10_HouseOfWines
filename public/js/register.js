@@ -1,128 +1,131 @@
-window.addEventListener('load', function () {
-    let form = document.querySelector('form')
+window.onload = function (){
+//window.addEventListener('load', function () {
+    //let form = document.querySelector('#form')
     
-    const data = {
-        firstName:e.target[0].value.trim().toLowerCase(),
-        lastName:e.target[1].value.trim().toLowerCase(),
-        password:e.target[2].value,
-        email:e.target[4].value
-    }
-    console.log('data:',data);
-
-    const url = 'http://localhost:3000/users/register';
-    fetch( url, {
-      method:'POST',
-      body: JSON.stringify(data),
-      headers:{
-          'Content-Type': 'application/json'
-        }
-    }).then(res => res.json())
-    .catch(error => console.error('Error:', error))
-    .then(response => console.log('Success:', response));
-
-
     //VARIABLES
-    let firstName = document.querySelector('input.name');
-    let lastName = document.querySelector('input.last-name');
-    let phone = document.querySelector('input.phone');
-    let adress = document.querySelector('input.adress');
-    let email = document.querySelector('input.email');
-    let avatar = document.getElementById('input.avatar');
-    let inputs = document.querySelectorAll(".inputs")
+    let firstName = document.querySelector("#firstName");
+    let lastName = document.querySelector("#lastName");
+    let phone = document.querySelector("#phone");
+    let adress = document.querySelector("#adress");
+    let email = document.querySelector("#email");
+    let password = document.querySelector("#password");
+    //let avatar = document.getElementById('input.avatar');
+    let inputs = document.querySelectorAll(".inputs2")
 
-    // EVENTOS PARA FORMULARIO
-    inputs.addEventListener("focus", function (){
-        this.style.borderColor="red";
-    })
-
-    inputs.addEventListener("change", function (){
-        style.backgroundColor="orange"
-    })
     
-    // for (let i = 0; i < campos.length; i++){
-    //     campos[i].addEventListener("focus", function () {
-    //         this.style.borderColor= "red";
-    //     })
+       const validacionesinputs = () => {
+        
+            //VALIDACION NOMBRE
+            let campoNombreValido = firstName.value.trim();
+    
+            if (campoNombreValido.length < 4 ){
+                firstName.classList.add ("error")
+                firstName.classList.remove ("success")
+               }
+            let regex = /^[a-zA-Z][0-9a-zA-Z .,'-]*$/
+    
+            if (!regex.test(campoNombreValido)){
+                firstName.classList.add ("error")
+                firstName.classList.remove ("success")
+            
+              } else{ 
+                firstName.classList.add ("success")
+            
+              } 
+    
+            //VALIDACION APELLIDO           
+            let campoApellidoValido = lastName.value.trim();
+    
+            if (campoApellidoValido.length < 4 ){
+                lastName.classList.add ("error")
+                lastName.classList.remove ("success")
+              }
+                let regexs = /^[a-zA-Z][0-9a-zA-Z .,'-]*$/
+    
+            if (!regexs.test(campoApellidoValido)){
+                lastName.classList.add ("error")
+                lastName.classList.remove ("success")
+            
+               } else{ 
+                   lastName.classList.add ("success")        
+                } 
+    
+    
+             //VALIDACION EMAIL
+            let campoEmailValido = email.value.trim();
+    
+            if (campoEmailValido.length < 1 ){
+                email.classList.add ("error")
+                email.classList.remove ("success")
+              }
+                let regexx = /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/
+    
+            if (!regexx.test(campoEmailValido)){
+                email.classList.add ("error")
+                email.classList.remove ("success")
+            
+             } else{ 
+                email.classList.add ("success")        
+               } 
+    
 
-    //     campos[i].addEventListener("change", function () {
-    //         this.style.borderColor = 'green';
-    //     })
+            //VALIDACION PHONE
+            let campoPhoneValido = phone.value.trim();
+    
+               if (campoPhoneValido.length < 6 ){
+                phone.classList.add ("error")
+                phone.classList.remove ("success")
+                 }
+            let regextp = /^.(?=.{6,})(?=.[0-9-.]).*$/
+               if (!regextp.test(campoPhoneValido)){
+                phone.classList.add ("error")
+                phone.classList.remove ("success")
+               
+                 } else{ 
+                    phone.classList.add ("success")        
+                  } 
 
-    //     campos[i].addEventListener("blur", function () {
-    //         if (!campos.value.length) {
-    //             this.style.display = 'unset';
-    //             campos[i].innerHTML = "Completa este campo";
-    //         };
-    //     })
-    // }
+            //VALIDACION ADRESS
+            let campoAdressValido = adress.value.trim();
+    
+            if (campoAdressValido.length < 6 ){
+            adress.classList.add ("error")
+            adress.classList.remove ("success")
+                 }
+                 let regextt = /^.(?=.{6,})(?=.[a-zA-Z0-9-.]).*$/
 
-
-    // VALIDACIONES
-    form.addEventListener("submit", function (e) {  
-        let errores = [];
-
-        if (firstName.value === "") {
-            errores.push("Completa este campo");
-        } else if(firstName.value <2){
-            errores.push ("El campo nombre debe tener al menos 2 caracteres");
-        }
-
-        if (lastName.value === "") {
-            errores.push ("Completa este campo");
-        } else if(lastName.value <2){
-            errores.push ("El campo apellido debe tener al menos 2 caracteres");
-        }
-
-        if (phone.value === "") {
-            errores.push ("Completa este campo");
-        } else if(lastName.value <8){
-            errores.push ("El campo teléfono debe tener al menos 8 caracteres");
-        }
-
-        if (adress.value === "") {
-            errores.push ("Completa este campo");
-        } else if(adress.value <6){
-            errores.push ("El campo domicilio debe tener al menos 6 caracteres");
-        }
-
-        if (email.value < 2) {
-            errores.push("El email ingresado es muy corto");
-        } else {
-            if (!ValidateEmail(email.value)) {
-                errores.push('La dirección de email debe ser una valida')
+            if (!regextt.test(campoAdressValido)){
+            adress.classList.add ("error")
+            adress.classList.remove ("success")
+               
+            } else{ 
+            adress.classList.add ("success")        
+            } 
+    
+             
+    
+             //VALIDACION PASSWORD      
+            let campoPasswordValido = password.value.trim();
+    
+            if (campoPasswordValido.length < 6 ){
+                password.classList.add ("error")
+                password.classList.remove ("success")
+                password.innerHTML= "El campo debe contener minimo 6 caracteres, 1 letra, 1 número y 1 character especial"
+              }
+                let regext = /^.*(?=.{6,})(?=.*[a-zA-Z])(?=.*\d)(?=.*[!#$%&? "]).*$/
+            if (!regext.test(campoPasswordValido)){
+                password.classList.add ("error")
+                password.classList.remove ("success")
+            
+              } else{ 
+                 password.classList.add ("success")        
+               } 
             }
-        }
-
-        if (!ValidateExtension(avatar.value)) {
-            errores.push("El archivo a adjuntar no posee extension valida");
-        }
-
-
-        if (errores.length > 0) {
-            e.preventDefault();
-
-            let ulErrores = document.querySelector("section.errores ul");
-            for (let i = 0; i < errores.length; i++) {
-                ulErrores.innerHTML+= "<li>" + errores[i] + "</li>";
-        }
-
-
-    };
-
-    })
-})
-
-function ValidateEmail(input) {
-    if (input.includes('@')) {
-        if (input.slice(-4) == ".com")
-            return true
-    }
-    return false;
-}
-
-function ValidateExtension(input) {
-    let acceptedExtensions = ['.jpg', '.png', '.gif', '.jpeg', '.PNG'];
-        if ( acceptedExtensions.includes(input.slice(-4)) )
-            return true
-    return false;
+ 
+             inputs.forEach((item)  => {       
+                item.addEventListener("keydown" , validacionesinputs)    
+                item.addEventListener("click" , validacionesinputs)                 
+                item.addEventListener("blur" , validacionesinputs)
+               })
+    
 }
