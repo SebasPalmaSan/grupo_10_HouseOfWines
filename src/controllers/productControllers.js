@@ -25,15 +25,16 @@ const productControllers = {
         }).then(ImagenProducto => {
         db.Product.create({
             name: req.body.name,
-            category: req.body.category,
+            category: parseInt(req.body.category),
             description: req.body.description,
             review: req.body.review, 
-            price: req.body.oldPrice,
+            price: req.body.price,
             discount: req.body.discount,
-            image: ImagenProducto.id,
+            images: ImagenProducto.id,
         })
         .then(()=>{
-            return res.redirect('/products/')
+            return res.redirect('/')
+
         })
         .catch(error => res.send(error))
         })
@@ -53,13 +54,13 @@ const productControllers = {
 
     detail: (req, res) => {
         db.Product.findByPk(req.params.id, {
-            include: [{association:'image'}, {association:'category'}],
+            include: [{association:'image'}, {association:'categories'}],
         })
         .then(function(product){
-            res.render('/products/detail', 
+            res.render('products/detail', 
             {
                 styles: ['products/detail', 'home'],
-                title: 'House of Wines | ' + product.name,
+                title: 'House of Wines',
                 product: product,
             })
         })
@@ -88,7 +89,7 @@ const productControllers = {
             review: req.body.review, 
             price: req.body.oldPrice,
             discount: req.body.discount,
-            //image: imageProduct
+            image: imagenProducto.id
         }, {
         where: {
             id: req.params.id

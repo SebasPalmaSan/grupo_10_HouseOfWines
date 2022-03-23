@@ -18,7 +18,7 @@ router.post('/create',[upload.any()], productControllers.save);
 router.get('/list', productControllers.list);
 
 //Detalle de Producto
-router.get('/:id', productControllers.detail);
+router.get('/detail/:id', productControllers.detail);
 
 //Actualizar Producto
 router.get('/edit/:id', productControllers.edit);
