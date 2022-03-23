@@ -21,16 +21,15 @@
                 <% products.forEach(product => { %>
                     
                             <article class="producto">
-                              <a href="/products/<%= product.id %>" class="caja">  
-                                <% if (product.image) { %>
-                                    <img src="<%= product.image %>" alt="Imagen del producto" class="img-product">
+                              <a href="/products/detail/<%= product.id %>" class="caja">  
+                                <% if (product.images) { %>
+                                    <img src="<%= product.images.url %>" alt="Imagen del producto" class="img-product">
                                 <% } %>
                                 <section class="texto">
                                     <h3 class="nombre-producto"><%= product.name %></h3>
                                     <p class="descrip-producto"><%= product.description %></p>
                                     <p class="descuento"> <%= product.discount %> % OFF</p>
-                                    <p class="precio-ant"> $ <%= product.oldPrice %> </p>
-                                    <p class="precio-nuevo"> $ <%= product.newPrice %> </p></p>
+                                    <p class="precio-ant"> $ <%= product.price %> </p>
                                     <p class="descrip-producto">Hasta 24 cuotas <i class="far fa-2x fa-credit-card service-icon"></i></p>
                                     
                                 </section>

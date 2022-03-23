@@ -51,8 +51,15 @@ module.exports = function(sequelize, DataTypes){
       });
       Product.belongsTo(models.Category,{
         foreignKey:"id",
-        as: "Category"
+        as: "categories"
       });
+      Product.belongsToMany(models.User,{
+        foreignKey:"productID",
+        through: "Users-Products",
+        otherKey: "userID",
+        as: "users",
+        timestamps: false
+      })
     }
     return Product;
 };    
