@@ -13,11 +13,10 @@ main{
     border: solid 2px #550c18;
     width: 100%;
 }
-.formulario {
+.formulario2 {
     width: 100%;
     padding: 20px 20px;
     background-color: #f5f5f5;
-    border: solid 3px #550c18;
     text-align: center;
 }
 .subtitulos, 
@@ -39,8 +38,8 @@ main{
     width: 80%;
     background-color: #f5f5f5;
     border: solid 3px #BAB7B7;
-    margin-top: 30px;
-    margin-bottom: 10px;
+    /* margin-top: 30px;
+    margin-bottom: 10px; */
     text-align: left; 
     margin-left: 10%;
     border-radius: 5px;
@@ -61,14 +60,14 @@ main{
     box-shadow: none;
 }
 input.error{
-    border: 6.6px solid rgb(235, 104, 104);
+    border: 6.6px solid #BF2B0B;
     width: 100%;
     text-align: left; 
     border-radius: 5px;
 }
 
 input.success{
-    border: 6.6px solid rgb(104, 235, 148);
+    border: 6.6px solid #65BC0D;
     width: 100%;
     text-align: left; 
     border-radius: 5px;
@@ -92,12 +91,6 @@ input.success{
     margin-top: 0%;
     margin-bottom:10px;
     padding-right:150px;
-}
-
-footer {
-    color: #BAB7B7;
-    background-color: #550c18;
-    width: 100%;
 }
 
 @media(min-width:361px){

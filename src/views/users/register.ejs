@@ -1,6 +1,6 @@
 <head>
     <%- include('../partials/head.ejs')  %>
-    <script src="../public/js/register.js"></script>
+
 </head>
 
     <!-- <link rel="stylesheet" href="/css/header.css"/> -->
@@ -10,7 +10,7 @@
         <main>
             <%- include('../partials/styles.ejs') %>
             <!-- <link rel="stylesheet" href="/css/users/register.css"/> -->
-            <form action="/users/register" method="POST" class="formulario" enctype="multipart/form-data">
+            <form action="/users/register" method="POST" class="formulario1" enctype="multipart/form-data" id="form">
                 <nav>
                     <a href="#" class="subtitulos">Inicio</a>
                     <span class="divider"> > </span>
@@ -18,44 +18,72 @@
                     <span class="divider"> > </span>
                     <a href="/users/register" class="subtitulos">Crear cuenta</a>
                 </nav>
-
-                <section class="errores">
-                    <ul>
-                    <% if (locals.errors) { %>
-                        <% for( let error in errors ) { %>
-                            <p>  <%= errors[error].msg %>  </p>
-                        <% } %>
-                    <% } %>
-                    </ul>
-                </section>
-                
                 <div class="titulo"><h1> <%- title %>  </h1></div>
-                <section class="inputs">
+          
                 <div class="control-formulario">
-                    <input type="text" name="firstName" placeholder="Nombre completo" minlength="3" class="control name"  required="">
+                    <input type="text" name="firstName" placeholder="Nombre completo" minlength="3" class="control inputs2"  required="" id="firstName">
+                    <% if (locals.errors && errors.nombre) { %>
+                        <p class="errores"><%= errors.nombre.msg %> </p>
+                    <% } %>
                 </div>
                 <div class="control-formulario">
-                    <input type="text" name="lastName" placeholder="Apellido completo" minlength="3" class="control last-name" required="">
+                    <input type="text" name="lastName" placeholder="Apellido completo" minlength="3" class="control inputs2" required="" id="lastName">
                 </div>
                 <div class="control-formulario">
-                    <input type="tel" name="phone" placeholder="Teléfono" class="control phone" required="">  
+                    <input type="tel" name="phone" placeholder="Teléfono" class="control inputs2" required="" id="phone">  
                 </div>
                 <div class="control-formulario">
-                    <input type="text" name="adress" placeholder="Domicilio" minlength="3" class="control adress" required="">
+                    <input type="text" name="adress" placeholder="Domicilio" minlength="3" class="control inputs2" required="" id="adress">
                 </div>
                 <div class="control-formulario">
-                    <input type="email" name="email" placeholder="E-mail" class="control email" required="">
+                    <input type="email" name="email" placeholder="E-mail" class="control inputs2" required="" id="email">
                 </div>
                 <div class="control-formulario">
-                    <input type="password" name="password" placeholder="Contraseña" class="control password" required="">
+                    <input type="password" name="password" placeholder="Contraseña" class="control inputs2" required="" id="password=">
                 </div>
                 <div class="control-formulario2">
                     <legend class="">Seleccione su imagen de perfil<legend>
                     <input type="file" class="avatar" name="imagenUsuario">
                 </div>
-                </section>
-                <br>
                 
+                <br>
+                <section>
+                    <% if (locals.errors && errors.firstName) { %>
+                        <p class="errors">
+                            <%= errors.firstName.msg %>
+                        </p>
+                        <% } %>
+                            <% if (locals.errors && errors.lastName) { %>
+                                <p class="errors">
+                                    <%= errors.lastName.msg %>
+                                </p>
+                                <% } %>
+
+                                    <% if (locals.errors && errors.phone) { %>
+                                        <p class="errors">
+                                            <%= errors.phone.msg %>
+                                        </p>
+                                        <% } %>
+
+                                        <% if (locals.errors && errors.adress) { %>
+                                            <p class="errors">
+                                                <%= errors.adress.msg %>
+                                            </p>
+                                            <% } %>
+
+                                            <% if (locals.errors && errors.email) { %>
+                                                <p class="errors">
+                                                    <%= errors.email.msg %>
+                                                </p>
+                                            <% } %>
+
+                                            <% if (locals.errors && errors.password) { %>
+                                                <p class="errorvalidacion">
+                                                    <%= errors.password.msg %>
+                                                </p>
+                                                <% } %>
+
+                </section>
 
                 <!-- <div class="control-formulario">
                     <input type="password" name="repetirPass" placeholder="Repetir contraseña" class="control" required="">
@@ -65,6 +93,6 @@
             </form>
     </main>
     <%- include('../partials/footer.ejs')  %>
-  <!-- <script src="../public/js/register.js"></script> -->
+    <script src = "../js/register.js"></script>
 </body>
 </html>
