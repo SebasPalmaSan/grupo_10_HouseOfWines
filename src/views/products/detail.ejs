@@ -20,6 +20,21 @@
 
     <section class="resenia-producto"> <%= product.review %> </section>
 
+    
+
+    <section>
+        <% if (user.admin) { %>
+        <a href="/product/edit/ <%= product.id %>" class="agregar">
+            <button type="submit" class="botonAgregar"> EDITAR PRODUCTO</i></button>
+        </a>
+    </section>
+
+    <section>
+        <a href="/product/delete/<%= product.id %>" class="agregar">
+            <button type="submit" class="botonAgregar"> BORRAR PRODUCTO</i></button>
+        </a>
+    </section>
+    <% } else { %>
     <section>
         <a href="/carrito" class="agregar">
             <button type="submit" class="botonAgregar">AGREGAR AL CARRITO<i class="fa fa-shopping-cart"></i></button>
@@ -31,7 +46,7 @@
             <button type="submit" class="botonAgregar">VER PRODUCTOS RELACIONADOS<i class="fa-solid fa-eye"></i></button>
         </a>
     </section>
-
+    <% } %>
     <%- include('../partials/footer.ejs') %>
 </body>
 </html>
