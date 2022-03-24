@@ -23,7 +23,7 @@
                             <article class="producto">
                               <a href="/products/detail/<%= product.id %>" class="caja">  
                                 <% if (product.images) { %>
-                                    <img src="<%= product.images.url %>" alt="Imagen del producto" class="img-product">
+                                    <img src="/products/<%= product.image %>" alt="Imagen del producto" class="img-product">
                                 <% } %>
                                 <section class="texto">
                                     <h3 class="nombre-producto"><%= product.name %></h3>

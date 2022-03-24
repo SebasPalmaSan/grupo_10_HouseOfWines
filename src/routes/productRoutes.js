@@ -3,16 +3,29 @@ const product = require('../controllers/productControllers');
 const router = Router();
 const productControllers = require('../controllers/productControllers')
 const path = require('path');
+const validatorSave = require('../middlewares/saveMiddleware');
 //const file = require('../controllers/file');
 const multer = require('multer');
-const upload = multer({storage: multer.diskStorage({
-    destination: (req, file, cb) => cb(null, path.resolve(__dirname, '../../uploads/products')),
-    filename: (req, file, cb) => cb(null, file.filename + '-' + Date.now() + path.extname(file.originalname))
-})})
+//const upload = multer({storage: multer.diskStorage({
+    //destination: (req, file, cb) => cb(null, path.resolve(__dirname, '../../uploads/products')),
+    //filename: (req, file, cb) => cb(null, file.filename + '-' + Date.now() + path.extname(file.originalname))
+//})})
+
+const multerDiskStorage = multer.diskStorage({
+    destination: (req, file, cb) => {
+        const folder = path.join(__dirname, '../../uploads/products')
+        cb (null, folder);
+    },
+    filename: (req, file, cb) => {
+        const nombreArchivo = 'file' + Date.now() + path.extname (file.originalname);
+        cb(null, nombreArchivo)
+    }
+})
+const fileUpload = multer({ storage: multerDiskStorage});
 
 //Crear un Producto
 router.get('/create', productControllers.create);
-router.post('/create',[upload.any()], productControllers.save);
+router.post('/create',[fileUpload.any('file'),validatorSave], productControllers.save);
 
 //Listado de Productos
 router.get('/list', productControllers.list);
