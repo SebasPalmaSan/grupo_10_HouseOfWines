@@ -59,6 +59,10 @@ footer h2 {
     text-align: center;
 }
 
+#mensajeFinal{
+    text-align: center;
+}
+
 @media (min-width: 769px){
     #iconos-redes{
         order: 0;
