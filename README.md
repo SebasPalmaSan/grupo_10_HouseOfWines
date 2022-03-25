@@ -1,10 +1,14 @@
-# Proyecto House of Wines
+# GRUPO 10 - Proyecto House of Wines
 
-Nuestro sitio es un Marketplace que ofrecera la venta de vinos, whiskys, destilados y espumantes, que será dirigido a personas físicas de una franja etaria de 18 a 65 años, residentes de la Republica Argentina. Haremos que el cliente tenga una navegación ágil, intuitiva y segura, y que cuente con servicio de envio a domicilio dentro de las 24hs dependiendo su situacion geográfica.
+Nuestro sitio es un Marketplace que ofrece la venta de vinos, whiskys, destilados, espumantes y accesorios. 
+
+# Público:
+Personas de 18 a 65 años, residentes de la Republica Argentina. Nuestro cliente tendrá una navegación ágil, intuitiva y segura, con una amplia gama de productos.
 
 ## Referentes del mercado:
 
-**Le Sommelier:**  tomamos como inspiración y referencia su estética y su gama de colores utilizados. [Aquí](https://www.lesommelier.com.ar/ "Aquí")
+**Le Sommelier:**  tomamos como inspiración y referencia su estética y su gama de colores utilizados
+(https://www.lesommelier.com.ar/)
 
 **Casa Catar:** tomamos como referencia su dinámica, funcionalidades y división de categorias de productos ofrecidos. [Aquí](https://casacatar.com/ "Aquí")
 
