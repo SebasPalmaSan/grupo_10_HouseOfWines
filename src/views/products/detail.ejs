@@ -21,42 +21,38 @@
     <section class="resenia-producto"> <%= product.review %> </section>
 
     
-    
     <section>
-        
-        <a href="/products/edit/<%= product.id %>" class="agregar">
-            <button type="submit" class="botonAgregar"> EDITAR PRODUCTO</i></button>
-        </a>
-    </section>
-
-    <form action="/products/delete/<%- product.id %>?m=DELETE" method="post" class="agregar">
-        <script>
-            // Confirmacion del boton para borrar productos
-            function confirmAction() {
-              let confirmAction = confirm("Está seguro que quiere eliminar el producto?");
-              if (confirmAction) {
-                alert("Eliminado Correctamente!");
-              } else {
-                alert("Acción Cancelada correctamente!");
-              }
-            }
-          </script>
-            <button type="submit" class="botonAgregar" id="delete" onclick="confirmAction()"> BORRAR PRODUCTO</i></button>
-        
-    </form>
-    
-    <section>
-        <a href="/carrito" class="agregar">
+        <% if (user == null) { %>
+        <a href="/users/register" class="agregar">
             <button type="submit" class="botonAgregar">AGREGAR AL CARRITO<i class="fa fa-shopping-cart"></i></button>
         </a>
     </section>
-
     <section>
         <a href="/" class="agregar">
             <button type="submit" class="botonAgregar">VER PRODUCTOS RELACIONADOS<i class="fa-solid fa-eye"></i></button>
         </a>
     </section>
-    
+
+    <section>
+        <% } else if (user != null && user.admin) { %>
+        <a href="/products/edit/<%= product.id %>" class="agregar">
+            <button type="submit" class="botonAgregar"> EDITAR PRODUCTO</i></button>
+        </a>
+    </section>
+    <form action="/products/delete/<%- product.id %>?m=DELETE" method="post" class="agregar">
+    </form>
+    </section>
+    <% } else { %>
+        <a href="/carrito" class="agregar">
+            <button type="submit" class="botonAgregar">AGREGAR AL CARRITO<i class="fa fa-shopping-cart"></i></button>
+        </a>
+    </section>
+    <section>
+        <a href="/" class="agregar">
+            <button type="submit" class="botonAgregar">VER PRODUCTOS RELACIONADOS<i class="fa-solid fa-eye"></i></button>
+        </a>
+    </section>
+        <% } %>
     <%- include('../partials/footer.ejs') %>
 </body>
 </html>
