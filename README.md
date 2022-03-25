@@ -4,9 +4,6 @@
 
 Nuestro sitio es un Marketplace que ofrece la venta de vinos, whiskys, destilados, espumantes y accesorios. 
 
-## Público:
-Personas de 18 a 65 años, residentes de la Republica Argentina. Nuestro cliente tendrá una navegación ágil, intuitiva y segura, con una amplia gama de productos.
-
 ## Equipo de desarrolladores:
 Melisa Mendez: Hola, soy Mel! Soy nueva en el mundo de la programación. Me gusta mucho viajar, ir a recitales, tomar mate, y estar con mi familia. 
 
@@ -16,6 +13,8 @@ Sebastian Palma Sanchez: Hola! soy Sebas, me gusta mucho la música, grabar, edi
 
 Santiago Gonzalez Calcagno: Soy Santiago. Me gustan los deportes, los videojuegos y los viajes. Hace varios años que me llamaba la atención la programación, pero recientemente me animé a probar y abrir un nuevo abanico de oportunidades. Veo este proyecto como la colocación de la primera piedra, con muchos objetivos y enormes posibilidades.
 
+## Público:
+Personas de 18 a 65 años, residentes de la Republica Argentina. Nuestro cliente tendrá una navegación ágil, intuitiva y segura, con una amplia gama de productos.
 
 ## Tablero de trabajo:
 Link Trello: https://trello.com/b/0GZCPFb9/hose-of-wines
