@@ -7,8 +7,7 @@ Personas de 18 a 65 años, residentes de la Republica Argentina. Nuestro cliente
 
 ## Referentes del mercado:
 
-**Le Sommelier:**  tomamos como inspiración y referencia su estética y su gama de colores utilizados
-(https://www.lesommelier.com.ar/)
+**Le Sommelier:**  tomamos como inspiración y referencia su estética y su gama de colores utilizados. [Aquí ](https://www.lesommelier.com.ar/ "Aquí")
 
 **Casa Catar:** tomamos como referencia su dinámica, funcionalidades y división de categorias de productos ofrecidos. [Aquí](https://casacatar.com/ "Aquí")
 
@@ -18,7 +17,7 @@ Personas de 18 a 65 años, residentes de la Republica Argentina. Nuestro cliente
 
 **Estación de bebidas:**  tomamos como inspiración y referencia el header, que acompaña y se desplaza junto con el cuerpo de la página. [Aquí](https://www.estaciondebebidas.com/ "Aquí")
 
-## Desarrolladores:
+## Equipo de desarrolladores:
 Melisa Mendez: Hola, soy Mel! Soy nueva en el mundo de la programación. Me gusta mucho viajar, ir a recitales, tomar mate, y estar con mi familia. 
 
 Sofia Valentini Curcio: Hola a todos! Soy Sofi, como muchos de ustedes, gran consumidora de todo tipo de plataformas, amante de los animales, la familia y los lugares nuevos. Encuentro éste proyecto como punto de partida en el campo de la programación, espero que les guste tanto como nos gustó a nosotros llevarlo a cabo. 
@@ -28,4 +27,4 @@ Sebastian Palma Sanchez: Hola! soy Sebas, me gusta mucho la música, grabar, edi
 Santiago Gonzalez Calcagno: Soy Santiago. Me gustan los deportes, los videojuegos y los viajes. Hace varios años que me llamaba la atención la programación, pero recientemente me animé a probar y abrir un nuevo abanico de oportunidades. Veo este proyecto como la colocación de la primera piedra, con muchos objetivos y enormes posibilidades.
 
 
-link trello: https://trello.com/b/0GZCPFb9/hose-of-wines
+Link Trello: https://trello.com/b/0GZCPFb9/hose-of-wines
