@@ -27,4 +27,5 @@ Sebastian Palma Sanchez: Hola! soy Sebas, me gusta mucho la música, grabar, edi
 Santiago Gonzalez Calcagno: Soy Santiago. Me gustan los deportes, los videojuegos y los viajes. Hace varios años que me llamaba la atención la programación, pero recientemente me animé a probar y abrir un nuevo abanico de oportunidades. Veo este proyecto como la colocación de la primera piedra, con muchos objetivos y enormes posibilidades.
 
 
+## Tablero de trabajo:
 Link Trello: https://trello.com/b/0GZCPFb9/hose-of-wines
