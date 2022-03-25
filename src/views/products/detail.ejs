@@ -30,8 +30,18 @@
     </section>
 
     <form action="/products/delete/<%- product.id %>?m=DELETE" method="post" class="agregar">
-        
-            <button type="submit" class="botonAgregar"> BORRAR PRODUCTO</i></button>
+        <script>
+            // Confirmacion del boton para borrar productos
+            function confirmAction() {
+              let confirmAction = confirm("Está seguro que quiere eliminar el producto?");
+              if (confirmAction) {
+                alert("Eliminado Correctamente!");
+              } else {
+                alert("Acción Cancelada correctamente!");
+              }
+            }
+          </script>
+            <button type="submit" class="botonAgregar" id="delete" onclick="confirmAction()"> BORRAR PRODUCTO</i></button>
         
     </form>
     
