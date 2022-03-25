@@ -6,32 +6,31 @@
     <section id="prodedit">
 
     <picture class="imagen">
-        <img src="<%=product.image%>"/>
+        <img src="/products/<%= product.image.url %>">
     </picture>
 
-    <form action="/products/<%- product.id %>?m=PUT" method="post" class='formulario'>
+    <form action="/products/edit/<%- product.id %>?m=PUT" method="post" class='formulario'>
         <label for="name" class="control-formulario"> Nombre del prducto:
-            <input type="text" id="name" minlength="3" maxlength="25" placeholder="<%= product.name %>" class="control" value=" <%= product.name %> "  required>
+            <input type="text" id="name" name="name" minlength="3" maxlength="25" placeholder="<%= product.name %>" class="control" value="<%= product.name %>"  required>
         </label>
         <label for="oldPrice" class="control-formulario"> Precio de lista:
-            <input type="number" id="oldPrice" min="0" placeholder=" $ <%= product.oldPrice %>" class="control" value=" <%= product.oldPrice %> " required>
+            <input type="number" id="oldPrice" name="price" min="0" placeholder=" $ <%= product.price %>" class="control" value="<%= product.price %>" required>
         </label>
         <label for="discount" class="control-formulario"> Porcentaje de descuento:
-            <input type="number" id="discount" min="0" max="100" placeholder=" % <%= product.discount %>" class="control" value=" <%= product.discount %> " required>
+            <input type="number" id="discount" name="discount" min="0" max="100" placeholder=" % <%= product.discount %>" class="control" value="<%= product.discount %>" required>
         </label>
         
         <label for="category" class="control-formulario"> Categoria:
             <select id="category" name="category" class="control" required>
-                <option value="vinos" <%= product.category ? 'selected' : null  %> >Vinos</option>
-                <option value="espumantes" <%= product.category ? 'selected' : null  %> >Espumantes</option>
-                <option value="destilados" <%= product.category ? 'selected' : null  %> >Destilados</option>
-                <option value="whiskys" <%= product.category ? 'selected' : null  %> >Whiskys</option>
-                <option value="accesorios" <%= product.category ? 'selected' : null  %> >Accesorios</option>
+                <option value="1" <%= product.category == 1 ? 'selected' : null  %> >Vinos</option>
+                <option value="2" <%= product.category == 2 ? 'selected' : null  %> >Espumantes</option>
+                <option value="3" <%= product.category == 3 ? 'selected' : null  %> >Destilados</option>
+                <option value="4" <%= product.category == 4 ? 'selected' : null  %> >Whiskys</option>
+                <option value="5" <%= product.category == 5 ? 'selected' : null  %> >Accesorios</option>
             </select>
         </label>
-       <!--  <label for="description" class="control-formulario"></label>
-            <textarea id="description" rows="4" cols="30"  required>
-        </label> -->
+        <fieldset ><textarea id="description" name="description" rows="4" cols="30" placeholder="<%=product.description%>" value="<%=product.description%>"></textarea></fieldset>
+            <fieldset ><textarea id="review" name="review" rows="4" cols="30" placeholder="<%=product.review%>" value="<%=product.review%>"></textarea></fieldset>
         <button type="submit">Enviar</button>
 
     </form>

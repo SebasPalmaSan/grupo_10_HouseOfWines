@@ -28,7 +28,7 @@ router.get('/create', productControllers.create);
 router.post('/create',[fileUpload.any('file'),validatorSave], productControllers.save);
 
 //Listado de Productos
-router.get('/list', productControllers.list);
+router.get('/list/:id', productControllers.list);
 
 //Detalle de Producto
 router.get('/detail/:id', productControllers.detail);

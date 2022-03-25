@@ -30,6 +30,17 @@ main{
    border-radius: 5px;
 }
 
+#description,
+#review{
+    width: 80%;
+    background-color: #f5f5f5;
+    border: solid 3px #BAB7B7;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    text-align: left; 
+    outline: none;
+}
+
 .imagen{
     width: 30%;
 }

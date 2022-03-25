@@ -32,8 +32,8 @@ const productControllers = {
             discount: req.body.discount,
             images: ImagenProducto.id,
         })
-        .then(()=>{
-            return res.redirect('/')
+        .then((producto)=>{
+            return res.redirect('/products/detail/' + producto.id)
 
         })
         .catch(error => res.send(error))
@@ -41,8 +41,11 @@ const productControllers = {
     },
     
     list: (req, res) => {
-        db.Product.findAll()
+        db.Product.findAll({ where: { category: req.params.id},
+            include: [{association:'image'}, {association:'categories'}],
+        })
         .then(function(products){
+           // return res.render(products)
             res.render('products/list', 
             {
                 styles: ['product/list'],
@@ -50,6 +53,7 @@ const productControllers = {
                 products: products
             })
         })
+        .catch(error => res.send(error))
     },
 
     detail: (req, res) => {
@@ -66,8 +70,10 @@ const productControllers = {
         })
     },
 
-    edit: (req, res) => {
-        let pedidoProducto = db.Product.findByPk(req.params.id);
+    /* edit: (req, res) => {
+        let pedidoProducto = db.Product.findByPk(req.params.id, {
+            include: [{association:'image'}, {association:'categories'}],
+        });
         let pedidoCategoria = db.Category.findAll();
         Promise.all([pedidoProducto, pedidoCategoria])
         .then(function([product, category]){
@@ -79,23 +85,34 @@ const productControllers = {
                 category: category
             })
         })
+    }, */
+    edit: (req, res) => {
+        db.Product.findByPk(req.params.id, {
+            include: [{association:'image'}, {association:'categories'}],
+        })
+        .then(function(product){
+            res.render('products/edit', 
+            {
+                styles: ['products/edit', 'main'],
+                title: 'House of Wines | Editar producto',
+                product: product, 
+            })
+        })
     },
-
     update: (req, res) => {
         db.Product.update({
             name: req.body.name,
             category: req.body.category,
             description: req.body.description,
             review: req.body.review, 
-            price: req.body.oldPrice,
+            price: req.body.price,
             discount: req.body.discount,
-            image: imagenProducto.id
         }, {
         where: {
             id: req.params.id
         }
     });
-        res.redirect('/products/' + req.params.id)
+        res.redirect('/products/detail/' + req.params.id)
     },
 
     delete: (req, res) => {
@@ -105,7 +122,7 @@ const productControllers = {
                     id: req.params.id
                 }
             })
-            res.redirect('/products');
+            res.redirect('/');
     }
 }
     module.exports = productControllers

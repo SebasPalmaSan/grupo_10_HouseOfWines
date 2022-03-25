@@ -3,38 +3,39 @@
     <header><%- include('../partials/header.ejs') %></header>
 <main>
     <h1>Lista de productos</h1>
-    <% if (locals.products) { %>
-        <% if (products.length > 0) { %>
-            <ul>
-                <% products.forEach(product => { %>
-                    <li>
-                    <a href="/products/<%= product.id %>">
-                        
-                            <article class="producto">
-                                <% if (product.image) { %>
-                                <img src="/products/<% product.image.url %>" alt="Imagen del producto">
-                                <% } %>
-                                <span><%= product.name %>Nombre Producto</span>
-                                <span><%= product.description %> Descripcion</span>
-                                <span><%= product.discount %>Descuento</span>
-                                <span><%= product.oldPrice %>Precio Viejo</span>
-                                <span><%= product.newPrice %>Precio Nuevo</span>
+    <section id="main-top">
 
-                                <form action= "/products/?m=DELETE" method="post">
-                                <input type="hidden" name="id" value="<%= product.id %>">
-                                <button type="submit"><i class="fa fa-trash"></i></button>
-                                </form>
-                            </article>
-                        </a>
-                    </li> 
-                <% }) %>
-            </ul>
-         <% } else { %>
-            <h2>No se encontraron productos</h2>
+        
+        <% if (locals.products) { %>
+            <% if (products.length > 0) { %>
+                    <% products.forEach(product => { %>
+                        
+                                <article class="producto">
+                                  <a href="/products/detail/<%= product.id %>" class="caja">  
+                                    <% if (product.images) { %>
+                                        <img src="/products/<%= product.image.url %>" alt="Imagen de <%= product.name %>" class="img-product">
+                                    <% } %>
+                                    <section class="texto">
+                                        <h3 class="nombre-producto"><%= product.name %></h3>
+                                        <p class="descrip-producto"><%= product.description %></p>
+                                        <p class="descuento"> <%= product.discount %> % OFF</p>
+                                        <p class="precio-ant"> $ <%= product.price %> </p>
+                                        <p class="descrip-producto">Hasta 24 cuotas <i class="far fa-2x fa-credit-card service-icon"></i></p>
+                                        
+                                    </section>
+                                    </a>
+                                </article>
+                        
+                    <% }) %>
+             <% } else { %>
+                <h2 class="destacados">No se encontraron productos</h2>
+                <% } %>
+            <% } else { %>
+                <h2 class="destacados">No se encontraron productos</h2>
             <% } %>
-        <% } else { %>
-            <h2>No se encontraron productos</h2>
-        <% } %>
+    
+    
+        </section> 
 </main>
     <%- include('../partials/footer.ejs') %>
 </body>

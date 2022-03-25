@@ -1,0 +1,213 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+}
+
+a{
+    text-decoration: none;
+}
+
+main {
+    background-color: #f5f5f5;
+    border: solid 2px #550c18;
+    
+}
+.bienvenida{
+    margin: 50px;
+    padding: auto;
+    font-size: 70px;
+    color: #791223;
+    text-align: center;
+}
+
+.linea{
+    border-top: 1px solid rgb(153, 150, 150);
+    height: 2px;
+    padding: 0;
+    margin: 20px auto 0 auto;
+}
+
+.destacados{
+    margin: 30px;
+    text-align: center;
+    color: rgb(153, 150, 150);
+    font-size: 35px;
+    font-weight: 350;
+}
+
+#main-top {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+
+}
+
+#main-bottom {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+
+}
+
+.caja{
+    display: flex;
+    
+}
+.productOrden{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    box-sizing: border-box;
+}
+.producto {
+    margin: 10px 20px;
+    background-color: rgb(85, 12, 24, 70%);
+    border-radius: 5px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+
+}
+
+.img-product {
+    display: inline-block;
+    width: 50%;
+    padding: 5px;
+    align-self: center;
+
+}
+
+.img-product img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.texto {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 5px;
+    line-height: 0.9;
+    flex-wrap: wrap;
+
+}
+
+.edit {
+    color: #f5f5f5;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    order: 1;
+    
+}
+
+.edit a {
+    color: #f5f5f5;
+    font-size: 20px;
+}
+
+.edit form button {
+    color: #f5f5f5;
+    font-size: 20px;
+    background-color: rgb(85, 12, 24, 70%);
+    border: none;
+}
+
+.nombre-producto {
+    color: #FEC85C;
+    justify-self: center;
+    text-align: center;
+    font-size: 30px;
+    font-weight: 400;
+    max-width: 90%;
+    flex-wrap: wrap;
+}
+
+.descrip-producto {
+    color: #C4C4C4;
+    justify-self: center;
+    text-align: center;
+    font-size: 16px;
+}
+
+.descuento {
+    font-size: 30px;
+    color: rgb(86, 2, 165);
+}
+
+.precio-ant {
+    font-size: 38px;
+    color: #f5f5f5;
+}
+
+
+.precio-nuevo {
+    font-size: 38px;
+    font-weight: bold;
+    color: #ececec;
+}
+
+.imagen-ofertas {
+    width: 80%;
+    display: block;
+    margin: auto;
+}
+
+.imagen-bodegas {
+    width: 60%;
+    display: block;
+    margin: auto;
+}
+
+.carrousel img{
+    width:100%;
+}
+.carrousel2 img{
+    width: 70%;
+}
+
+@media(min-width:361px){
+    .bienvenida{
+        font-size: 30px;
+    }
+    
+
+}
+
+@media (min-width: 769px){
+    .bienvenida{
+        font-size: 40px;
+    }
+    .producto{
+        width: 40%;
+    }
+    .productOrden{
+        
+        display: flex;
+        flex-direction: wrap;
+    }
+
+}
+
+
+@media (min-width: 1200px){
+    .bienvenida{
+        font-size: 70px;
+    }
+    .producto {
+        width: 30%;
+        transition: all 400ms;
+    }
+    .producto:hover {
+        box-shadow: 0px 0px 20px rgb(85, 12, 24);
+    }
+}
