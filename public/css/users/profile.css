@@ -43,6 +43,7 @@ main{
     margin: 2rem;
     text-decoration: underline;
 }
+
 .boton-formulario{
     width: 120px;
     font-size: 20px;
@@ -54,8 +55,9 @@ main{
     text-decoration: none;
     padding: 2px 1px 0;
     background-color: rgb(85, 12, 24, 20%); 
+    color: #550c18;
 }
-   
+
 .boton-formulario:link {
     color: #550c18;
 }
