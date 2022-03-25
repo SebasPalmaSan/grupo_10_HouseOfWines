@@ -24,16 +24,16 @@
     
     <section>
         
-        <a href="/product/edit/" class="agregar">
+        <a href="/products/edit/<%= product.id %>" class="agregar">
             <button type="submit" class="botonAgregar"> EDITAR PRODUCTO</i></button>
         </a>
     </section>
 
-    <section>
-        <a href="/product/delete/" class="agregar">
+    <form action="/products/delete/<%- product.id %>?m=DELETE" method="post" class="agregar">
+        
             <button type="submit" class="botonAgregar"> BORRAR PRODUCTO</i></button>
-        </a>
-    </section>
+        
+    </form>
     
     <section>
         <a href="/carrito" class="agregar">
