@@ -7,18 +7,6 @@ Nuestro sitio es un Marketplace que ofrece la venta de vinos, whiskys, destilado
 ## Público:
 Personas de 18 a 65 años, residentes de la Republica Argentina. Nuestro cliente tendrá una navegación ágil, intuitiva y segura, con una amplia gama de productos.
 
-## Referentes del mercado:
-
-**Le Sommelier:**  tomamos como inspiración y referencia su estética y su gama de colores utilizados. [Aquí ](https://www.lesommelier.com.ar/ "Aquí")
-
-**Casa Catar:** tomamos como referencia su dinámica, funcionalidades y división de categorias de productos ofrecidos. [Aquí](https://casacatar.com/ "Aquí")
-
-**Club Argentino del vino:** tomamos en referencia su presentación y sus imágenes. [Aquí ](https://clubargentinodelvino.com/ "Aquí ")
-
-**Cepa de vinos:** tomamos en referencia su simpleza y su forma de exponer sus productos. [Aquí](https://cepadevinos.com/ "Aquí")
-
-**Estación de bebidas:**  tomamos como inspiración y referencia el header, que acompaña y se desplaza junto con el cuerpo de la página. [Aquí](https://www.estaciondebebidas.com/ "Aquí")
-
 ## Equipo de desarrolladores:
 Melisa Mendez: Hola, soy Mel! Soy nueva en el mundo de la programación. Me gusta mucho viajar, ir a recitales, tomar mate, y estar con mi familia. 
 
@@ -31,3 +19,15 @@ Santiago Gonzalez Calcagno: Soy Santiago. Me gustan los deportes, los videojuego
 
 ## Tablero de trabajo:
 Link Trello: https://trello.com/b/0GZCPFb9/hose-of-wines
+
+## Referentes del mercado:
+
+**Le Sommelier:**  tomamos como inspiración y referencia su estética y su gama de colores utilizados. [Aquí ](https://www.lesommelier.com.ar/ "Aquí")
+
+**Casa Catar:** tomamos como referencia su dinámica, funcionalidades y división de categorias de productos ofrecidos. [Aquí](https://casacatar.com/ "Aquí")
+
+**Club Argentino del vino:** tomamos en referencia su presentación y sus imágenes. [Aquí ](https://clubargentinodelvino.com/ "Aquí ")
+
+**Cepa de vinos:** tomamos en referencia su simpleza y su forma de exponer sus productos. [Aquí](https://cepadevinos.com/ "Aquí")
+
+**Estación de bebidas:**  tomamos como inspiración y referencia el header, que acompaña y se desplaza junto con el cuerpo de la página. [Aquí](https://www.estaciondebebidas.com/ "Aquí")
