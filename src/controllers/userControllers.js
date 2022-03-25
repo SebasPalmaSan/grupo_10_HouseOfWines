@@ -204,13 +204,16 @@ const userController = {
 .catch(error => res.send(error))
 },
 
-    user_delete: (req,res) => {
-      db.User.destroy({
-        where: {
-        id: req.params.id
-    }
-  })
-      res.redirect('/users/register');
+userDelete: (req,res) => {
+  res.clearCookie('userEmail');
+        req.session.destroy();
+    db.User.destroy(
+      {
+          where: {
+              id: req.params.id
+          }
+      })
+      return res.redirect('/');
 },
  
     logout: (req,res) => {

@@ -46,7 +46,7 @@
             <article class="datosProfile">
                 <h2 class="datosUsuario">Editar datos</h2> 
                 <a class="boton-formulario" href='/users/edit/'>MODIFICAR</a>
-                <a class="boton-formulario" href='/users/user_delete/'>BORRAR</a>
+                <form action="/users/delete/<%- user.id %>?m=DELETE" method="post" class="boton-formulario"><button type="submit"> ELIMINAR CUENTA</button></form>
                 <a class="boton-formulario" href="/">VOLVER</a>
     
             </article>
@@ -57,7 +57,7 @@
                     <article class="datosProfile">
                         <h2 class="datosUsuario">Editar datos</h2> 
                         <a class="boton-formulario" href='/users/edit/'>MODIFICAR</a>
-                        <a class="boton-formulario" href='/users/user_delete/'>BORRAR</a>
+                        <form action="/users/delete/<%- user.id %>?m=DELETE" method="post" class="boton-formulario"><button type="submit"> ELIMINAR CUENTA</button></form>
                         <a class="boton-formulario" href="/">VOLVER</a>
             
                     </article>

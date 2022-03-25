@@ -51,7 +51,7 @@ router.get('/edit', userControllers.edit)
 router.post('/userUpdate/', userControllers.userUpdate);
 
 //Eliminar un Usuario
-router.delete('/delete/:id', userControllers.user_delete);
+router.post('/delete/:id', userControllers.userDelete);
 
 
 //router.get('/userUpdate/:id', user.edit);
