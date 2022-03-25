@@ -2,7 +2,7 @@
 
 Nuestro sitio es un Marketplace que ofrece la venta de vinos, whiskys, destilados, espumantes y accesorios. 
 
-# Público:
+## Público:
 Personas de 18 a 65 años, residentes de la Republica Argentina. Nuestro cliente tendrá una navegación ágil, intuitiva y segura, con una amplia gama de productos.
 
 ## Referentes del mercado:
