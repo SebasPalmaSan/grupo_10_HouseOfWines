@@ -1,4 +1,6 @@
 # GRUPO 10 - Proyecto House of Wines
+![image](https://user-images.githubusercontent.com/93838647/160048532-0a687575-a954-4444-bdd2-ec044fdb0d0e.png)
+
 
 Nuestro sitio es un Marketplace que ofrece la venta de vinos, whiskys, destilados, espumantes y accesorios. 
 
