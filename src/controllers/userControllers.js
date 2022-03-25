@@ -188,7 +188,6 @@ const userController = {
         db.User.update({
         firstName: req.body.firstName,
         lastName: req.body.lastName,
-        //birthdate: req.body.birthdate,
         phone: req.body.phone,
         adress: req.body.adress,
         email: req.body.email, 

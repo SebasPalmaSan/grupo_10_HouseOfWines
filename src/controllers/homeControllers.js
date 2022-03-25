@@ -7,9 +7,9 @@ module.exports = {
         .then(function(products){
           //  return res.send(products)
             res.render('home', {
-        styles: ['home'],
-        title: 'House of Wines | Home',
-        products: products,
+            styles: ['home'],
+            title: 'House of Wines | Home',
+            products: products,
         })
     })
 }
