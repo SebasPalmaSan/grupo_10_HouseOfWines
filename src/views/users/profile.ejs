@@ -36,13 +36,36 @@
     
     <section>
         <article class="datosProfile">
-            <h2 class="datosUsuario">Editar datos</h2> 
-            <a class="boton-formulario" href='/users/edit/'>MODIFICAR</a>
+            <% if (user.admin) { %>
+            <h2 class="datosUsuario">Editar productos</h2> 
+            <a class="boton-formulario" href='/products/create/'> CREAR </a>
             <br>
             <a class="boton-formulario" href="/">VOLVER</a>
-
         </article>
+        <section>
+            <article class="datosProfile">
+                <h2 class="datosUsuario">Editar datos</h2> 
+                <a class="boton-formulario" href='/users/edit/'>MODIFICAR</a>
+                <a class="boton-formulario" href='/users/user_delete/'>BORRAR</a>
+                <a class="boton-formulario" href="/">VOLVER</a>
+    
+            </article>
+        </section>
+
+            <% } else { %>
+                <section>
+                    <article class="datosProfile">
+                        <h2 class="datosUsuario">Editar datos</h2> 
+                        <a class="boton-formulario" href='/users/edit/'>MODIFICAR</a>
+                        <a class="boton-formulario" href='/users/user_delete/'>BORRAR</a>
+                        <a class="boton-formulario" href="/">VOLVER</a>
+            
+                    </article>
+                </section>
+            <% } %>
+        
     </section>
+
 </main>
 
 </body>
