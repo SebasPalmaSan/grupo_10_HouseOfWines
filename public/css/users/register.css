@@ -15,14 +15,14 @@ main{
 }
 
 input.error{
-    border: 6.6px solid #BF2B0B;
+    border: 1px solid #BF2B0B;
     width: 100%;
     text-align: left; 
     border-radius: 5px;
 }
 
 input.success{
-    border: 6.6px solid #65BC0D;
+    border: 1px solid #65BC0D;
     width: 100%;
     text-align: left; 
     border-radius: 5px;
