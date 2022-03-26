@@ -2,15 +2,14 @@
 <body>
     <main>
     <%- include('../partials/header.ejs') %>
+    
     <h2 class="destacados"> <%- locals.title ? title : null %>  </h2>
-
-    <picture class="imagen">
-        <img src="/products/<%= product.image.url %>">
-    </picture>
-
+    <div class="linea"></div>
     <form action="/products/edit/<%- product.id %>?m=PUT" method="post" class='formulario'>
         <section class="contenedor">
-
+            <figure>
+                <img id="imgCentral" src="/products/<%= product.image.url %>" class="productoImg">
+            </figure>
             <label for="name">
             <input type="text" id="name" name="<%= product.name %>" placeholder="Nombre del producto" minlength="3" maxlength="25" class="control" value="<%= product.name %>"  required>
             </label>
@@ -22,7 +21,7 @@
             <laber for="discount">
             <input type="number" id="discount" name="<%= product.discount %>" min="0" max="100" placeholder="Descuento" class="control" value="<%= product.discount %>" required>
             </laber>
-            
+
             <select id="category" name="" placeholder="Categoria" class="control" required>
                 <option value="1" <%= product.category == 1 ? 'selected' : null  %> >Vinos</option>
                 <option value="2" <%= product.category == 2 ? 'selected' : null  %> >Espumantes</option>
@@ -33,7 +32,7 @@
         
         <fieldset ><textarea id="description" placeholder="Descripción" rows="4" cols="30" name="" value="<%=product.description%>"><%=product.description%></textarea></fieldset>
             <fieldset ><textarea id="review" placeholder="Reseña" rows="4" cols="30" name="" value="<%=product.review%>"><%=product.review%></textarea></fieldset>
-         <fieldset><button type="submit">Enviar cambios</button></fieldset>
+         <fieldset><button type="submit" class="agregar">Enviar cambios</button></fieldset>
     </section>
     </form>
 </main>
