@@ -1,40 +1,42 @@
 <%- include('../partials/head.ejs') %> 
 <body>
+    <main>
     <%- include('../partials/header.ejs') %>
-    <h1> <%- locals.title ? title : null %>  </h1>
-
-    <section id="prodedit">
+    <h2 class="destacados"> <%- locals.title ? title : null %>  </h2>
 
     <picture class="imagen">
         <img src="/products/<%= product.image.url %>">
     </picture>
 
     <form action="/products/edit/<%- product.id %>?m=PUT" method="post" class='formulario'>
-        <label for="name" class="control-formulario"> Nombre del prducto:
-            <input type="text" id="name" name="name" minlength="3" maxlength="25" placeholder="<%= product.name %>" class="control" value="<%= product.name %>"  required>
-        </label>
-        <label for="oldPrice" class="control-formulario"> Precio de lista:
-            <input type="number" id="oldPrice" name="price" min="0" placeholder=" $ <%= product.price %>" class="control" value="<%= product.price %>" required>
-        </label>
-        <label for="discount" class="control-formulario"> Porcentaje de descuento:
-            <input type="number" id="discount" name="discount" min="0" max="100" placeholder=" % <%= product.discount %>" class="control" value="<%= product.discount %>" required>
-        </label>
-        
-        <label for="category" class="control-formulario"> Categoria:
-            <select id="category" name="category" class="control" required>
+        <section class="contenedor">
+
+            <label for="name">
+            <input type="text" id="name" name="<%= product.name %>" placeholder="Nombre del producto" minlength="3" maxlength="25" class="control" value="<%= product.name %>"  required>
+            </label>
+
+            <label for="price">
+            <input type="number" id="price" name="<%= product.price %>" min="0" placeholder="Precio" class="control" value="<%= product.price %>" required>
+            </label>
+
+            <laber for="discount">
+            <input type="number" id="discount" name="<%= product.discount %>" min="0" max="100" placeholder="Descuento" class="control" value="<%= product.discount %>" required>
+            </laber>
+            
+            <select id="category" name="" placeholder="Categoria" class="control" required>
                 <option value="1" <%= product.category == 1 ? 'selected' : null  %> >Vinos</option>
                 <option value="2" <%= product.category == 2 ? 'selected' : null  %> >Espumantes</option>
                 <option value="3" <%= product.category == 3 ? 'selected' : null  %> >Destilados</option>
                 <option value="4" <%= product.category == 4 ? 'selected' : null  %> >Whiskys</option>
                 <option value="5" <%= product.category == 5 ? 'selected' : null  %> >Accesorios</option>
             </select>
-        </label>
-        <fieldset ><textarea id="description" name="description" rows="4" cols="30" placeholder="<%=product.description%>" value="<%=product.description%>"></textarea></fieldset>
-            <fieldset ><textarea id="review" name="review" rows="4" cols="30" placeholder="<%=product.review%>" value="<%=product.review%>"></textarea></fieldset>
-        <button type="submit">Enviar</button>
-
+        
+        <fieldset ><textarea id="description" placeholder="Descripción" rows="4" cols="30" name="" value="<%=product.description%>"><%=product.description%></textarea></fieldset>
+            <fieldset ><textarea id="review" placeholder="Reseña" rows="4" cols="30" name="" value="<%=product.review%>"><%=product.review%></textarea></fieldset>
+         <fieldset><button type="submit">Enviar cambios</button></fieldset>
+    </section>
     </form>
-</section>
+</main>
     <%- include('../partials/footer.ejs') %>
 </body>
 </html>

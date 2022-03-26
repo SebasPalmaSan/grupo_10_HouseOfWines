@@ -4,6 +4,7 @@
 
     
     <form action= "/products/create" method = "POST" enctype="multipart/form-data">
+        
         <h1 class="title">Crear un producto</h1>
         
         <section class="contenedor">
@@ -34,12 +35,11 @@
             <fieldset ><textarea id="description" name="description" rows="4" cols="30" placeholder="Descripción del Producto"></textarea></fieldset>
             <fieldset ><textarea id="review" name="review" rows="4" cols="30" placeholder="Reseña del Producto"></textarea></fieldset>
             
-        
-            <label for="file" class="control-formulario2">
-            <input type="file" id="file" name="file">
-            </label>
-
-            <fieldset ><button type="submit">Guardar</button></fieldset>
+            <label for="file" class="control-formulario2"><input type="file" id="file" name="file"></label>
+            <br>
+            <br>
+            <fieldset><button type="submit">Guardar producto</button></fieldset>
+            <br>
     </section>
     </form>
     <%- include('../partials/footer.ejs') %>
