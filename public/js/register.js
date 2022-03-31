@@ -10,6 +10,7 @@ window.onload = function (){
     let email = document.querySelector("#email");
     let password = document.querySelector("#password");
     //let avatar = document.getElementById('input.avatar');
+    let file = document.querySelector('#file')
     let inputs = document.querySelectorAll(".inputs2")
 
     
@@ -102,6 +103,24 @@ window.onload = function (){
             adress.classList.add ("success")        
             } 
     
+            //VALIDACION IMAGE
+            file.addEventListener("change", function(e){
+              let target = e.target;
+              let value = target.files;
+              let errorFile = document.querySelector("#errorFile")
+              let regex = /^image\//;
+      
+              if(!regex.test(value[0].type)){
+                  target.classList.add("error")
+                  errorFile.classList.add("error")
+                  errorFile.innerHTML = "El archivo no es una imagen con formato valido"
+              }else{
+                  target.classList.add("sucess")
+                  errorFile.classList.remove("error")
+                  errorFile.classList.add("sucess")
+                  errorFile.innerHTML = "Archivo con formato valido"
+              }
+          })
              
     
              //VALIDACION PASSWORD      

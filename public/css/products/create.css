@@ -19,6 +19,19 @@ main{
 h1{
     margin: 10px;
 }
+input.error{
+    border: 1px solid #BF2B0B;
+    width: 80%;
+    text-align: left; 
+    border-radius: 5px;
+}
+
+input.success{
+    border: 1px solid #65BC0D;
+    width: 80%;
+    text-align: left; 
+    border-radius: 5px;
+}
 .formulario {
     width: 100%;
     padding: 20px 20px;

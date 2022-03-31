@@ -31,22 +31,37 @@
             <h3> <i class="footer-icon fa fa-lg fa-fw fa-phone"></i> <%= user.phone %> </h3>
             <br>
             <h3> <i class="footer-icon fa fa-lg fa-fw fa-map-marker-alt"></i><%= user.adress %></h3>
+            <br>
+            <br>
+            <form action="/users/delete/<%- user.id %>?m=DELETE" method="post">
+                <button type="submit" class="boton-formulario" onclick="confirmAction()">ELIMINAR CUENTA</button>
+                <script>
+                    // Confirmacion del boton para borrar productos
+                    function confirmAction() {
+                      let confirmAction = confirm("Está seguro que quiere eliminar su cuenta?");
+                      if (confirmAction) {
+                        alert("Eliminado Correctamente!");
+                      } else{
+                          event.preventDefault();
+                      }
+                    }
+                  </script>
+            </form>
         </article>
     </section>
     
-    <section>
+    <section class="editButtonsProfile">
         <article class="datosProfile">
             <% if (user.admin) { %>
             <h2 class="datosUsuario">Editar productos</h2> 
             <a class="boton-formulario" href='/products/create/'> CREAR </a>
-            <br>
             <a class="boton-formulario" href="/">VOLVER</a>
         </article>
         <section>
             <article class="datosProfile">
                 <h2 class="datosUsuario">Editar datos</h2> 
                 <a class="boton-formulario" href='/users/edit/'>MODIFICAR</a>
-                <form action="/users/delete/<%- user.id %>?m=DELETE" method="post" class="boton-formulario"><button type="submit"> ELIMINAR CUENTA</button></form>
+                <!-- <form action="/users/delete/<%- user.id %>?m=DELETE" method="post" class="boton-formulario"><button type="submit"> ELIMINAR CUENTA</button></form> -->
                 <a class="boton-formulario" href="/">VOLVER</a>
     
             </article>
@@ -57,7 +72,7 @@
                     <article class="datosProfile">
                         <h2 class="datosUsuario">Editar datos</h2> 
                         <a class="boton-formulario" href='/users/edit/'>MODIFICAR</a>
-                        <form action="/users/delete/<%- user.id %>?m=DELETE" method="post" class="formu">
+                        <!-- <form action="/users/delete/<%- user.id %>?m=DELETE" method="post" class="formu">
                             <button type="submit" class="boton-formulario" onclick="confirmAction()">ELIMINAR CUENTA</button>
                             <script>
                             // Confirmacion del boton para borrar productos
@@ -70,7 +85,7 @@
                               }
                             }
                           </script>
-                        </form> 
+                        </form>  -->
 
                         <a class="boton-formulario" href="/">VOLVER</a>
             

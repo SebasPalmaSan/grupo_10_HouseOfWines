@@ -43,7 +43,8 @@
                 </div>
                 <div class="control-formulario2">
                     <legend class="">Seleccione su imagen de perfil<legend>
-                    <input type="file" class="avatar" name="imagenUsuario">
+                    <input type="file" class="avatar inputs2" name="imagenUsuario" accept=".jpeg, .png, .gif, .jpg" id="file">
+                    <small id="errorFile"></small>
                 </div>
                 
                 <br>
@@ -76,6 +77,10 @@
                                                     <%= errors.email.msg %>
                                                 </p>
                                             <% } %>
+
+                                            <% if (locals.errors && errors.file) { %>
+                                                <p class="errors"> <%= errors.file.msg  %> </p>
+                                               <% } %>
 
                                             <% if (locals.errors && errors.password) { %>
                                                 <p class="errorvalidacion">

@@ -9,8 +9,7 @@
         
         <section class="contenedor">
             <label for="name">
-            <input type="text" id="name" name="name" minlength="3" maxlength="25" placeholder="Nombre del producto" class="control" required>
-            </label>
+            <input type="text" id="name" name="name" minlength="5" maxlength="25" placeholder="Nombre del producto" class="control inputs2" required>
 
             <label for="price"class="">
             <input type="number" id="price" name="price" min="0" placeholder="Precio de lista" class="control" required>
@@ -32,10 +31,14 @@
             
             
             <!--<label for="description" class=""></label>-->
-            <fieldset ><textarea id="description" name="description" rows="4" cols="30" placeholder="Descripción del Producto"></textarea></fieldset>
+            <fieldset >
+                <textarea id="description" name="description" rows="4" cols="30" minlength="20" class="control inputs2" placeholder="Descripción del Producto" required></textarea>
+            </fieldset>
             <fieldset ><textarea id="review" name="review" rows="4" cols="30" placeholder="Reseña del Producto"></textarea></fieldset>
-            
-            <label for="file" class="control-formulario2"><input type="file" id="file" name="file"></label>
+    
+            <label for="file" class="control-formulario2"><input type="file" id="file" name="file" accept=".jpeg, .png, .gif, .jpg">
+                <small id="errorFile"></small>
+            </label>
             <br>
             <br>
             <fieldset><button type="submit">Guardar producto</button></fieldset>
@@ -43,5 +46,6 @@
     </section>
     </form>
     <%- include('../partials/footer.ejs') %>
+    <script src = "../js/create.js"></script>
 </body>
 </html>

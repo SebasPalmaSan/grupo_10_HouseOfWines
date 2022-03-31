@@ -44,6 +44,12 @@ main{
     text-decoration: underline;
 }
 
+section.editButtonsProfile{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+}
 .boton-formulario{
     width: 120px;
     font-size: 20px;
@@ -83,7 +89,6 @@ main{
 .datosProfile{
     color: #550c1877;
     font-size: 20px;
-    margin: 2rem;
     display: flex;
     flex-direction: column;
     align-items: center;
