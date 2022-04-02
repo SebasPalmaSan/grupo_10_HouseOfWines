@@ -13,7 +13,6 @@ main{
     width: 100%;
     border: solid 2px #550c18;
 }
-
 .avatar{
     width:20%;
     border: solid 2px #550c18;
@@ -32,20 +31,24 @@ main{
 
 #imgCentral{
     display: block;
-    margin-left:auto;
-    margin-right:auto;
+    margin:20px;
+    margin-right: 30px;
+}
+.listaDatosUsuarios{
+    pointer-events: none;
+    text-align: left;
 }
 
-.datosProfile{
-    color: #736E6E;
-    font-size: 20px;
-    font-weight: 500;
+.datosProfile2{
+    color:rgb(85, 12, 24, 70%);
+    font-size: 25px;
+    font-weight: 300;
     margin: 2rem;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
+    margin-bottom:10px;
 }
-
 .saludoBienvenida{
     color: #6a6363;
     font-size:50px;

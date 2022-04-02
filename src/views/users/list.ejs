@@ -1,15 +1,41 @@
-<%- include('./partials/head.ejs')  %>
-    <body>
-        <%- include('./partials/header.ejs') %>
-        <link rel='stylesheet' href='/stylesheets/list.css' />
-        <h1><% = Usuarios registrados %></h1>
-        <ul>
-            <% for (let i=0; i<users.length;i++){ % >
-            <li>
-            <a href = "users/detail/ <% users[i].id %>"><%= users[i].name %></a>
-            </li>  
-            % } %
-        </ul> 
-    <%- include('./partials/footer.ejs')  %>   
-</body>
-</html>
+<html>
+<%- include('../partials/head.ejs') %>
+<link rel="stylesheet" href="/css/users/list.css"/>
+<%- include("../partials/header") %>
+            <main>
+                <h1 class="saludoBienvenida">Usuarios registrados</h1>
+                <% if (user !=null && user.admin) { %>
+                    <section class="listUsuarios">
+                        <% if (locals.users) { %>
+                            <% if (users.length> 0) { %>
+                                <% users.forEach(user=> { %>
+                                    <article>
+                                        <div class="datosProfile2" href="/users/profile/<%= user.id %> ">
+                                            <% if (user.image) { %>
+                                                <img id="imgCentral"src="/avatars/<%= user.image.url %> " alt="photo<%= user.email %> "class="avatar">
+                                                <% } %>
+                                                <div>
+                                                <ul class="listaDatosUsuarios">
+                                                        <li><p>Nombre: <%= user.firstName %></p></li>
+                                                        <li><p>Apellido: <%= user.lastName %></p></li>
+                                                        <li><p>E-mail: <%= user.email %></p></li>
+                                                        <li><p>Dirección: <%= user.adress %></p></li>
+                                                        <li><p>Teléfono: <%= user.phone %></p></li>
+                                                </ul>
+                                                </div>
+                                            </div>
+                                    </article>
+                                <% }) %>
+                             <% } %>          
+                        <% } %>
+                       
+                    </section>              
+                <% } else { %>
+                    <section>
+                        <h1 class="titulolista">Tenés que ser admin para ver la lista de usuarios</h1>
+                    </section>
+                <% } %>
+            </main>
+    <%- include("../partials/footer") %>
+    </body>
+</html> 
