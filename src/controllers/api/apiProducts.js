@@ -8,20 +8,23 @@ module.exports = {
                 let response = {
                     meta: {status: 200},
                     count: products.length,
-                    /* countByCategory: categories.map(
-                        category => {
+                    countByCategory: categories.map(category => {
                             return {
-                                name: category.name,
-                                countCategory: category.length
+                            name: category.name,
+                            countCategory: category.length
                             }
                         }
-                    ), */
+                    ),
                     products: products,
                 }
                 return res.status(200).json(response);
-            }
-        }).catch((err) => {res.send(err);});
-    },
+        } else {
+            return res.status(404).json({
+                error: 'No se encontraron productos'
+            })}
+    }).catch((err) => {res.send(err);});
+
+},
     show: function (req, res){
         db.Product.findByPk(req.params.id, {
             include: ['image','categories'],
