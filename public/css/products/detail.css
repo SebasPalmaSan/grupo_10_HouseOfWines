@@ -130,6 +130,12 @@ body{
     text-align: center;
     padding-bottom:5px;
 }
+.fa.fa-shopping-cart{
+    margin:0;
+}
+.fa-solid.fa-eye{
+    margin:0;
+}
 
 .botonAgregar:hover {
     transform: translatey(3px);
