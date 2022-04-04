@@ -16,11 +16,45 @@ main {
     border: solid 2px #550c18;
     
 }
+
+.carrouselBanners{
+    width: 100%;
+    height: 21vw;
+    overflow: hidden;
+}
+
+.carrouselCaja{
+    display: flex;
+    width: 200%; 
+    animation: secuencia 8s infinite alternate linear;
+}
+
+.carrousel{
+    list-style: none;
+    position: relative;
+    width: 100%;
+    padding: 0;
+}
+
+.imagen-ofertas{
+    width: 100%;
+    height: 60%;
+}
+
+@keyframes secuencia {
+
+    0% {margin-left: 0;}
+    45% {margin-left: 0;}
+
+    50% {margin-left: -100%;}
+    100% {margin-left: -100%;}
+}
+
 .bienvenida{
-    margin: 50px;
+    margin: 10px;
     padding: auto;
     font-size: 70px;
-    color: #791223;
+    color: #550c18;
     text-align: center;
 }
 
@@ -156,23 +190,10 @@ main {
     color: #ececec;
 }
 
-.imagen-ofertas {
-    width: 80%;
-    display: block;
-    margin: auto;
-}
-
 .imagen-bodegas {
     width: 60%;
     display: block;
     margin: auto;
-}
-
-.carrousel img{
-    width:100%;
-}
-.carrousel2 img{
-    width: 70%;
 }
 
 @media(min-width:361px){

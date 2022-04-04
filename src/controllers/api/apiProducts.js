@@ -6,17 +6,33 @@ module.exports = {
         .then((products) => {
             if(products.length){
                 let response = {
-                    meta: {status: 200},
-                    count: products.length,
-                    countByCategory: categories.map(category => {
-                            return {
-                            name: category.name,
-                            countCategory: category.length
-                            }
-                        }
-                    ),
-                    products: products,
+                    meta: {
+                        status:200,
+                        total:products.length,
+                    },
+                    data:[]
                 }
+                    products.forEach(product =>{
+                        response.data.push({
+                            id:product.id,
+                            name:product.name,
+                            description: product.description,
+                            precio: product.precio,
+                            imagen:`http://localhost:3000/uploads/${product.images.url}`,
+                            producto: 'http://localhost:3000' + `/api/products/${product.id}`
+                        })
+                    })
+                //     meta: {status: 200},
+                //     count: products.length,
+                //     // categoryById: categories.foreach(category => {
+                //     //         return {
+                //     //         name: category.name,
+                //     //         categoryById: category.length
+                //     //         }
+                //     //     }
+                //     // ),
+                //     products: products,
+                // }
                 return res.status(200).json(response);
         } else {
             return res.status(404).json({
