@@ -2,6 +2,7 @@
 <%- include('../partials/head.ejs') %>
 <link rel="stylesheet" href="/css/users/list.css"/>
 <%- include("../partials/header") %>
+<body>
             <main>
                 <h1 class="saludoBienvenida">Usuarios registrados</h1>
                 <% if (user !=null && user.admin) { %>
@@ -32,10 +33,12 @@
                     </section>              
                 <% } else { %>
                     <section>
-                        <h1 class="titulolista">Tenés que ser admin para ver la lista de usuarios</h1>
+                        <h1 class="titulolista1">ACCESO NO AUTORIZADO<i class="fa fa-exclamation-circle" aria-hidden="true"></i></h1>
+                        <h1 class="titulolista2">Debes ser administrador para ver la lista de usuarios</h1>
                     </section>
                 <% } %>
             </main>
+
     <%- include("../partials/footer") %>
-    </body>
+</body>
 </html> 
