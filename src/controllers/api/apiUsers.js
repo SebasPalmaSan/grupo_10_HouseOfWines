@@ -12,9 +12,9 @@ module.exports = {
                 users: users.map(user => {
                     return {
                     id: user.id, 
-                   nombre: user.firstName + ' ' + user.lastName,
-                   email: user.email,
-                   url: 'http://localhost:3000/api/users/' + user.id
+                    nombre: user.firstName + ' ' + user.lastName,
+                    email: user.email,
+                    url: 'http://localhost:3000/api/users/' + user.id
                 }})}
             return res.status(200).json(response);
         } else {
