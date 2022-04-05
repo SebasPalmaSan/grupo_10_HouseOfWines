@@ -41,6 +41,14 @@
             </label>
             <br>
             <br>
+            <section>
+
+            <% if (locals.errors && errors.file) { %>
+                <p class="errors"> <%= errors.file.msg  %> </p>
+               <% } %>
+
+            </section>   
+
             <fieldset><button type="submit">Guardar producto</button></fieldset>
             <br>
     </section>
