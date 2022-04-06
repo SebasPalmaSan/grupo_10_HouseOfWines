@@ -5,7 +5,6 @@ module.exports = {
     
         db.Product.findAll({include: [{association:'image'}]})
         .then(function(products){
-          //  return res.send(products)
             res.render('home', {
             styles: ['home'],
             title: 'House of Wines | Home',

@@ -1,0 +1,37 @@
+<head><%- include('../partials/head.ejs') %> </head>
+<body>
+    <header><%- include('../partials/header.ejs') %></header>
+<main>
+
+    <section>
+        <h1>Resultado de tu busqueda</h1>
+    </section>
+    <section>
+        <% if (product.length > 0) %>
+        <h2>Se encuentra disponible <%= product.length %> productos con ese nombre</h2>
+
+        <% product.forEach(element => { %>
+            <section>
+                <article>
+                    <a href="/product/search<%= element.id %> ">
+                        <ul>
+                            <li>Nombre:<% =element.name %></li>
+                            <li>Descripcion:<%= element.descripcion %></li>
+                            <li>Precio:<% =element.price %></li>
+                        </ul>
+                    </a>
+                </article>
+            </section> 
+            <% }) %>
+            
+            <% } else { %>
+                <p>No se encuentran resultados</p> 
+                <% } %> 
+             </section>
+   
+
+
+</main>
+    <%- include('../partials/footer.ejs') %>
+</body>
+</html>

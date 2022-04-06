@@ -6,31 +6,4 @@ module.exports = {
         styles: ['files/upload'],
         title: 'House of Wines | Subir imagenes',
     }),
-    
-
-    /*uploadAvatar: (req, res) => {
-
-        if (req.files && req.files.length > 0) {
-          db.Image.create({
-            url: req.files[0].filename, Type: 2
-          })
-            .then(imagenAvatar => {
-              db.User.update({ avatar: imagenAvatar.id }, {
-                where: {
-                  id: req.session.user.id
-                }
-              })
-                .then(update => {
-                  (req.session.user.id)
-    
-                })
-                .then(user => {
-                  req.session.user = user
-                })
-    
-              res.redirect('/users/profile')
-            })
-            .catch((error) => res.send(error));
-        }
-      },*/
-    }
+}
