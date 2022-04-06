@@ -19,3 +19,4 @@ Productos Homepage Background-color: 550C18, Opacidad 70%.
 Productos Homepage Color: FEC85C.
 
 
+![Paleta](https://user-images.githubusercontent.com/79474103/162084027-f04881b5-ef58-4b35-b216-e81b0a7c256c.png)
