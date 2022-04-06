@@ -27,22 +27,25 @@ module.exports = {
     show: function (req, res){
         db.User.findByPk(req.params.id,{
             include:['image']
-          }).then(user => {
+          }).then((user) => {
+            if(user.length){
               let response = {
                 meta: {status: 200},
+                count: user.length,
                 data: {
                     id: user.id,
-                  firstName: user.firstName,
-                  lastName: user.lastName,
-                  email: user.email,
-                  phone: user.phone,
-                  adress: user.adress,
-                  avatar: user.image.url,
-                  url: 'http://localhost:3000/api/users/' + user.id
-                }
-              }
-              
-              return res.status(200).json(response);
-          })
-    }
-}
+                    firstName: user.firstName,
+                    lastName: user.lastName,
+                    email: user.email,
+                    phone: user.phone,
+                    adress: user.adress,
+                    avatar: user.image.url,
+                    url: 'http://localhost:3000/api/users/' + user.id
+                }}
+                return res.status(200).json(response);  
+          } else {
+            return res.status(404).json({
+                error: 'No se encontró el usuario'
+            })}
+    }).catch((err) => {res.send(err);}
+)}};
