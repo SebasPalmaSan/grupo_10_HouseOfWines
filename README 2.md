@@ -20,7 +20,7 @@ Designed by Christian Robertson.
 - Productos Homepage Color: FEC85C.
 
 ### Paleta-Imagen de los colores elegidos:
-![Paleta](https://user-images.githubusercontent.com/79474103/162084027-f04881b5-ef58-4b35-b216-e81b0a7c256c.png)
+![Paleta](https://user-images.githubusercontent.com/79474103/162085980-ade8762e-fee8-42ad-8f02-5055e3390158.png)
 
 ### Variante de los colores elegidos:
 ![Variantes - Colores - HOW](https://user-images.githubusercontent.com/79474103/162085149-89356f76-9a78-4842-a69a-649412ec0a17.png)
