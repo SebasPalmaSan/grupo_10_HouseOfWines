@@ -3,6 +3,7 @@ const product = require('../controllers/productControllers');
 const router = Router();
 const productControllers = require('../controllers/productControllers')
 const path = require('path');
+//const adminMiddleware = require('../middlewares/authAdminMiddleware');
 const validatorSave = require('../middlewares/saveMiddleware');
 const multer = require('multer');
 

@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+ 
+    font-family: "Roboto", sans-serif;
+}
+
+main{
+    background-color: #f5f5f5;
+    width: 100%;
+    border: solid 2px #550c18;
+}
+.linea{
+    border-top: 1px solid rgb(153, 150, 150);
+    height: 2px;
+    padding: 0;
+    margin: 20px auto 0 auto;
+}
+
+.saludoBienvenida{
+    color: #736E6E;
+    font-size:100px;
+    font-weight: light;
+    margin: 1rem;
+    display: flex;
+    justify-content: center;
+}
+.subtitulos {
+    text-align: center;
+    justify-content: center;
+}
+
+.subtitulos:hover{
+    color:rgb(153, 150, 150);
+}
+
+@media(max-width:360px){
+    .saludoBienvenida{
+        display: none;
+    }
+}
+@media(min-width:361px){
+    .saludoBienvenida{
+        font-size: 18px;
+    }
+    .datosProfile{
+        font-size: 14px;
+    }
+    .avatar{
+        width: 60%;
+    }
+}
+
+@media(min-width:768px){
+    .saludoBienvenida{
+        font-size: 25px;
+    }
+    .datosProfile{
+        font-size: 15px;
+    }
+    .avatar{
+        width: 30%;
+    }
+}
+
+@media(min-width:1200px){
+    .saludoBienvenida{
+        font-size: 50px;
+    }
+    .datosProfile{
+        font-size: 20px;
+    }
+    .boton-formulario{
+        font-size: 20px;
+    }
+    .avatar{
+        width: 20%;
+}
+}

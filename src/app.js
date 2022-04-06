@@ -22,6 +22,7 @@ app.use(cookie());
 app.use(session({secret: 'HOW', resave: false, saveUninitialized: true}));
 
 app.use(require('./middlewares/userLoggedMiddleware'));
+//app.use(require('./middlewares/authAdminMiddleware'));
 app.use('/', require('./routes/homeRoutes'));
 app.use('/products', require('./routes/productRoutes'));
 app.use('/users', require('./routes/userRoutes'));

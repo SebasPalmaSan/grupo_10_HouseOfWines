@@ -31,6 +31,7 @@ footer {
     padding: 0 10px;
 }
 
+
 footer h2 {
     margin: 5px;
     font-weight: 430;
@@ -46,6 +47,10 @@ footer h2 {
     font-size: 30px;
     padding: 0 10px;
 }
+.iconos-redes:hover{
+    color: #FEC85C;
+}
+
 #iconos-redes{
     order: -1;
     width: 100%;
@@ -61,6 +66,10 @@ footer h2 {
 
 #mensajeFinal{
     text-align: center;
+}
+
+#mensajeFinal:hover {
+    color: #FEC85C;
 }
 
 @media (min-width: 769px){

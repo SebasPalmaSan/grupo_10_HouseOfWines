@@ -15,7 +15,7 @@ const productControllers = {
                 producto: producto 
             });
         })
-    },
+},
     
     //Guardar un producto
     save: (req, res) => {
