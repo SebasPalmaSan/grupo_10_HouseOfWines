@@ -1,12 +1,11 @@
 const db = require('../database/models');
-//const file = require('../models/file')
 const sequelize = db.sequelize;
-
+const Op = db.sequelize.Op
 
 const productControllers = {
-
+    
+    //Crear un producto
     create: (req, res) => {
-        //return res.send(req.body)
         db.Product.findAll()
         .then(function(producto) {
             return res.render('products/create', 
@@ -18,8 +17,8 @@ const productControllers = {
         })
     },
     
+    //Guardar un producto
     save: (req, res) => {
-        //return res.send(req.body)
         db.Image.create({
             url: req.files[0].filename
         }).then(ImagenProducto => {
@@ -40,12 +39,12 @@ const productControllers = {
         })
     },
     
+    //Listado de productos
     list: (req, res) => {
         db.Product.findAll({ where: { category: req.params.id},
             include: [{association:'image'}, {association:'categories'}],
         })
         .then(function(products){
-           // return res.render(products)
             res.render('products/list', 
             {
                 styles: ['product/list'],
@@ -56,6 +55,7 @@ const productControllers = {
         .catch(error => res.send(error))
     },
 
+    //Detalle de producto
     detail: (req, res) => {
         db.Product.findByPk(req.params.id, {
             include: [{association:'image'}, {association:'categories'}],
@@ -70,22 +70,8 @@ const productControllers = {
         })
     },
 
-    /* edit: (req, res) => {
-        let pedidoProducto = db.Product.findByPk(req.params.id, {
-            include: [{association:'image'}, {association:'categories'}],
-        });
-        let pedidoCategoria = db.Category.findAll();
-        Promise.all([pedidoProducto, pedidoCategoria])
-        .then(function([product, category]){
-            res.render('products/edit', 
-            { 
-                styles: ['products/edit', 'main'],
-                title: 'House of Wines | Editar producto',
-                product: product, 
-                category: category
-            })
-        })
-    }, */
+
+    //Editar un producto
     edit: (req, res) => {
         db.Product.findByPk(req.params.id, {
             include: [{association:'image'}, {association:'categories'}],
@@ -99,6 +85,8 @@ const productControllers = {
             })
         })
     },
+
+    //Actualizar producto
     update: (req, res) => {
         db.Product.update({
             name: req.body.name,
@@ -115,6 +103,8 @@ const productControllers = {
         res.redirect('/products/detail/' + req.params.id)
     },
 
+
+    //Eliminar un producto
     delete: (req, res) => {
         db.Product.destroy(
             {
@@ -123,6 +113,38 @@ const productControllers = {
                 }
             })
             res.redirect('/');
+    },
+
+   //Busqueda de producto
+    search: (req, res) => {
+        db.Product.findAll({
+            where: {
+                [Op.or]:[
+                    {name:"%" + req.query.params + "%"},
+                    {category:"%" + req.query.params + "%"},
+                    {description:"%" + req.query.params + "%"},
+                    {review:"%" + req.query.params + "%"}
+                ]
+                //name: { [Op.like]: "%" + req.query.buscar + "%"},
+            }
+        })
+        // .then(name => {
+        //     db.Product.findAll({
+        //         include: ['name', 'category'],
+        //         where:{
+        //             nameID: name.id
+        //         }
+        //     })
+        .then(function(products){
+            // return res.render(products)
+             res.render('products/list', 
+             {
+                 styles: ['product/list'],
+                 title:'House of Wines | Productos',
+                 products: products
+             })
+         })
+         .catch(error => res.send(error))
     }
 }
     module.exports = productControllers

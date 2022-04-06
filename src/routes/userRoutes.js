@@ -21,10 +21,6 @@ const multerDiskStorage = multer.diskStorage({
 })
 const fileUpload = multer({ storage: multerDiskStorage});
 
-//Middlewares
-//const guestMiddleware = require('../middlewares/guestMiddleware');
-//const authMiddleware = require('../middlewares/authMiddleware');
-
 //Crear un Usuario
 router.get('/register', userControllers.create);
 
@@ -52,23 +48,6 @@ router.post('/userUpdate/', userControllers.userUpdate);
 
 //Eliminar un Usuario
 router.post('/delete/:id', userControllers.userDelete);
-
-
-//router.get('/userUpdate/:id', user.edit);
-
-
-//post
-//router.post('/create', create);
-//router.post('/register', save);
-//router.post('/access',access);
-
-//router.post('/edit', edit)
-
-//put
-
-//router.put('/upload/password', [], uploadPassword);
-//router.put('/upload/avatar', [], uploadAvatar);
-
 
 
 module.exports = router;

@@ -17,8 +17,9 @@ module.exports = {
                             id:product.id,
                             name:product.name,
                             description: product.description,
-                            precio: product.precio,
-                            imagen:`http://localhost:3000/uploads/${product.images.url}`,
+                            category: product.category,
+                            price: product.price,
+                            imagen:`http://localhost:3000/uploads/${product.image.url}`,
                             producto: 'http://localhost:3000' + `/api/products/${product.id}`
                         })
                     })
@@ -50,6 +51,7 @@ module.exports = {
                     id: product.id,
                     name: product.name,
                     description: product.description,
+                    category: product.category,
                     price: product.price,
                     discount: product.discount,
                     review: product.review, 

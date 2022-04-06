@@ -28,8 +28,10 @@ module.exports = {
         db.User.findByPk(req.params.id,{
             include:['image']
           }).then(user => {
-              return res.status(200).json({
-                  id: user.id,
+              let response = {
+                meta: {status: 200},
+                data: {
+                    id: user.id,
                   firstName: user.firstName,
                   lastName: user.lastName,
                   email: user.email,
@@ -37,7 +39,10 @@ module.exports = {
                   adress: user.adress,
                   avatar: user.image.url,
                   url: 'http://localhost:3000/api/users/' + user.id
-              })
+                }
+              }
+              
+              return res.status(200).json(response);
           })
     }
 }

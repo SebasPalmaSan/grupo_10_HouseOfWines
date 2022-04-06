@@ -1,22 +1,18 @@
 const bcryptjs = require ('bcryptjs');
 const {validationResult} = require("express-validator");
-//const model = require('../database/models/User')
-//const validator = require('express-validator');
 const db = require('../database/models');
-//const user = require('../database/models/user');
-
 
 const userController = {
 
-    
+    //Crear un usuario
     create: (req, res) => res.render('users/register',
         {
           styles: ['register'],
           title: 'Crear tu cuenta'
         }),
 
+    //Guardar un usuario
     save: (req, res) =>{
-      //return res.send(req.body) 
       const errors = validationResult(req)
       if(errors.isEmpty()){
         if(req.file){
@@ -53,9 +49,8 @@ const userController = {
           }).catch(error => res.send(error))
 
         }
-          
-          
-        }else{
+      
+      }else{
           return res.render('users/register', 
                 {
                   styles: ['register'],
@@ -66,12 +61,14 @@ const userController = {
         } 
     },
 
+    //Logueo de usuario
     login: (req, res) => res.render('users/login',
         {
           styles: ['login'],
           title: 'Iniciá sesión',
         }),
 
+    //Acceso de usuario
     access: (req, res) => {
       //return res.send(req.body)        
       db.User.findOne({
@@ -127,7 +124,7 @@ const userController = {
             .catch(error => res.send(error))
           },
                
-
+    //Listado de usuarios
     list: (req, res) => {
        db.User.findAll({
         include: ['image']
@@ -141,16 +138,7 @@ const userController = {
       }).catch(error => res.send(error))
     },
     
-    /*list: (req, res) => {
-      db.User.findAll()
-          .then(users => { 
-            res.render("users/list", {
-              styles: ["list"],
-              title: "Usuarios registados",
-              users: users
-              })
-          })
-  },*/
+    //Perfil de usuario
     profile: (req,res) => {
      console.clear();
      console.log('sql')
@@ -166,6 +154,8 @@ const userController = {
   })
   .catch(error => res.send(error))
 },
+
+    //Editar un usuario
     edit: (req, res) => {
       db.User.findOne(
         { where: 
@@ -183,6 +173,7 @@ const userController = {
   .catch(error => res.send(error))
 },
 
+    //Actualizar un usuario
     userUpdate: (req, res) =>{
       //return res.send(req.body)
         db.User.update({
@@ -204,6 +195,7 @@ const userController = {
 .catch(error => res.send(error))
 },
 
+//Eliminar un usuario
 userDelete: (req,res) => {
   res.clearCookie('userEmail');
         req.session.destroy();
@@ -215,7 +207,8 @@ userDelete: (req,res) => {
       })
       return res.redirect('/');
 },
- 
+
+//Deslogueo de un usuario
     logout: (req,res) => {
         res.clearCookie('userEmail');
         req.session.destroy();
