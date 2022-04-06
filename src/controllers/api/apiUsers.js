@@ -14,6 +14,7 @@ module.exports = {
                     id: user.id, 
                     nombre: user.firstName + ' ' + user.lastName,
                     email: user.email,
+                    avatar: 'http://localhost:3000/avatars/' + user.image.url,
                     url: 'http://localhost:3000/api/users/' + user.id
                 }})}
             return res.status(200).json(response);
@@ -37,7 +38,7 @@ module.exports = {
                   email: user.email,
                   phone: user.phone,
                   adress: user.adress,
-                  avatar: 'http://localhost:3000/uploads/avatars/' + user.image.url,
+                  avatar: 'http://localhost:3000/avatars/' + user.image.url,
                   url: 'http://localhost:3000/api/users/' + user.id
                 }
               }
@@ -59,7 +60,7 @@ module.exports = {
                 email: user.email,
                 phone: user.phone,
                 adress: user.adress,
-                avatar: 'http://localhost:3000/uploads/avatars/' + user.image.url,
+                avatar: 'http://localhost:3000/avatars/' + user.image.url,
                 url: 'http://localhost:3000/api/users/' + user.id
               }
             }

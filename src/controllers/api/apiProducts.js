@@ -19,7 +19,7 @@ module.exports = {
                             description: product.description,
                             category: product.category,
                             price: product.price,
-                            image:'http://localhost:3000/uploads/products/' + product.image.url,
+                            image:'http://localhost:3000/products/' + product.image.url,
                             product: 'http://localhost:3000/api/products/' + product.id
                         })
                     })
@@ -55,7 +55,7 @@ module.exports = {
                     price: product.price,
                     discount: product.discount,
                     review: product.review, 
-                    image:'http://localhost:3000/uploads/products/' + product.image.url,
+                    image:'http://localhost:3000/products/' + product.image.url,
                     product: 'http://localhost:3000/api/products/' + product.id
                 })
             }else {
@@ -77,7 +77,7 @@ module.exports = {
                 price: product.price,
                 discount: product.discount,
                 review: product.review, 
-                image:'http://localhost:3000/uploads/products/' + product.image.url,
+                image:'http://localhost:3000/products/' + product.image.url,
                 product: 'http://localhost:3000/api/products/' + product.id
             })
         }).catch((err) => {res.send(err);});

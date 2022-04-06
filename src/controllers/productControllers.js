@@ -1,6 +1,6 @@
 const db = require('../database/models');
-const sequelize = db.sequelize;
-const Op = db.sequelize.Op
+const {Op} = require('sequelize');
+
 
 const productControllers = {
     
@@ -119,28 +119,19 @@ const productControllers = {
     search: (req, res) => {
         db.Product.findAll({
             where: {
-                [Op.or]:[
-                    {name:"%" + req.query.params + "%"},
-                    {category:"%" + req.query.params + "%"},
-                    {description:"%" + req.query.params + "%"},
-                    {review:"%" + req.query.params + "%"}
-                ]
-                //name: { [Op.like]: "%" + req.query.buscar + "%"},
-            }
+                [Op.or]:{
+                    name: { [Op.like]: '%' + req.query.keywords + '%' },
+                    category:{ [Op.like]: '%' + req.query.keywords + '%' },
+                    description:{ [Op.like]: '%' + req.query.keywords + '%' },
+                    review:{ [Op.like]: '%' + req.query.keywords + '%' }
+                }
+            }, include: [{association:'image'}, {association:'categories'}]
         })
-        // .then(name => {
-        //     db.Product.findAll({
-        //         include: ['name', 'category'],
-        //         where:{
-        //             nameID: name.id
-        //         }
-        //     })
         .then(function(products){
-            // return res.render(products)
              res.render('products/list', 
              {
                  styles: ['product/list'],
-                 title:'House of Wines | Productos',
+                 title:'House of Wines | Productos encontrados',
                  products: products
              })
          })
