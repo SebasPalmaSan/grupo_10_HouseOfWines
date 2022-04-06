@@ -3,6 +3,7 @@ const product = require('../controllers/productControllers');
 const router = Router();
 const productControllers = require('../controllers/productControllers')
 const path = require('path');
+const adminMiddleware = require('../middlewares/authAdminMiddleware');
 const validatorSave = require('../middlewares/saveMiddleware');
 const multer = require('multer');
 
@@ -20,7 +21,7 @@ const multerDiskStorage = multer.diskStorage({
 const fileUpload = multer({ storage: multerDiskStorage});
 
 //Crear un Producto
-router.get('/create', productControllers.create);
+router.get('/create',[adminMiddleware], productControllers.create);
 router.post('/create',[fileUpload.any('file'),validatorSave], productControllers.save);
 
 //Listado de Productos

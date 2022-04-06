@@ -42,6 +42,9 @@ router.get('/list', userControllers.list);
 //Desloguear Usuario
 router.get('/logout',userControllers.logout);
 
+//Error al querer ver products sin ser admin
+router.get('/errorLogueado', userControllers.errorLogueado);
+
 //Editar un Usuario
 router.get('/edit', userControllers.edit)
 router.post('/userUpdate/', userControllers.userUpdate);

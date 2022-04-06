@@ -213,7 +213,15 @@ userDelete: (req,res) => {
         res.clearCookie('userEmail');
         req.session.destroy();
         return res.redirect('/');
-}
+},
+
+//Error al querer ver products sin ser admin
+errorLogueado: (req, res) => res.render('users/errorLogueado',
+        {
+          styles: ['errorLogueado'],
+          title: 'Error',
+        }
+),
 }
 
 
