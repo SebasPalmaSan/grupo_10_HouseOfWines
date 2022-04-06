@@ -1,9 +1,9 @@
-function authAdminMiddleware(req,res,next) {
+//function authAdminMiddleware(req,res,next) {
     
-    let userLogged = req.session != undefined && req.session.userLogged ? req.session.userLogged : null;
+  //  let userLogged = req.session != undefined && req.session.userLogged ? req.session.userLogged : null;
 
-    return (!userLogged) ? res.redirect('/users/login') : (userLogged.isAdmin == 1) ? next() : res.redirect('/users/errorLogueado');
+    //return (!userLogged) ? res.redirect('/user/login') : (userLogged.isAdmin == 1) ? next() : res.redirect('/');
 
-}
+//}
 
-module.exports = authAdminMiddleware;
+//module.exports = authAdminMiddleware;
