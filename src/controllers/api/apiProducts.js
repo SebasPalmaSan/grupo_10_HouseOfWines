@@ -19,8 +19,8 @@ module.exports = {
                             description: product.description,
                             category: product.category,
                             price: product.price,
-                            imagen:`http://localhost:3000/uploads/${product.image.url}`,
-                            producto: 'http://localhost:3000' + `/api/products/${product.id}`
+                            image:'http://localhost:3000/uploads/products/' + product.image.url,
+                            product: 'http://localhost:3000/api/products/' + product.id
                         })
                     })
                 //     meta: {status: 200},
@@ -55,8 +55,8 @@ module.exports = {
                     price: product.price,
                     discount: product.discount,
                     review: product.review, 
-                    //associations: product.map(() => {return product.association}),
-                    url: 'http://localhost:3000/api/products/' + product.id
+                    image:'http://localhost:3000/uploads/products/' + product.image.url,
+                    product: 'http://localhost:3000/api/products/' + product.id
                 })
             }else {
                 return res.status(404).json({
@@ -64,5 +64,23 @@ module.exports = {
                 })}
         }).catch((err) => {res.send(err);});
     },
+    last: function(req, res) {
+        db.Product.findOne({
+            include: ['image', 'categories'],
+            order: [['id', 'DESC']],
+        }).then(product => {
+            return res.status(200).json({
+                id: product.id,
+                name: product.name,
+                description: product.description,
+                category: product.category,
+                price: product.price,
+                discount: product.discount,
+                review: product.review, 
+                image:'http://localhost:3000/uploads/products/' + product.image.url,
+                product: 'http://localhost:3000/api/products/' + product.id
+            })
+        }).catch((err) => {res.send(err);});
+    }
      
 }

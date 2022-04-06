@@ -37,12 +37,34 @@ module.exports = {
                   email: user.email,
                   phone: user.phone,
                   adress: user.adress,
-                  avatar: user.image.url,
+                  avatar: 'http://localhost:3000/uploads/avatars/' + user.image.url,
                   url: 'http://localhost:3000/api/users/' + user.id
                 }
               }
               
               return res.status(200).json(response);
-          })
+          }).catch((err) => {res.send(err);});
+    },
+    last: function(req, res) {
+        db.User.findOne({
+            include: ['image'],
+            order: [['id', 'DESC']],
+        }).then(user => {
+            let response = {
+              meta: {status: 200},
+              data: {
+                  id: user.id,
+                firstName: user.firstName,
+                lastName: user.lastName,
+                email: user.email,
+                phone: user.phone,
+                adress: user.adress,
+                avatar: 'http://localhost:3000/uploads/avatars/' + user.image.url,
+                url: 'http://localhost:3000/api/users/' + user.id
+              }
+            }
+            
+            return res.status(200).json(response);
+        }).catch((err) => {res.send(err);});
     }
 }
