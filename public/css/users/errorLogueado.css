@@ -31,6 +31,10 @@ main{
     justify-content: center;
 }
 
+.subtitulos:hover{
+    color:rgb(153, 150, 150);
+}
+
 @media(max-width:360px){
     .saludoBienvenida{
         display: none;
