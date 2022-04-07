@@ -1,9 +1,5 @@
-//function authAdminMiddleware(req,res,next) {
-    
-  //  let userLogged = req.session != undefined && req.session.userLogged ? req.session.userLogged : null;
+const authAdminMiddleware = (req, res, next) => {
+  req.session && req.session.user && req.session.user ? req.session.user.admin == 1? next() :res.redirect('/') : res.redirect('/users/login')
+};
 
-    //return (!userLogged) ? res.redirect('/user/login') : (userLogged.isAdmin == 1) ? next() : res.redirect('/');
-
-//}
-
-//module.exports = authAdminMiddleware;
+module.exports = authAdminMiddleware;

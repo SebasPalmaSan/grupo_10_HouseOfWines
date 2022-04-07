@@ -22,12 +22,9 @@ app.use(cookie());
 app.use(session({secret: 'HOW', resave: false, saveUninitialized: true}));
 
 app.use(require('./middlewares/userLoggedMiddleware'));
-//app.use(require('./middlewares/authAdminMiddleware'));
 app.use('/', require('./routes/homeRoutes'));
 app.use('/products', require('./routes/productRoutes'));
 app.use('/users', require('./routes/userRoutes'));
 app.use('/carrito', require('./routes/carritoRoutes'));
 app.use('/api/products', require('./routes/api/apiProducts'));
 app.use('/api/users', require('./routes/api/apiUsers'));
-
-//app.use('/file/', require('./routes/fileRoutes'));

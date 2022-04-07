@@ -8,14 +8,14 @@ const userLoggedMiddleware = (req, res, next) => {
     .then(users =>{
     let userLogged = users;
 
-    if (req.session && req.session.user){
+    if (req.session && req.session.user) {
         userLogged = req.session.user;
        
     }
 
     res.locals.user = userLogged;
     
-    next();
+    return next();
 })
 .catch(error => res.send(error))
 }
