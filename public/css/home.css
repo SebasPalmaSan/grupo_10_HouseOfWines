@@ -114,12 +114,17 @@ main {
     width: 50%;
     padding: 5px;
     align-self: center;
+    border-radius: 20px;
+    max-width: 270px;
+    max-height: 360px;
 
 }
 
 .img-product img {
     width: 100%;
-    border-radius: 8px;
+    border-radius: 20px;
+    max-width: 270px;
+    max-height: 360px;
 }
 
 .texto {

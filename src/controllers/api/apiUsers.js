@@ -14,7 +14,11 @@ module.exports = {
                     id: user.id, 
                     nombre: user.firstName + ' ' + user.lastName,
                     email: user.email,
+<<<<<<< HEAD
                     //avatar: 'http://localhost:3000/avatars/' + user.image.url,
+=======
+                    avatar: 'http://localhost:3000/avatars/' + user.image.url,
+>>>>>>> 22870b74b16fadb74ab1c3d5f2886a4e5f8616cb
                     url: 'http://localhost:3000/api/users/' + user.id
                 }})}
             return res.status(200).json(response);
