@@ -53,8 +53,9 @@ main {
 .bienvenida{
     margin: 10px;
     padding: auto;
+    padding-top: 25px;
     font-size: 70px;
-    color: #550c18;
+    color: #731122;
     text-align: center;
 }
 
@@ -69,7 +70,7 @@ main {
     margin: 30px;
     text-align: center;
     color: rgb(153, 150, 150);
-    font-size: 35px;
+    font-size: 38px;
     font-weight: 350;
 }
 
