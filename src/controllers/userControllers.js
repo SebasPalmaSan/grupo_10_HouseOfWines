@@ -139,15 +139,11 @@ const userController = {
     },
     
     //Perfil de usuario
-    profile: (req,res) => {
-     //console.clear();
-     //console.log('sql')
-      //return res.send(req.body)  
+    profile: (req,res) => { 
       db.User.findByPk(req.session.user.id,{
         include:['image']
       })
           .then(user => {
-           ///return res.send(user)
            return res.render('users/profile',{
           user: user
     })
@@ -175,7 +171,6 @@ const userController = {
 
     //Actualizar un usuario
     userUpdate: (req, res) =>{
-      //return res.send(req.body)
         db.User.update({
         firstName: req.body.firstName,
         lastName: req.body.lastName,
