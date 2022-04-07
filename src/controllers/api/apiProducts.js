@@ -26,10 +26,7 @@ module.exports = {
                         product: 'http://localhost:3000/api/products/' + product.id
                     }})
             });
-                    
-                
-        
-    }).catch((err) => {res.send(err);});
+            }).catch((err) => {res.send(err);});
 
 },
     show: function (req, res){

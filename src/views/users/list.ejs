@@ -14,7 +14,12 @@
                                         <div class="datosProfile2" href="/users/profile/<%= user.id %> ">
                                             <% if (user.image) { %>
                                                 <img id="imgCentral"src="/avatars/<%= user.image.url %> " alt="photo<%= user.email %> "class="avatar">
-                                                <% } %>
+                                                
+                                                <% }  else { %>
+                                                    <figure>
+                                                        <img id="imgCentral"src="/avatars/default-avatar.png" alt="avatar generico" class="avatar">
+                                                    </figure>
+                                                    <% } %>
                                                 <div>
                                                 <ul class="listaDatosUsuarios">
                                                         <li><p>Nombre: <%= user.firstName %></p></li>
