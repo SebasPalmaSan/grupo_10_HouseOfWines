@@ -140,8 +140,8 @@ const userController = {
     
     //Perfil de usuario
     profile: (req,res) => {
-     console.clear();
-     console.log('sql')
+     //console.clear();
+     //console.log('sql')
       //return res.send(req.body)  
       db.User.findByPk(req.session.user.id,{
         include:['image']

@@ -2,43 +2,33 @@ const db = require('../../database/models');
 
 module.exports = {
     list: function (req, res){
-        db.Product.findAll( {include: ['image','categories']})
+        db.Product.findAll({include: ['image','categories']})
         .then((products) => {
-            if(products.length){
-                let response = {
-                    meta: {
+            return res.status(200).json({
+                meta: {
                         status:200,
-                        total:products.length,
-                    },
-                    data:[]
-                }
-                    products.forEach(product =>{
-                        response.data.push({
-                            id:product.id,
-                            name:product.name,
-                            description: product.description,
-                            category: product.category,
-                            price: product.price,
-                            image:'http://localhost:3000/products/' + product.image.url,
-                            product: 'http://localhost:3000/api/products/' + product.id
-                        })
-                    })
-                //     meta: {status: 200},
-                //     count: products.length,
-                //     // categoryById: categories.foreach(category => {
-                //     //         return {
-                //     //         name: category.name,
-                //     //         categoryById: category.length
-                //     //         }
-                //     //     }
-                //     // ),
-                //     products: products,
-                // }
-                return res.status(200).json(response);
-        } else {
-            return res.status(404).json({
-                error: 'No se encontraron productos'
-            })}
+                        count:products.length,
+                        productsByCategory:{
+                            vinos: products.map(({category}) => category ==1).reduce((a,b)=> {return a+b},0),
+                            espumantes: products.map(({category}) => category ==2).reduce((a,b)=> {return a+b},0),
+                            destilados: products.map(({category}) => category ==3).reduce((a,b)=> {return a+b},0),
+                            whiskys: products.map(({category}) => category ==4).reduce((a,b)=> {return a+b},0),
+                            accesorios: products.map(({category}) => category ==5).reduce((a,b)=> {return a+b},0)
+                }},
+                data:products.map(product =>{
+                    return {
+                        id:product.id,
+                        name:product.name,
+                        description: product.description,
+                        category: product.categories.name,
+                        price: product.price,
+                        image:'http://localhost:3000/products/' + product.image.url,
+                        product: 'http://localhost:3000/api/products/' + product.id
+                    }})
+            });
+                    
+                
+        
     }).catch((err) => {res.send(err);});
 
 },
@@ -46,22 +36,19 @@ module.exports = {
         db.Product.findByPk(req.params.id, {
             include: ['image','categories'],
         }).then(product => {
-            if(product) {
                 return res.status(200).json({
+                    meta: {status: 200},
+                    data:{
                     id: product.id,
                     name: product.name,
                     description: product.description,
-                    category: product.category,
+                    category: product.categories.name,
                     price: product.price,
                     discount: product.discount,
                     review: product.review, 
                     image:'http://localhost:3000/products/' + product.image.url,
                     product: 'http://localhost:3000/api/products/' + product.id
-                })
-            }else {
-                return res.status(404).json({
-                    error: 'No se encontro el producto'
-                })}
+                }})
         }).catch((err) => {res.send(err);});
     },
     last: function(req, res) {
@@ -76,7 +63,7 @@ module.exports = {
                 category: product.category,
                 price: product.price,
                 discount: product.discount,
-                review: product.review, 
+                review: product.review,
                 image:'http://localhost:3000/products/' + product.image.url,
                 product: 'http://localhost:3000/api/products/' + product.id
             })

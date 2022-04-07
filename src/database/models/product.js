@@ -50,7 +50,7 @@ module.exports = function(sequelize, DataTypes){
         as: "image"
       });
       Product.belongsTo(models.Category,{
-        foreignKey:"id",
+        foreignKey:"category",
         as: "categories"
       });
       Product.belongsToMany(models.User,{
