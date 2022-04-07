@@ -19,21 +19,10 @@ module.exports = {
                             description: product.description,
                             category: product.category,
                             price: product.price,
-                            image:'http://localhost:3000/uploads/products/' + product.image.url,
+                            image:'http://localhost:3000/products/' + product.image.url,
                             product: 'http://localhost:3000/api/products/' + product.id
                         })
                     })
-                //     meta: {status: 200},
-                //     count: products.length,
-                //     // categoryById: categories.foreach(category => {
-                //     //         return {
-                //     //         name: category.name,
-                //     //         categoryById: category.length
-                //     //         }
-                //     //     }
-                //     // ),
-                //     products: products,
-                // }
                 return res.status(200).json(response);
         } else {
             return res.status(404).json({
@@ -55,7 +44,7 @@ module.exports = {
                     price: product.price,
                     discount: product.discount,
                     review: product.review, 
-                    image:'http://localhost:3000/uploads/products/' + product.image.url,
+                    image:'http://localhost:3000/products/' + product.image.url,
                     product: 'http://localhost:3000/api/products/' + product.id
                 })
             }else {
@@ -77,7 +66,7 @@ module.exports = {
                 price: product.price,
                 discount: product.discount,
                 review: product.review, 
-                image:'http://localhost:3000/uploads/products/' + product.image.url,
+                image:'http://localhost:3000/products/' + product.image.url,
                 product: 'http://localhost:3000/api/products/' + product.id
             })
         }).catch((err) => {res.send(err);});
